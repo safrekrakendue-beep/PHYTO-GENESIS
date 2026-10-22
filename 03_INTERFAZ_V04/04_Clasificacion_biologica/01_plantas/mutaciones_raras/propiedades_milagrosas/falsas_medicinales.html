@@ -31,4 +31,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><div class="top"><div class="logo">PHYTOGENESIS<small>T.L.S. // ARCHIVO BOTÁNICO</small></div><div class="status">REGISTRO DE PROPIEDADES VEGETALES</div></div><div class="layout"><aside><div class="sidehead">MUTACIONES</div><a class="sidebtn" href="../index.html">← Mutaciones</a><div class="sidehead">PROPIEDADES MILAGROSAS</div><a class="sidebtn" href="medicinales.html">Medicinales</a><a class="sidebtn" href="falsas_medicinales.html">Falsas medicinales</a></aside><div class="main"><div class="hero"><div class="eyebrow">T.L.S. // ARCHIVO CENTRAL // PROPIEDADES MILAGROSAS</div><h1>Falsas medicinales</h1><p>Especies que imitan plantas útiles, pero pueden agravar la exposición o causar daño según el registro ficticio disponible.</p></div><div class="notice"><strong>EXPEDIENTES COMPLETOS DISPONIBLES.</strong> La vista resumida se conserva. <a href="archivo_completo/impostores/index.html">Abrir los cinco expedientes de falsas medicinales ↗</a></div><div class="sectionhead"><h2>FALSAS MEDICINALES</h2><span class="eyebrow">ARCHIVO PG-01</span></div><div class="grid"><article class="card"><div class="tag" style="color:var(--red)">IMITADORA PELIGROSA</div><h3>Falsas plantas medicinales</h3><p>Imitan especies útiles, pero pueden agravar la exposición o causar daño.</p><span class="pill high">Verificar antes de usar</span></article></div><div class="notice">Este contenido pertenece a un universo ficticio. No constituye información médica ni instrucciones reales para tratar enfermedades.</div><div class="footer">T.L.S. // THE LAST SURVIVORS · PHYTOGENESIS PG-01</div></div></div></body></html>

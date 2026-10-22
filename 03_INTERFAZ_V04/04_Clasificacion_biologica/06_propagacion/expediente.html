@@ -24,5 +24,60 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación global"><span class="tls-nav-brand">T.L.S. / ARCHIVO PG-01</span><a class="tls-home" href="../../panel_modulos.html">⌂ PORTADA PRINCIPAL</a><a href="../../02_Ciclo_infeccion/index.html">CICLO</a><a href="../../03_Progresion_humanos_zombis/index.html">PROGRESIÓN</a><a href="../index.html">CLASIFICACIÓN</a><a href="../../07_Anomalias_excepcionales/index.html">ANOMALÍAS</a><a href="../../08_Matriz_Maestra_y_Registros/index.html">MATRIZ</a><a href="../../galeria_imagenes.html">GALERÍA VISUAL</a><a href="../01_plantas/index.html">CATÁLOGO</a><a href="../../index.html">V0.4</a></nav><header><div class="eyebrow">THE LAST SURVIVORS · PG-01 / EXPEDIENTE 06</div><h1>Vías de propagación y contacto</h1><p>04 / Clasificación biológica</p><span class="status">REGISTRO INCOMPLETO</span></header><main><div class="panel"><p>Registro de las rutas de exposición descritas para el sistema y de sus límites aún no determinados.</p><p class="warning"><strong>Estado del archivo:</strong> separar observación, interpretación y pregunta abierta. Las ideas propuestas no son REGISTRO hasta su aprobación.</p></div><section class="panel"><h2>Vías descritas</h2><p>Esporas en el aire, semillas, heridas o contacto con filamentos, agua, animales y vegetación.</p></section><section class="panel"><h2>Distinción importante</h2><p>Una vía de contacto no demuestra por sí sola que haya infección. Registrar contacto, evidencia de entrada y cambios posteriores como campos separados.</p></section><section class="panel"><h2>Entorno</h2><p>Viento, humedad, agua y densidad vegetal pueden ser variables narrativas importantes, pero su peso exacto requiere establecerse en el REGISTRO.</p></section><section class="panel"><h2>Contención ficticia</h2><p>Aislar muestras, evitar sacudir estructuras con esporas, mantener distancia y registrar procedencia. Estas indicaciones son parte del universo ficticio, no instrucciones médicas reales.</p></section><section class="panel"><h2>Datos pendientes</h2><p>Distancias de dispersión, viabilidad de esporas, tiempo de supervivencia fuera del huésped y eficacia de barreras.</p></section><div class="panel"><h2>Registro de campo</h2><p>Anotar fecha narrativa, ubicación, observador, condiciones ambientales, descripción literal, evidencia adjunta, interpretación provisional y preguntas pendientes. No rellenar campos sin datos.</p><p><a class="pill" href="registros/bitacora.md">Abrir bitácora Markdown</a> <a class="pill" href="evidencias/LEEME.txt">Ver carpeta de evidencias</a></p></div><p><a href="../index.html">← Índice principal</a>　<a href="../07_respuestas/expediente.html">Siguiente expediente →</a></p><div class="footer">Expediente 06 · TLS / PHYTOGENESIS PG-01 · Documento ficticio de worldbuilding.</div></main></body></html>

@@ -23,6 +23,61 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación T.L.S."><a href="../../../panel_modulos.html">⌂ PORTADA PHYTOGENESIS</a><a href="index.html">CATÁLOGO DE ESPECIES</a><a href="../index.html">INTERFAZ V0.4</a></nav><div class="wrap"><header class="top"><div class="eyebrow">THE LAST SURVIVORS // ARCHIVO ECOLÓGICO // PG-01</div><h1>CATÁLOGO ECOLÓGICO</h1><p class="muted">Base de datos de especies vegetales y ramas de investigación animal, ahora enlazada con las láminas visuales originales aportadas al proyecto. Expedientes separados y clasificación del canon.</p><span class="tag">SISTEMA: PHYTOGENESIS</span><span class="tag">ARCHIVO 05</span><span class="tag">ESTADO: EN DESARROLLO</span></header><nav class="nav"><a href="biblioteca_visual.html">▣ Biblioteca visual original</a></nav>
 <section class="section"><div class="card"><span class="tag">PUNTO DE REFERENCIA</span><h2>00 // PUNTO 0 — INVERNADERO ANTIGUO</h2><p class="muted">Acceso directo al primer entorno ecológico documentado, con descripción del lugar y enlaces a los expedientes relacionados.</p><a class="button" href="../punto0/index.html">ABRIR EXPEDIENTE DEL PUNTO 0 ↗</a></div></section><section class="section"><h2>01 // REINO VEGETAL — ESPECIES REGISTRADAS</h2><p class="muted">Los nombres aparecen en las referencias del proyecto. Las fichas no confirman hábitat ni presencia en Punto 0; cada dato no establecido permanece pendiente.</p><div class="grid"><a class="card" href="01_Reino_vegetal/01_el_cazador/expediente.html"><span class="tag">PHY-V-001</span><h3>El Cazador</h3><p>Nombre registrado en las referencias del proyecto. Su morfología, método de captura, hábitat y conducta exactos todavía deben definirse.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/02_el_frutal/expediente.html"><span class="tag">PHY-V-002</span><h3>El Frutal</h3><p>Categoría nominal asociada a una forma vegetal con frutos en el catálogo. No se confirma que sus frutos sean comestibles ni que exista en Punto 0…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/03_el_espinario/expediente.html"><span class="tag">PHY-V-003</span><h3>El Espinario</h3><p>Nombre presente en las referencias. La relación exacta con espinas, defensa y distribución queda pendiente de especificación.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/04_el_berrero/expediente.html"><span class="tag">PHY-V-004</span><h3>El Berrero</h3><p>Nombre registrado en el catálogo de especies. Aspecto, ciclo y relación con frutos o bayas no establecidos todavía.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/05_la_bella/expediente.html"><span class="tag">PHY-V-005</span><h3>La Bella</h3><p>Nombre de catálogo confirmado como referencia. Apariencia, atracción visual, mecanismos y comportamiento no definidos.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/06_la_espinada/expediente.html"><span class="tag">PHY-V-006</span><h3>La Espinada</h3><p>Especie nombrada en el material del proyecto. Rasgos anatómicos concretos y diferencias respecto de El Espinario siguen abiertos.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/07_la_tejedora/expediente.html"><span class="tag">PHY-V-007</span><h3>La Tejedora</h3><p>Nombre registrado en las referencias. La forma de sus filamentos, el tipo de estructura que produce y su función deben definirse.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/08_la_estranguladora/expediente.html"><span class="tag">PHY-V-008</span><h3>La Estranguladora</h3><p>Nombre registrado que sugiere una posible relación con constricción, pero el nombre por sí solo no fija su mecánica.…</p><span class="status">CANON: CANON PARCIAL</span></a><a class="card" href="01_Reino_vegetal/09_la_mordiente/expediente.html"><span class="tag">PHY-V-009</span><h3>La Mordiente</h3><p>Especie incluida en el catálogo. La referencia nominal no basta para determinar si muerde, secreta sustancias o utiliza otra estructura.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/10_la_c_ntara/expediente.html"><span class="tag">PHY-V-010</span><h3>La Cántara</h3><p>Nombre de catálogo confirmado. Forma de la estructura, posible retención de líquidos y función biológica no establecidas.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/11_el_rabo_de_espinas/expediente.html"><span class="tag">PHY-V-011</span><h3>El Rabo de Espinas</h3><p>Nombre presente en las referencias. La forma, movilidad y función de la estructura llamada “rabo” deben acordarse.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/12_la_flotante/expediente.html"><span class="tag">PHY-V-012</span><h3>La Flotante</h3><p>Especie nombrada en el catálogo. Su relación con agua o flotación es una hipótesis sugerida por el nombre, no una localización confirmada.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/13_la_imitadora/expediente.html"><span class="tag">PHY-V-013</span><h3>La Imitadora</h3><p>Nombre registrado en el proyecto. Qué imita —apariencia, olor, sonidos, señales o estructura— continúa sin especificar.…</p><span class="status">CANON: CANON PARCIAL</span></a><a class="card" href="01_Reino_vegetal/14_la_vigilante/expediente.html"><span class="tag">PHY-V-014</span><h3>La Vigilante</h3><p>Especie incluida en las referencias. La detección de estímulos y la respuesta ante ellos aún no están definidas.…</p><span class="status">CANON: PENDIENTE</span></a><a class="card" href="01_Reino_vegetal/15_la_luci_rnaga/expediente.html"><span class="tag">PHY-V-015</span><h3>La Luciérnaga</h3><p>Nombre presente en el catálogo. La posible emisión de luz es una interpretación del nombre y necesita confirmación expresa.…</p><span class="status">CANON: PENDIENTE</span></a></div></section><hr class="rule"><section class="section"><h2>02 // REINO ANIMAL — RAMAS DE INVESTIGACIÓN</h2><p class="muted">La fauna tiene una rama propia. Estas categorías organizan la investigación y no implican que todos sus integrantes estén infectados o alterados por PG-01.</p><div class="grid"><a class="card" href="02_Reino_animal/01_mam_feros/expediente.html"><span class="tag">PHY-A-001</span><h3>Mamíferos</h3><p>Clasificación de fauna para registrar especies, huellas, alimentación, refugios y posible contacto con PG-01. No hay especies concretas confirmadas en esta rama.</p><span class="status">RAMA DE INVESTIGACIÓN</span></a><a class="card" href="02_Reino_animal/02_aves/expediente.html"><span class="tag">PHY-A-002</span><h3>Aves</h3><p>Rama para aves terrestres y voladoras, nidos, plumas, rutas y posibles interacciones con semillas o esporas.</p><span class="status">RAMA DE INVESTIGACIÓN</span></a><a class="card" href="02_Reino_animal/03_reptiles/expediente.html"><span class="tag">PHY-A-003</span><h3>Reptiles</h3><p>Rama para reptiles y su relación potencial con microhábitats, refugios, muda y zonas de temperatura.</p><span class="status">RAMA DE INVESTIGACIÓN</span></a><a class="card" href="02_Reino_animal/04_anfibios/expediente.html"><span class="tag">PHY-A-004</span><h3>Anfibios</h3><p>Rama para fauna asociada a ambientes húmedos y sus posibles contactos con agua, suelo y vegetación.</p><span class="status">RAMA DE INVESTIGACIÓN</span></a><a class="card" href="02_Reino_animal/05_fauna_acu_tica/expediente.html"><span class="tag">PHY-A-005</span><h3>Fauna acuática</h3><p>Rama para organismos acuáticos y posibles interacciones con agua, sedimentos, plantas sumergidas y semillas.</p><span class="status">RAMA DE INVESTIGACIÓN</span></a><a class="card" href="02_Reino_animal/06_invertebrados/expediente.html"><span class="tag">PHY-A-006</span><h3>Invertebrados</h3><p>Rama para insectos, arácnidos y otros invertebrados, incluyendo observaciones de contacto con estructuras vegetales.</p><span class="status">RAMA DE INVESTIGACIÓN</span></a></div></section><section class="section card"><h2>03 // LEYENDA DEL CANON</h2><p><span class="tag">CANON</span> Dato establecido por el autor.</p><p><span class="tag">CANON PARCIAL</span> Existe un rasgo general, pero faltan reglas o detalles.</p><p><span class="tag">PENDIENTE</span> No definido; no tratar como hecho.</p><p class="warn">Regla de archivo: un nombre no demuestra una habilidad, un hábitat, una conducta ni una presencia geográfica.</p></section><footer>TLS // PHYTOGENESIS PG-01 · Catálogo independiente · Mantener juntos index.html, style.css y las carpetas 01 y 02.</footer></div></body></html>

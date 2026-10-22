@@ -17,4 +17,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><main><a href="../index.html">← Mutaciones</a><h1>Propiedades milagrosas</h1><p>Catálogos separados para las especies medicinales y las falsas medicinales. Se conserva el contenido de los registros existentes.</p><div class="grid"><a class="tile" href="archivo_completo/index.html"><h2>Medicinales</h2><p>Cinco expedientes completos con sus fichas y registros de investigación originales.</p>ABRIR CATÁLOGO ↗</a><a class="tile" href="archivo_completo/impostores/index.html"><h2>Falsas medicinales</h2><p>Cinco expedientes de falsas medicinales y sus registros originales.</p>ABRIR CATÁLOGO ↗</a></div></main></body></html>

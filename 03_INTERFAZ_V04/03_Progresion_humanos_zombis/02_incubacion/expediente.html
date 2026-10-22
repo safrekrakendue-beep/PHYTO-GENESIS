@@ -27,5 +27,60 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación global"><span class="tls-nav-brand">T.L.S. / ARCHIVO PG-01</span><a class="tls-home" href="../../panel_modulos.html">⌂ PORTADA PRINCIPAL</a><a href="../../02_Ciclo_infeccion/index.html">CICLO</a><a href="../index.html">PROGRESIÓN</a><a href="../../04_Clasificacion_biologica/index.html">CLASIFICACIÓN</a><a href="../../07_Anomalias_excepcionales/index.html">ANOMALÍAS</a><a href="../../08_Matriz_Maestra_y_Registros/index.html">MATRIZ</a><a href="../../galeria_imagenes.html">GALERÍA VISUAL</a><a href="../../04_Clasificacion_biologica/01_plantas/index.html">CATÁLOGO</a><a href="../../index.html">V0.4</a></nav><header><div class="eyebrow">THE LAST SURVIVORS · PG-01 · DOSSIER 03</div><h1>ETAPA 02 — Incubación o actividad no evidente</h1><p>Expediente PG-HZ-02</p><span class="status">REGISTRO INCOMPLETO · NOMBRE PROVISIONAL</span></header><main><nav><a href="../index.html">← Índice principal</a><a href="../01_exposicion/expediente.html">← Etapa anterior</a><a href="../03_primeras_senales/expediente.html">Etapa siguiente →</a></nav><section class="panel"><h2>Descripción general</h2><p>Intervalo hipotético en el que el huésped puede no mostrar cambios externos concluyentes. No hay duración universal confirmada. La ausencia de signos visibles no permite declarar ausencia de actividad.</p></section><h2>Marco confirmado</h2><section class="panel"><ul><li>PG-01 es un sistema biológico vegetal adaptativo, no un virus convencional.</li><li>La progresión general de huéspedes humanos y zombis se organiza en ocho etapas.</li><li>La transformación puede incluir raíces, estructuras vegetales y pérdida gradual de humanidad.</li></ul></section><h2>Protocolo de observación</h2><section class="panel"><p>Comparar observaciones en el tiempo y distinguir síntomas verificables de sospechas. No diagnosticar por una sola señal inespecífica.</p></section><h2>Ficha de campo</h2><section class="panel"><ul><li><strong>ID del caso:</strong> pendiente.</li><li><strong>Huésped:</strong> humano / zombi / no determinado.</li><li><strong>Fecha y hora:</strong> pendiente.</li><li><strong>Entorno:</strong> pendiente.</li><li><strong>Señales observadas:</strong> registrar únicamente lo comprobado.</li><li><strong>Fuente:</strong> observación / testimonio / imagen / muestra.</li><li><strong>Evolución:</strong> comparar con registros previos.</li></ul></section><h2>Incógnitas abiertas</h2><section class="panel warning"><p>PENDIENTE: duración, variabilidad individual, indicadores tempranos fiables y relación con condiciones ambientales.</p><p>También quedan sin fijar la duración, la reversibilidad y la universalidad de esta etapa.</p></section><h2>Archivos relacionados</h2><div class="grid"><div class="panel"><h3>expediente.md</h3><p>Versión editable del documento completo.</p></div><div class="panel"><h3>evidencias/</h3><p>Depositar futuras evidencias ficticias, imágenes o descripciones de muestras.</p></div><div class="panel"><h3>registros/</h3><p>Bitácora cronológica de observaciones y cambios.</p></div></div><nav><a href="../index.html">Volver al índice</a></nav><div class="footer">No añadir datos hipotéticos al REGISTRO sin aprobación. Los detalles clínicos específicos siguen pendientes.</div></main></body></html>

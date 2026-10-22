@@ -54,7 +54,62 @@
 .environment-cell p{font-size:12px;line-height:1.45;color:#c1c8b8;margin:0}
 @media(max-width:600px){.environment-grid{grid-template-columns:1fr}}
  .sector-links{display:flex;flex-wrap:wrap;gap:8px;padding:10px clamp(16px,4vw,48px)}.sector-links a{color:#b5d77b;border:1px solid #34422e;padding:7px 10px;text-decoration:none;font:12px ui-monospace,monospace}.sector-links a:hover{background:#283522}
-</style></head>
+</style>
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
+</head>
 <body>
 <header class="top"><div><div class="brand">T.L.S. // ARCHIVO DE CAMPO</div><div class="tag">THE LAST SURVIVORS · BIOLOGICAL HAZARD DIVISION</div></div><div class="tag">DOSSIER PG-01 / MAPA DE RECONOCIMIENTO</div></header>
 <div style="padding:10px clamp(16px,4vw,48px);background:#0b100b;border-bottom:1px solid #34422e;font:12px ui-monospace,monospace"><a href="../03_INTERFAZ_V04/index.html" style="color:#b5d77b;text-decoration:none;border:1px solid #34422e;padding:8px 11px;display:inline-block">← VOLVER A INTERFAZ PRINCIPAL</a> <a href="ubicaciones.html" style="color:#b5d77b;text-decoration:none;border:1px solid #34422e;padding:8px 11px;display:inline-block;margin-left:6px">PUNTOS INTERNOS ↗</a> <span style="color:#9aa28e;margin-left:10px">PUNTO 0 // MÓDULO INTEGRADO</span></div>

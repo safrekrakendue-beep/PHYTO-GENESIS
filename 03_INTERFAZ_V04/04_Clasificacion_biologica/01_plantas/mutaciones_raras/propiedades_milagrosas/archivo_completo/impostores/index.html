@@ -28,4 +28,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><header><main><span class="tag">T.L.S. / PHYTOGENESIS PG-01</span><h1>ARCHIVO DE FALSAS MEDICINALES</h1><p class="muted">Imitadores peligrosos · Registro de advertencias</p><nav><a href="../index.html">Índice medicinal</a><a href="../registro_medicinal.html">Registro de muestra</a><a href="../control_fuentes.html">Control de fuentes</a><a href="../impostores/index.html">Archivo de impostores</a></nav></main></header><main><section class="panel"><h2>Las falsas medicinales</h2><p>Las imitadoras reproducen casi por completo la apariencia de su equivalente medicinal. Cada pareja presenta una sola diferencia visual registrada; no se deben asumir otras.</p><div class="grid"><section class="panel"><h3>La Sanadora / Imitadora</h3><p>La falsa Sanadora empeora la herida: puede infectarla, pudrirla o provocar una hemorragia.</p><p><b>Diferencia única:</b> Sus hojas son redondeadas en lugar de puntiagudas.</p><p><a href="impostor_01.html">Abrir expediente de riesgo →</a></p><p><a href="../expedientes/sanadora.html">Consultar medicinal auténtica</a></p></section><section class="panel"><h3>El Calmante / Imitadora</h3><p>La falsa Calmante agrava el dolor hasta que el cerebro deja de registrarlo, creando la impresión de adormecimiento. Además, genera adicción.</p><p><b>Diferencia única:</b> Su savia presenta una tonalidad más oscura.</p><p><a href="impostor_02.html">Abrir expediente de riesgo →</a></p><p><a href="../expedientes/calmante.html">Consultar medicinal auténtica</a></p></section><section class="panel"><h3>El Antídoto / Imitadora</h3><p>La falsa Antídoto acelera el envenenamiento y no sirve para desarrollar la cura de PhytoGenesis.</p><p><b>Diferencia única:</b> Sus raíces son más gruesas que las del ejemplar auténtico.</p><p><a href="impostor_03.html">Abrir expediente de riesgo →</a></p><p><a href="../expedientes/antidoto.html">Consultar medicinal auténtica</a></p></section><section class="panel"><h3>El Purificador / Imitadora</h3><p>La falsa Purificador contamina el terreno y favorece principalmente a las plantas infectadas.</p><p><b>Diferencia única:</b> Su tallo crece con una torsión lateral característica.</p><p><a href="impostor_04.html">Abrir expediente de riesgo →</a></p><p><a href="../expedientes/purificador.html">Consultar medicinal auténtica</a></p></section><section class="panel"><h3>El Renovador / Imitadora</h3><p>La falsa Renovador ralentiza la regeneración celular y consume el cuerpo del huésped, provocando desnutrición y otros trastornos relacionados con la alimentación.</p><p><b>Diferencia única:</b> Sus hojas tienen un borde dentado, a diferencia del borde liso del ejemplar auténtico.</p><p><a href="impostor_05.html">Abrir expediente de riesgo →</a></p><p><a href="../expedientes/renovador.html">Consultar medicinal auténtica</a></p></section></div></section><p><small>Archivo de investigación ficticio · Bloque independiente; la web principal v0.4 permanece intacta.</small></p></main></body></html>

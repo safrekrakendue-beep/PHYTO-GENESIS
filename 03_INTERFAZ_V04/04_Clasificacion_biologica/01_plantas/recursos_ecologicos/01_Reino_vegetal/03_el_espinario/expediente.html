@@ -23,6 +23,61 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación T.L.S."><a href="../../../../../panel_modulos.html">⌂ PORTADA PHYTOGENESIS</a><a href="../../index.html">CATÁLOGO DE ESPECIES</a><a href="../../../index.html">INTERFAZ V0.4</a></nav><div class="wrap"><header class="top"><div class="eyebrow">T.L.S. // PHYTOGENESIS PG-01 // ARCHIVO ECOLÓGICO</div><h1>El Espinario</h1><p class="muted">Rama vegetal · catálogo de especies</p><span class="tag">EXPEDIENTE DE CAMPO</span><span class="tag">REGISTRO EDITABLE</span><span class="tag">CANON + PROPUESTAS SEPARADOS</span></header><nav class="nav"><a href="../../index.html">← Volver al índice</a><a href="../../index.html">Índice del catálogo</a></nav><div class="meta"><div><span class="label">CÓDIGO</span><strong>PHY-V-003</strong></div><div><span class="label">CLASIFICACIÓN</span><strong>ESPECIE VEGETAL</strong></div><div><span class="label">ESTADO DE CANON</span><strong class="status">PENDIENTE</strong></div><div><span class="label">PRESENCIA EN PUNTO 0</span><strong class="warn">NO CONFIRMADA</strong></div></div><section class="section"><h2>01 // Identificación y resumen</h2><p>Arbusto infectado cuya característica distintiva es la presencia de espinas. La propuesta funcional es que las espinas reduzcan el ramoneo y protejan brotes y estructuras reproductivas; algunas pueden actuar como defensa pasiva y otras desprenderse al contacto.</p></section><section class="section"><h2>02 // Morfología y señales</h2><p>Múltiples tallos bajos, ramas densas y espinas de tamaños distintos. Algunas pueden ser rígidas y otras quebradizas. En zonas infectadas podrían retener restos orgánicos o filamentos, aumentando el riesgo de heridas contaminadas.</p></section><section class="section"><h2>03 // Hábitat y distribución</h2><p>Bordes de senderos, claros, vallados naturales y zonas de transición entre matorral y bosque. Puede formar parches densos, pero no debe suponerse que todos los parches son colonias conectadas.</p></section><section class="section"><h2>04 // Conducta e interacción ecológica</h2><p>Defensa principalmente pasiva. El contacto puede causar cortes y facilitar entrada de PG-01 por heridas; no se establece que el arbusto lance espinas activamente. La fauna pequeña puede usarlo como refugio y dispersar fragmentos.</p></section><section class="section"><h2>05 // Ciclo biológico y propagación</h2><p>Se propaga mediante semillas y, potencialmente, brotes desde la base. Los ejemplares dañados pueden rebrotar si la raíz sigue viva. Las espinas y ramas secas pueden persistir después de la muerte del tejido principal.</p></section><section class="section"><h2>06 // Riesgo y respuesta de campo</h2><p>Riesgo medio por heridas, ropa enganchada y contaminación de cortes. No atravesar un parche sin protección. El fuego puede quemar la parte aérea, pero la raíz puede sobrevivir en suelo húmedo y regenerar el arbusto.</p></section><section class="section"><h2>07 // Relación con PG-01</h2><p>PG-01 es un sistema biológico adaptativo, no un virus convencional aislado. Puede propagarse mediante esporas, semillas, filamentos, heridas, agua, suelo y organismos. La exposición no produce el mismo resultado en todos los huéspedes; humedad, nutrientes, estado del organismo y carga de material alteran la evolución.</p></section><section class="section"><h2>08 // Registro de campo</h2><ul><li>Localización: pendiente de ejemplar verificado.</li><li>Fecha y equipo responsable: pendiente.</li><li>Muestra asociada: ninguna confirmada en este expediente.</li><li>Registrar por separado observaciones e hipótesis.</li></ul></section><section class="section"><h2>09 // Estado del conocimiento</h2><p><strong>Conservado del proyecto:</strong> nombre, categoría general y rasgos descritos en las referencias visuales asociadas.</p><p><strong>Ampliación propuesta:</strong> detalles funcionales, interacción ecológica y medidas de campo. Se pueden modificar si una lámina original o una decisión posterior del autor establece otra cosa.</p></section><section class="section"><h2>10 // Referencias visuales originales</h2><p>Las láminas originales se conservan como referencia primaria. Los detalles que no se lean con claridad quedan sujetos a revisión.</p><div class="grid"><a href="../../../../../assets/imagenes/referencias_catalogo/532876.png" target="_blank"><img alt="Referencia visual 532876.png" loading="lazy" src="../../../../../assets/imagenes/referencias_catalogo/532876.png" style="width:100%;height:auto;border:1px solid var(--line);border-radius:8px"/></a><a href="../../../../../assets/imagenes/referencias_catalogo/532873.png" target="_blank"><img alt="Referencia visual 532873.png" loading="lazy" src="../../../../../assets/imagenes/referencias_catalogo/532873.png" style="width:100%;height:auto;border:1px solid var(--line);border-radius:8px"/></a><a href="../../../../../assets/imagenes/referencias_catalogo/532870.png" target="_blank"><img alt="Referencia visual 532870.png" loading="lazy" src="../../../../../assets/imagenes/referencias_catalogo/532870.png" style="width:100%;height:auto;border:1px solid var(--line);border-radius:8px"/></a></div></section><section class="section"><h2>11 // Matriz operativa ampliada</h2><p><strong>Estado:</strong> guía de observación propuesta; no añade habilidades al canon por sí sola.</p><div class="meta"><div><span class="label">TIPO OPERATIVO</span><strong>Arbusto / defensa espinosa</strong></div><div><span class="label">SEÑALES A DOCUMENTAR</span><strong>espinas nuevas, ramas quebradas, restos adheridos a espinas</strong></div></div><p><strong>Protocolo de observación:</strong> observar desde distancia y registrar densidad y orientación de espinas</p><p><strong>Preguntas abiertas:</strong> si las espinas inoculan material, si se desprenden y su alcance</p><p><strong>Registro mínimo recomendado:</strong> código del expediente, fecha y hora, localización, distancia de observación, condiciones ambientales, rasgos observados, conducta repetible, muestra autorizada y nivel de confianza.</p><p class="warn"><strong>Uso narrativo opcional:</strong> pauta para escenas de exploración y descubrimiento. Todo efecto nuevo debe acordarse antes de considerarse canon.</p></section><footer>TLS / ARCHIVO BIOLÓGICO · Los campos pendientes no constituyen canon.</footer></div><p class="tls-return-branch"><a href="../../../index.html">← Volver a Clasificación biológica · Rama Vegetal</a></p>
 </body></html>

@@ -40,6 +40,61 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación global"><span class="tls-nav-brand">T.L.S. / ARCHIVO PG-01</span><a class="tls-home" href="../panel_modulos.html">⌂ PORTADA PRINCIPAL</a><a href="../02_Ciclo_infeccion/index.html">CICLO</a><a href="../03_Progresion_humanos_zombis/index.html">PROGRESIÓN</a><a href="../04_Clasificacion_biologica/index.html">CLASIFICACIÓN</a><a href="../07_Anomalias_excepcionales/index.html">ANOMALÍAS</a><a href="index.html">MATRIZ</a><a href="../galeria_imagenes.html">GALERÍA VISUAL</a><a href="../04_Clasificacion_biologica/01_plantas/index.html">CATÁLOGO</a><a href="../index.html">V0.4</a></nav><header><main><span class="tag">T.L.S. / ARCHIVO PG-01 · SISTEMA ACTIVO</span><h1>Control de evidencia</h1><p class="muted">Separar REGISTRO, referencia visual e hipótesis</p><nav><a href="index.html">Índice</a><a href="matriz_maestra.html">Matriz maestra</a><a href="registro_campo.html">Registro de campo</a><a href="control_evidencia.html">Control de evidencia</a></nav></main></header><main>
 <section class="panel"><h2>Control de evidencia</h2><p>Antes de convertir una casilla en REGISTRO, indica de dónde procede.</p>

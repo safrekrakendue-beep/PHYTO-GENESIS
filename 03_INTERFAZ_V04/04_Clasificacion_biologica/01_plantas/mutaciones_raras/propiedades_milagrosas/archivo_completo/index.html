@@ -28,4 +28,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><header><main><span class="tag">T.L.S. / PHYTOGENESIS PG-01</span><h1>ARCHIVO MEDICINAL</h1><p class="muted">Biblioteca de especies medicinales del ecosistema PG-01</p><nav><a href="index.html">Índice medicinal</a><a href="registro_medicinal.html">Registro de muestra</a><a href="control_fuentes.html">Control de fuentes</a><a href="impostores/index.html">Archivo de impostores</a></nav></main></header><main><section class="panel"><h2>Biblioteca medicinal</h2><p>Registro de las cinco especies medicinales del ecosistema PG-01 y de sus imitadoras peligrosas.</p><div class="grid"><section class="panel"><span class="tag">EXPEDIENTE 01</span><h3>La Sanadora</h3><p>Favorece el cierre de heridas cuando su savia se procesa como ungüento. Acelera la regeneración del organismo, pero el proceso consume vitaminas, proteínas y energía de la persona herida.</p><p><a href="expedientes/sanadora.html">Abrir expediente completo →</a></p><p><a href="impostores/impostor_01.html">☠ Cuidado con su impostor</a></p></section><section class="panel"><span class="tag">EXPEDIENTE 02</span><h3>El Calmante</h3><p>Actúa como analgésico general y puede producir un efecto semejante al de una anestesia: sueño, pérdida de sensibilidad y disminución de los reflejos.</p><p><a href="expedientes/calmante.html">Abrir expediente completo →</a></p><p><a href="impostores/impostor_02.html">☠ Cuidado con su impostor</a></p></section><section class="panel"><span class="tag">EXPEDIENTE 03</span><h3>El Antídoto</h3><p>Actúa contra venenos generales y diluye progresivamente las sustancias venenosas dentro del organismo, consumiéndolas en el proceso. También es un ingrediente probado en el desarrollo de la cura —o de lo más cercano a ella— para PhytoGenesis.</p><p><a href="expedientes/antidoto.html">Abrir expediente completo →</a></p><p><a href="impostores/impostor_03.html">☠ Cuidado con su impostor</a></p></section><section class="panel"><span class="tag">EXPEDIENTE 04</span><h3>El Purificador</h3><p>Puede utilizarse como una máscara de gas natural y ayuda a que el terreno vuelva a ser más fértil para plantas no infectadas. Absorbe y filtra lo que encuentra, reteniendo o procesando los elementos y devolviendo a la tierra aquello que resulta beneficioso.</p><p><a href="expedientes/purificador.html">Abrir expediente completo →</a></p><p><a href="impostores/impostor_04.html">☠ Cuidado con su impostor</a></p></section><section class="panel"><span class="tag">EXPEDIENTE 05</span><h3>El Renovador</h3><p>Favorece la renovación celular y resulta útil frente a la fatiga física y la desnutrición. Aporta parte de los recursos que el organismo necesita durante la recuperación.</p><p><a href="expedientes/renovador.html">Abrir expediente completo →</a></p><p><a href="impostores/impostor_05.html">☠ Cuidado con su impostor</a></p></section></div></section><section class="panel"><h2>Protocolos</h2><p><a href="registro_medicinal.html">Registro de muestra</a> · <a href="control_fuentes.html">Control de fuentes</a> · <a href="impostores/index.html">Archivo de falsas medicinales</a></p><p class="muted">Las propiedades descritas son ficticias y pertenecen al universo de PhytoGenesis.</p></section><p><small>Archivo de investigación ficticio · Bloque independiente; la web principal v0.4 permanece intacta.</small></p></main></body></html>

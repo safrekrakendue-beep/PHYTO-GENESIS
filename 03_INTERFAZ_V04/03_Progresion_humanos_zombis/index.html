@@ -33,5 +33,60 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación global"><span class="tls-nav-brand">T.L.S. / ARCHIVO PG-01</span><a class="tls-home" href="../panel_modulos.html">⌂ PORTADA PRINCIPAL</a><a href="../02_Ciclo_infeccion/index.html">CICLO</a><a href="index.html">PROGRESIÓN</a><a href="../04_Clasificacion_biologica/index.html">CLASIFICACIÓN</a><a href="../07_Anomalias_excepcionales/index.html">ANOMALÍAS</a><a href="../08_Matriz_Maestra_y_Registros/index.html">MATRIZ</a><a href="../galeria_imagenes.html">GALERÍA VISUAL</a><a href="../04_Clasificacion_biologica/01_plantas/index.html">CATÁLOGO</a><a href="../index.html">V0.4</a></nav><header><div class="eyebrow">THE LAST SURVIVORS · ARCHIVO BIOLÓGICO</div><h1>PHYTOGENESIS PG-01</h1><p>03 / Progresión en huéspedes humanos y zombis</p><span class="status">ARCHIVO DE PROGRESIÓN · PG-HZ</span></header><main><div class="panel"><h2>Objeto del dossier</h2><p>El ciclo se organiza en ocho etapas comunes, desde la exposición hasta la forma reproductiva. La expresión difiere entre huéspedes humanos vivos y cuerpos zombificados, por lo que ambos expedientes se consultan por separado.</p><p class="warning"><strong>Regla de archivo:</strong> el REGISTRO establece una progresión gradual de contagio a forma reproductiva, con raíces, estructuras vegetales y pérdida de humanidad. Los tiempos, síntomas exclusivos y orden detallado de cambios siguen pendientes.</p></div><p><a class="panel" style="display:inline-block;text-decoration:none" href="../04_Clasificacion_biologica/03_humanos_zombis/index.html">↗ ABRIR INTERFAZ INTERACTIVA: HUMANO / ZOMBI</a></p><h2>Índice de las ocho etapas</h2><div class="grid"><a class="panel" style="display:block;text-decoration:none" href="01_exposicion/expediente.html"><span class="eyebrow">ETAPA 01</span><h2 style="margin:.4em 0">Exposición y entrada</h2><p class="muted">La exposición describe el contacto inicial con material asociado a PG-01. Las vías reconocidas en el REGISTRO incluyen esporas, semillas, heridas o contacto con fi…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="02_incubacion/expediente.html"><span class="eyebrow">ETAPA 02</span><h2 style="margin:.4em 0">Incubación o actividad no evidente</h2><p class="muted">Intervalo hipotético en el que el huésped puede no mostrar cambios externos concluyentes. No hay duración universal confirmada. La ausencia de signos visibles n…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="03_primeras_senales/expediente.html"><span class="eyebrow">ETAPA 03</span><h2 style="margin:.4em 0">Primeras señales</h2><p class="muted">Posible aparición de señales iniciales, todavía insuficientes para definir una transformación completa. En este archivo se registran como categorías de observac…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="04_germinacion/expediente.html"><span class="eyebrow">ETAPA 04</span><h2 style="margin:.4em 0">Germinación interna o superficial</h2><p class="muted">Fase de trabajo para documentar el comienzo del crecimiento vegetal asociado al huésped. El desarrollo de filamentos o estructuras no debe darse por hecho en to…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="05_expansion/expediente.html"><span class="eyebrow">ETAPA 05</span><h2 style="margin:.4em 0">Expansión de filamentos y raíces</h2><p class="muted">La progresión puede implicar filamentos, raíces u otras estructuras vegetales que se extienden por tejidos, heridas o superficies. El alcance y el mecanismo exa…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="06_transformacion/expediente.html"><span class="eyebrow">ETAPA 06</span><h2 style="margin:.4em 0">Transformación avanzada</h2><p class="muted">La integración vegetal se vuelve más evidente y puede acompañarse de cambios físicos importantes. El REGISTRO general establece una pérdida gradual de humanidad, p…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="07_perdida_funciones/expediente.html"><span class="eyebrow">ETAPA 07</span><h2 style="margin:.4em 0">Pérdida progresiva de funciones humanas</h2><p class="muted">Etapa de archivo para estudiar el deterioro o sustitución de funciones humanas durante la progresión. No implica que todos los huéspedes pierdan las mismas capa…</p><span class="pill">Abrir expediente →</span></a><a class="panel" style="display:block;text-decoration:none" href="08_forma_reproductiva/expediente.html"><span class="eyebrow">ETAPA 08</span><h2 style="margin:.4em 0">Forma reproductiva</h2><p class="muted">El extremo de la progresión descrita puede presentar estructuras reproductivas o contribuir a la dispersión del sistema. La forma concreta y su frecuencia todav…</p><span class="pill">Abrir expediente →</span></a></div><h2>Clave de certeza</h2><div class="grid"><div class="panel"><span class="status">REGISTRO</span><p>Dato establecido expresamente en el lore.</p></div><div class="panel"><span class="status">REGISTRO INCOMPLETO</span><p>La fase general existe, pero faltan detalles específicos.</p></div><div class="panel"><span class="status">PENDIENTE</span><p>Pregunta abierta; no debe tratarse como hecho.</p></div></div><p><a href="../02_Ciclo_infeccion/index.html">← Volver al dossier del ciclo biológico</a></p><div class="footer">Archivo ficticio de T.L.S. · Mantener toda la carpeta extraída para conservar los enlaces relativos.</div></main></body></html>

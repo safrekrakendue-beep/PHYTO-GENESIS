@@ -17,4 +17,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><main><a href="../index.html">← Rama vegetal</a><p class="eyebrow">T.L.S. // PG-01 // CLASIFICACIÓN VEGETAL</p><h1>Flora normal y frutales</h1><p>Catálogo de especies vegetales registradas. Selecciona una ficha para consultar su expediente original, evidencias y bitácora.</p><div class="grid"><a class="tile" href="../especies/01_el_cazador/expediente.html"><span class="code">FL-01</span><h2>El Cazador</h2><p>Árbol territorial de raíces espinosas.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/02_el_frutal/expediente.html"><span class="code">FL-02</span><h2>El Frutal</h2><p>Árbol frutal.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/03_el_espinario/expediente.html"><span class="code">FL-03</span><h2>El Espinario</h2><p>Arbusto de espinas con estructura rígida.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/04_el_berrero/expediente.html"><span class="code">FL-04</span><h2>El Berrero</h2><p>Especie productora de bayas.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/05_la_bella/expediente.html"><span class="code">FL-05</span><h2>La Bella</h2><p>Especie floral registrada.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/06_la_espinada/expediente.html"><span class="code">FL-06</span><h2>La Espinada</h2><p>Planta espinosa.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/07_la_tejedora/expediente.html"><span class="code">FL-07</span><h2>La Tejedora</h2><p>Especie de crecimiento entrelazado.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/08_la_estranguladora/expediente.html"><span class="code">FL-08</span><h2>La Estranguladora</h2><p>Especie trepadora.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/09_la_mordiente/expediente.html"><span class="code">FL-09</span><h2>La Mordiente</h2><p>Especie de comportamiento depredador.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/10_la_c_ntara/expediente.html"><span class="code">FL-10</span><h2>La Cántara</h2><p>Especie vegetal registrada.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/11_el_rabo_de_espinas/expediente.html"><span class="code">FL-11</span><h2>Rabo de Espinas</h2><p>Especie con estructuras espinosas.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/12_la_flotante/expediente.html"><span class="code">FL-12</span><h2>La Flotante</h2><p>Especie adaptada a superficies acuáticas.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/13_la_imitadora/expediente.html"><span class="code">FL-13</span><h2>La Imitadora</h2><p>Especie con rasgos miméticos.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/14_la_vigilante/expediente.html"><span class="code">FL-14</span><h2>La Vigilante</h2><p>Especie con respuesta de vigilancia.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a><a class="tile" href="../especies/15_la_luci_rnaga/expediente.html"><span class="code">FL-15</span><h2>La Luciérnaga</h2><p>Especie bioluminiscente.</p><p style="margin-top:12px;color:var(--green);font:11px ui-monospace,monospace">ABRIR EXPEDIENTE ↗</p></a></div><p class="foot">Los expedientes completos permanecen en sus ubicaciones oficiales. Este índice facilita el acceso sin duplicar fichas ni imágenes.</p></main></body></html>

@@ -28,4 +28,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><header><main><span class="tag">T.L.S. / PHYTOGENESIS PG-01</span><h1>Imitadora de El Purificador</h1><p class="muted">Expediente de riesgo · El Purificador</p><nav><a href="../index.html">Índice medicinal</a><a href="../registro_medicinal.html">Registro de muestra</a><a href="../control_fuentes.html">Control de fuentes</a><a href="../impostores/index.html">Archivo de impostores</a></nav></main></header><main><section class="panel"><span class="tag" style="color:var(--red);border-color:var(--red)">ADVERTENCIA · IMITADOR PELIGROSO</span><h2>Imitadora de El Purificador</h2><p>La falsa Purificador contamina el terreno y favorece principalmente a las plantas infectadas.</p><h3>Única diferencia visual registrada</h3><p>Su tallo crece con una torsión lateral característica.</p><h3>Regla de identificación</h3><p>En los demás rasgos visibles descritos hasta ahora, el impostor es prácticamente idéntico al ejemplar medicinal correspondiente. No se le asignan otras diferencias visuales. La identificación requiere comprobar este único rasgo.</p><h3>Riesgo operativo</h3><p>No tratar el ejemplar como medicinal auténtico cuando presente la diferencia descrita. Registrar ubicación, imagen y consecuencias observadas en el informe de campo.</p><p><a href="../expedientes/purificador.html">Volver al expediente de El Purificador</a></p></section><p><small>Archivo de investigación ficticio · Bloque independiente; la web principal v0.4 permanece intacta.</small></p></main></body></html>

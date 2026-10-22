@@ -24,5 +24,60 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación global"><span class="tls-nav-brand">T.L.S. / ARCHIVO PG-01</span><a class="tls-home" href="../../panel_modulos.html">⌂ PORTADA PRINCIPAL</a><a href="../../02_Ciclo_infeccion/index.html">CICLO</a><a href="../../03_Progresion_humanos_zombis/index.html">PROGRESIÓN</a><a href="../index.html">CLASIFICACIÓN</a><a href="../../07_Anomalias_excepcionales/index.html">ANOMALÍAS</a><a href="../../08_Matriz_Maestra_y_Registros/index.html">MATRIZ</a><a href="../../galeria_imagenes.html">GALERÍA VISUAL</a><a href="../01_plantas/index.html">CATÁLOGO</a><a href="../../index.html">V0.4</a></nav><header><div class="eyebrow">THE LAST SURVIVORS · PG-01 / EXPEDIENTE 03</div><h1>Humanos</h1><p>04 / Clasificación biológica</p><span class="status">EXPEDIENTE ACTIVO</span></header><main><div class="panel"><p>La infección vegetal coloniza progresivamente al huésped humano. Las primeras alteraciones pueden aparecer bajo y sobre la piel, con brotes, raíces o tallos; el crecimiento se extiende por los tejidos y modifica la anatomía hasta que el cuerpo deja de funcionar como organismo independiente.</p><p class="warning"><strong>Estado del archivo:</strong> separar observación, interpretación y pregunta abierta. Las ideas propuestas no son REGISTRO hasta su aprobación.</p></div><section class="panel"><h2>Base conocida</h2><p>El ciclo de referencia comprende exposición, incubación, primeras señales, germinación, expansión, transformación, pérdida progresiva de funciones y forma reproductiva. En la fase avanzada, la vegetación puede emerger desde el cuerpo y utilizar la cabeza como punto principal de crecimiento; el huésped acaba convertido en la base de un árbol que libera semillas. El tiempo y la manifestación concreta pueden variar entre casos.</p></section><section class="panel"><h2>Qué documentar</h2><p>Nivel de consciencia, movilidad, comunicación, respuesta a estímulos, lesiones visibles, aparición de filamentos o raíces y evolución temporal, siempre como observación narrativa.</p></section><section class="panel"><h2>No asumir</h2><p>No todos los huéspedes tienen que mostrar el mismo orden, ritmo o aspecto. La ausencia de una señal no demuestra ausencia de infección.</p></section><section class="panel"><h2>Protección de REGISTRO</h2><p>Las ocho etapas se consultan en el índice de progresión, donde cada una conserva su expediente independiente.</p></section><section class="panel"><h2>Variaciones observadas</h2><p>Tiempo de incubación, umbrales de progresión, diferencias entre infección por esporas y por heridas, posibilidad de estabilización y factores que alteran el curso.</p></section><div class="panel"><h2>Registro de campo</h2><p>Anotar fecha narrativa, ubicación, observador, condiciones ambientales, descripción literal, evidencia adjunta, interpretación provisional y preguntas pendientes. No rellenar campos sin datos.</p><p><a class="pill" href="registros/bitacora.md">Abrir bitácora Markdown</a> <a class="pill" href="evidencias/LEEME.txt">Ver carpeta de evidencias</a></p></div><p><a href="../index.html">← Índice principal</a>　<a href="../04_zombis/expediente.html">Siguiente expediente →</a></p><div class="footer">Expediente 03 · TLS / PHYTOGENESIS PG-01 · Documento ficticio de worldbuilding.</div><section class="panel"><h2>Relación con la progresión</h2><p>Este expediente clasifica al huésped humano. Para consultar las etapas de progresión detalladas, abre el módulo independiente de progresión humana y zombis.</p><p><a href="../../03_Progresion_humanos_zombis/index.html">ABRIR PROGRESIÓN HUMANA Y ZOMBIS ↗</a></p></section></main></body></html>

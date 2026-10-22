@@ -28,4 +28,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><header><main><span class="tag">T.L.S. / PHYTOGENESIS PG-01</span><h1>CONTROL DE FUENTES</h1><p class="muted">Trazabilidad de los datos medicinales</p><nav><a href="index.html">Índice medicinal</a><a href="registro_medicinal.html">Registro de muestra</a><a href="control_fuentes.html">Control de fuentes</a></nav></main></header><main><section class="panel"><h2>Control de fuentes</h2><label>Afirmación o rasgo</label><textarea placeholder="Escribe el dato que quieres comprobar."></textarea><label>Origen</label><select><option>Confirmado por el creador</option><option>Archivo anterior de PhytoGenesis</option><option>Imagen original</option><option>Observación de campo ficticia</option><option>Propuesta nueva</option></select><label>Referencia exacta</label><input placeholder="Nombre de imagen, página o archivo"><label>Estado</label><select><option>Confirmado</option><option>Visible en imagen</option><option>Hipótesis</option><option>Pendiente de aprobación</option><option>Contradictorio / revisar</option></select><label>Notas</label><textarea placeholder="Qué demuestra la fuente y qué no demuestra."></textarea></section><section class="panel"><h2>Precaución editorial</h2><p>Las propiedades de estas especies son ficticias. No deben interpretarse como remedios reales ni convertirse en instrucciones médicas.</p></section><p><small>Bloque independiente · La web principal v0.4 permanece intacta.</small></p></main></body></html>

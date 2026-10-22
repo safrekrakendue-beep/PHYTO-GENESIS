@@ -24,5 +24,60 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación global"><span class="tls-nav-brand">T.L.S. / ARCHIVO PG-01</span><a class="tls-home" href="../../panel_modulos.html">⌂ PORTADA PRINCIPAL</a><a href="../../02_Ciclo_infeccion/index.html">CICLO</a><a href="../../03_Progresion_humanos_zombis/index.html">PROGRESIÓN</a><a href="../index.html">CLASIFICACIÓN</a><a href="../../07_Anomalias_excepcionales/index.html">ANOMALÍAS</a><a href="../../08_Matriz_Maestra_y_Registros/index.html">MATRIZ</a><a href="../../galeria_imagenes.html">GALERÍA VISUAL</a><a href="../01_plantas/index.html">CATÁLOGO</a><a href="../../index.html">V0.4</a></nav><header><div class="eyebrow">THE LAST SURVIVORS · PG-01 / EXPEDIENTE 02</div><h1>Animales y huéspedes no humanos</h1><p>04 / Clasificación biológica</p><span class="status">REGISTRO INCOMPLETO</span></header><main><div class="panel"><p>Los animales pueden entrar en contacto con el sistema y actuar como huéspedes, vectores accidentales o parte del ecosistema. El resultado no se presupone uniforme.</p><p class="warning"><strong>Estado del archivo:</strong> separar observación, interpretación y pregunta abierta. Las ideas propuestas no son REGISTRO hasta su aprobación.</p></div><section class="panel"><section class="panel"><h2>ÁRBOL DE CLASIFICACIÓN ANIMAL</h2><p>Esta rama organiza la fauna que podría estudiarse en relación con PG-01. No afirma que todos estos grupos estén infectados ni que exista una transformación confirmada en cada uno.</p><div class="grid"><div class="panel"><span class="eyebrow">RAMA A</span><h3>Mamíferos</h3><p>Fauna terrestre, doméstica y salvaje. Registrar tamaño, pelaje, comportamiento, heridas y posible material vegetal adherido.</p><span class="tag">PENDIENTE</span></div><div class="panel"><span class="eyebrow">RAMA B</span><h3>Aves</h3><p>Especies voladoras y terrestres. Investigar contacto con esporas, semillas, nidos y transporte entre zonas sin asumir que sean vectores confirmados.</p><span class="tag">PENDIENTE</span></div><div class="panel"><span class="eyebrow">RAMA C</span><h3>Reptiles</h3><p>Observar escamas, muda, temperatura ambiental, refugios y contacto con suelo o vegetación.</p><span class="tag">PENDIENTE</span></div><div class="panel"><span class="eyebrow">RAMA D</span><h3>Anfibios</h3><p>Grupo útil para estudiar ambientes húmedos; cualquier relación con PG-01 debe documentarse caso por caso.</p><span class="tag">PENDIENTE</span></div><div class="panel"><span class="eyebrow">RAMA E</span><h3>Fauna acuática</h3><p>Organismos de agua dulce o salobre. La transmisión por agua no demuestra por sí sola que un animal acuático sea huésped.</p><span class="tag">PENDIENTE</span></div><div class="panel"><span class="eyebrow">RAMA F</span><h3>Invertebrados</h3><p>Insectos, arácnidos y otros invertebrados. Registrar si transportan material externo, interactúan con estructuras vegetales o presentan cambios observables.</p><span class="tag">PENDIENTE</span></div></div><p class="warning"><strong>Regla de clasificación:</strong> cada rama empieza como una línea de investigación. Solo se elevará a REGISTRO cuando el lore confirme especies, efectos o mecanismos concretos.</p></section><h2>Base conocida</h2><p>El lore contempla animales dentro de las interacciones de PhytoGenesis y reconoce que la respuesta depende del huésped y del entorno.</p></section><section class="panel"><h2>Resultados posibles por estudiar</h2><p>Sin alteración visible, contacto transitorio, asociación con estructuras vegetales, transformación o papel en la dispersión. Estas son categorías hipotéticas para ordenar futuros casos, no resultados confirmados para todas las especies.</p></section><section class="panel"><h2>Observación</h2><p>Documentar especie animal si puede identificarse, comportamiento previo y posterior, presencia de material vegetal y duración de la observación. Evitar concluir causalidad a partir de una sola coincidencia.</p></section><section class="panel"><h2>Riesgos</h2><p>Mordeduras, arañazos, transporte de semillas o esporas y contacto indirecto con superficies contaminadas son riesgos de ficción a registrar cuando existan indicios.</p></section><section class="panel"><h2>Datos pendientes</h2><p>Si existen especies resistentes, portadores sin síntomas, cambios heredables o diferencias entre mamíferos, aves, reptiles y fauna acuática.</p></section><div class="panel"><h2>Registro de campo</h2><p>Anotar fecha narrativa, ubicación, observador, condiciones ambientales, descripción literal, evidencia adjunta, interpretación provisional y preguntas pendientes. No rellenar campos sin datos.</p><p><a class="pill" href="registros/bitacora.md">Abrir bitácora Markdown</a> <a class="pill" href="evidencias/LEEME.txt">Ver carpeta de evidencias</a></p></div><p><a href="../index.html">← Índice principal</a>　<a href="../03_humanos/expediente.html">Siguiente expediente →</a></p><div class="footer">Expediente 02 · TLS / PHYTOGENESIS PG-01 · Documento ficticio de worldbuilding.</div><section class="panel"><h2>Límite de clasificación</h2><p>Esta rama contiene exclusivamente fauna no humana: mamíferos, aves, reptiles, anfibios, fauna acuática e invertebrados. Los humanos y las plantas tienen expedientes separados y no son subcategorías animales.</p></section></main></body></html>

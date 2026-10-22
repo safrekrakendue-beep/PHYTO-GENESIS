@@ -18,6 +18,61 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><header><a href="../index.html">← Clasificación biológica</a><p class="eyebrow">PG-01 // HUÉSPEDES ALTERADOS</p><h1>Humano y Zombi</h1><p class="intro">Dos condiciones del huésped, un mismo archivo de consulta. La infección vegetal se desarrolla de forma distinta en un organismo vivo y en un cadáver con tejidos necrosados; por eso los expedientes se mantienen separados, aunque compartan el índice de progresión.</p></header><main><div class="tabs" role="tablist" aria-label="Tipo de huésped"><button class="tab" data-kind="human" role="tab" aria-selected="true"><span class="eyebrow">RAMA 01</span><strong>Huésped humano</strong><span>Germinación, crecimiento y transformación de un organismo vivo.</span></button><button class="tab" data-kind="zombie" role="tab" aria-selected="false"><span class="eyebrow">RAMA 02</span><strong>Huésped zombi</strong><span>Colonización de tejidos necrosados y transformación del cadáver.</span></button></div><section class="profile" id="profile" data-kind="human" aria-live="polite"><p class="eyebrow" id="profileCode">PG-H-01 // ORGANISMO VIVO</p><h2 id="profileTitle">Transformación humana</h2><p id="profileText">En humanos, la infección puede avanzar mediante señales de germinación bajo y sobre la piel. Los brotes, raíces y tallos se extienden a medida que el tejido es colonizado; en la fase final, la vegetación puede emerger desde el cuerpo y utilizar la cabeza como punto principal de crecimiento. El huésped acaba convertido en la base de una estructura arbórea reproductiva que libera semillas.</p><div class="facts" id="facts"><div class="fact"><b>INICIO</b><span>Contacto y colonización del huésped</span></div><div class="fact"><b>CAMBIOS VISIBLES</b><span>Brotes, raíces y tallos bajo o sobre la piel</span></div><div class="fact"><b>FASE FINAL</b><span>Enraizamiento y estructura vegetal reproductiva</span></div></div><div class="actions"><a class="button primary" id="dossierLink" href="../03_humanos/expediente.html">ABRIR EXPEDIENTE HUMANO ↗</a><a class="button" href="../../03_Progresion_humanos_zombis/index.html">ÍNDICE DE LAS OCHO ETAPAS ↗</a></div></section><h2 style="margin-top:28px">Ciclo de progresión</h2><p class="intro">Selecciona una etapa para abrir su expediente. La secuencia es compartida como marco general; la expresión corporal difiere según el huésped.</p><div class="stages">
 <a class="stage" href="../../03_Progresion_humanos_zombis/01_exposicion/expediente.html"><span class="num">ETAPA 01</span><strong>Exposición y entrada</strong><span>Contacto inicial con material asociado a PG-01.</span></a>
 <a class="stage" href="../../03_Progresion_humanos_zombis/02_incubacion/expediente.html"><span class="num">ETAPA 02</span><strong>Incubación</strong><span>Actividad interna antes de cambios externos concluyentes.</span></a>

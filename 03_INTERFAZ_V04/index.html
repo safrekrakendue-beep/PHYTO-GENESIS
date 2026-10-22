@@ -29,6 +29,105 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style>
+/* PHYTOGENESIS IMMERSIVE UPGRADE V1 */
+:root {
+  --pg-glow: rgba(76, 255, 164, .16);
+  --pg-edge: rgba(98, 247, 154, .28);
+}
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 50% -15%, rgba(28,105,66,.24), transparent 58%),
+    radial-gradient(ellipse at 100% 70%, rgba(16,76,57,.13), transparent 48%),
+    #050907 !important;
+}
+.shell { max-width: 1500px; margin-inline: auto; }
+.top, header {
+  backdrop-filter: blur(10px);
+}
+.module, .metric, .panel, .tile, .card, article {
+  transition: border-color .2s ease, background .2s ease,
+              transform .2s ease, box-shadow .2s ease;
+}
+.module, .tile, .card, .panel, .metric {
+  border-color: var(--pg-edge);
+}
+.module:hover, .tile:hover, .card:hover {
+  border-color: rgba(98,247,154,.65);
+  box-shadow: 0 0 22px var(--pg-glow);
+}
+a, button { transition: color .18s ease, border-color .18s ease; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #8bffc0;
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><div class="shell"><header class="top"><div class="brand">T.L.S. // THE LAST SURVIVORS<strong>PHYTOGENESIS PG-01 · INTERFAZ V0.4</strong></div><div class="state"><b>● SISTEMA LOCAL</b><br>ARCHIVO RECUPERADO · ACCESO INVESTIGADOR<br><a href="../02_RESUMEN/resumen.html">← VOLVER AL RESUMEN</a></div></header><div class="layout"><aside class="side"><div class="sigil">☣</div><h2>PHYTOGENESIS</h2><p>UNIDAD DE ARCHIVO BIOLÓGICO</p><nav class="nav"><a href="index.html">⌂ PANEL PRINCIPAL</a><a href="02_Ciclo_infeccion/index.html">01 · CICLO DE INFECCIÓN</a><a href="04_Clasificacion_biologica/index.html">02 · CLASIFICACIÓN BIOLÓGICA</a><a href="04_Clasificacion_biologica/01_plantas/punto0/index.html">00 · PUNTO 0 — INVERNADERO</a><a href="08_Matriz_Maestra_y_Registros/index.html">03 · MATRIZ Y REGISTROS COMPARTIDOS</a><a href="galeria_imagenes.html">04 · GALERÍA VISUAL</a></nav><div class="warn">☣ NIVEL DE AMENAZA: VARIABLE<br>Los fragmentos recuperados presentan lagunas y contradicciones. No permiten confirmar una hipótesis.</div></aside><main class="main"><section class="hero"><div class="eyebrow">ARCHIVO CENTRAL // BUILD 0.4 // LOCAL MODE</div><h1>PHYTO<span>GENESIS</span></h1><div class="eyebrow">SISTEMA BIOLÓGICO ADAPTATIVO · PG-01</div><p>Panel de navegación del archivo T.L.S. Accede a cada módulo y continúa hacia sus expedientes, subcarpetas y registros. Los documentos permanecen separados para conservar su estructura y facilitar su consulta desde móvil.</p><div class="tag">ARCHIVO LOCAL RECUPERADO</div></section><section class="metrics"><div class="metric"><small>ESTADO DEL ARCHIVO</small><strong>RECUPERADO / PARCIAL</strong></div><div class="metric"><small>TIPO DE DOCUMENTACIÓN</small><strong>EXPEDIENTES INDEPENDIENTES</strong></div><div class="metric"><small>CONEXIÓN EXTERNA</small><strong>NO REQUERIDA</strong></div></section>
 <div class="head"><h2>DIRECTORIO DE MÓDULOS</h2><small>SELECCIONA UNA CARPETA</small></div><section class="grid">
 <article class="module"><div class="num">00 / PUNTO DE REFERENCIA</div><h3>Punto 0 — Invernadero antiguo</h3><p>Acceso directo al entorno inicial: vegetación invasora, microambientes y registros ecológicos recuperados.</p><a class="go" href="04_Clasificacion_biologica/01_plantas/punto0/index.html">ENTRAR EN PUNTO 0 ↗</a></article>

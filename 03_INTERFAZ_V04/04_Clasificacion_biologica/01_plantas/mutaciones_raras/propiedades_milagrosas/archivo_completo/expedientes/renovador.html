@@ -28,4 +28,59 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body><header><main><span class="tag">T.L.S. / PHYTOGENESIS PG-01</span><h1>El Renovador</h1><p class="muted">Expediente medicinal · Registro de campo PG-01</p><nav><a href="../index.html">Índice medicinal</a><a href="../registro_medicinal.html">Registro de muestra</a><a href="../control_fuentes.html">Control de fuentes</a><a href="../impostores/index.html">Archivo de impostores</a></nav></main></header><main><section class="panel"><span class="tag">EXPEDIENTE MEDICINAL 05</span><h2>Identificación y función</h2><p>Favorece la renovación celular y resulta útil frente a la fatiga física y la desnutrición. Aporta parte de los recursos que el organismo necesita durante la recuperación.</p><table><tr><th>Campo</th><th>Registro</th></tr><tr><td>Función</td><td>apoyo a la renovación celular</td></tr><tr><td>Partes útiles y uso</td><td>Puede combinarse con La Sanadora: el Renovador aporta parte de los recursos que la regeneración acelerada consume, haciendo el proceso más rápido y menos peligroso. Su aporte es limitado y no repone por completo las reservas.</td></tr><tr><td>Hábitat y frecuencia</td><td>Presente en el territorio del Invernadero. El microhábitat y las condiciones exactas de crecimiento no están especificados.</td></tr><tr><td>Riesgos y límites</td><td>Su efecto de apoyo es limitado; no se establece que pueda revertir por sí solo una desnutrición grave ni reparar cualquier daño celular.</td></tr><tr><td>Descripción visual</td><td>Identificación visual completa pendiente de describir a partir de la referencia original.</td></tr><tr><td>Impostor asociado</td><td>La falsa Renovador ralentiza la regeneración celular y consume el cuerpo del huésped, provocando desnutrición y otros trastornos relacionados con la alimentación.</td></tr><tr><td>Única diferencia visual conocida entre auténtica e impostora</td><td>Sus hojas tienen un borde dentado, a diferencia del borde liso del ejemplar auténtico.</td></tr></table></section><section class="panel"><h2>Interacción con otras medicinales</h2><p>La eficacia depende de la planta medicinal que se añada. Con La Sanadora, aporta parte de los recursos que esta consume durante la regeneración, acelerando el proceso y reduciendo parte del peligro.</p></section><section class="panel"><h2>Protocolo de identificación de campo</h2><ol><li>Registrar el lugar y las condiciones en que se encontró el ejemplar.</li><li>Comparar sus rasgos visibles con la referencia de la especie.</li><li>Comprobar la única diferencia visual descrita para su impostor asociado: sus hojas tienen un borde dentado, a diferencia del borde liso del ejemplar auténtico.</li><li>No declarar una identificación solo por el parecido general; documentar cualquier rasgo contradictorio.</li></ol><p class="muted">Las propiedades y procedimientos pertenecen al universo ficticio de PhytoGenesis; no son indicaciones médicas reales.</p></section><section class="panel" style="border-color:var(--red);background:linear-gradient(145deg,#21100f,#100b0b);margin-top:22px"><span class="tag" style="color:var(--red);border-color:var(--red)">ADVERTENCIA DE CAMPO</span><h2 style="color:var(--red)">☠ CUIDADO CON SU IMPOSTOR</h2><p>La falsa Renovador ralentiza la regeneración celular y consume el cuerpo del huésped, provocando desnutrición y otros trastornos relacionados con la alimentación. La diferencia visual registrada es una sola: Sus hojas tienen un borde dentado, a diferencia del borde liso del ejemplar auténtico.</p><p><a style="color:#ffaaa1;font-weight:700" href="../impostores/impostor_05.html">ABRIR EL EXPEDIENTE DE SU IMPOSTOR →</a></p><p><a href="../impostores/index.html">Consultar el archivo completo de falsas medicinales</a></p></section><p><small>Archivo de investigación ficticio · Bloque independiente; la web principal v0.4 permanece intacta.</small></p></main></body></html>

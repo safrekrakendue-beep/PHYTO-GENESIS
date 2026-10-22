@@ -23,6 +23,61 @@ img{max-width:100%;height:auto}
 table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
 </style>
+
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
 </head><body>
 <nav class="tls-global-nav" aria-label="Navegación T.L.S."><a href="../../../../../panel_modulos.html">⌂ PORTADA PHYTOGENESIS</a><a href="../../index.html">CATÁLOGO DE ESPECIES</a><a href="../../../index.html">INTERFAZ V0.4</a></nav><div class="wrap"><header class="top"><div class="eyebrow">T.L.S. // PHYTOGENESIS PG-01 // ARCHIVO ECOLÓGICO</div><h1>Invertebrados</h1><p class="muted">Rama animal · clasificación de fauna</p><span class="tag">EXPEDIENTE DE CAMPO</span><span class="tag">REGISTRO EDITABLE</span><span class="tag">CANON + PROPUESTAS SEPARADOS</span></header><nav class="nav"><a href="../../index.html">← Volver al índice</a><a href="../../index.html">Índice del catálogo</a></nav><div class="meta"><div><span class="label">CÓDIGO</span><strong>PHY-A-006</strong></div><div><span class="label">RAMA</span><strong>INVERTEBRADOS</strong></div><div><span class="label">ESTADO</span><strong class="status">CATEGORÍA DE INVESTIGACIÓN</strong></div><div><span class="label">CASOS CONFIRMADOS</span><strong class="warn">NINGUNO REGISTRADO AQUÍ</strong></div></div><section class="section"><h2>01 // Identificación</h2><p>Los invertebrados pueden ser polinizadores, dispersores, huéspedes, depredadores de plagas o simples habitantes del ecosistema. Su tamaño y ciclo de vida hacen que la infección pueda manifestarse como material adherido, cambios de muda, capullos alterados o colonización de nidos.</p></section><section class="section"><h2>02 // Morfología y señales</h2><p>Señales propuestas: esporas en patas y alas, filamentos entre segmentos, caparazones o capullos cubiertos de tejido vegetal y rutas de insectos que atraviesan colonias. No toda telaraña, capullo o muda es evidencia de PG-01.</p></section><section class="section"><h2>03 // Hábitat y distribución</h2><p>Flores, frutos, hojarasca, suelo, madera muerta, humedales y estructuras humanas. Insectos y otros invertebrados pueden transportar propágulos a distancias muy distintas según su movilidad.</p></section><section class="section"><h2>04 // Conducta e interacción</h2><p>Las relaciones pueden ser mutualistas, neutrales o perjudiciales. Algunos insectos pueden polinizar flores infectadas; otros morir o evitar esporas. Las colonias de invertebrados no son automáticamente una horda hostil.</p></section><section class="section"><h2>05 // Progresión biológica</h2><p>Puede haber exposición superficial sin infección sistémica. En especies con metamorfosis, el efecto puede variar entre larva y adulto. Los ciclos y tasas de reproducción son específicos de cada organismo y deben registrarse por separado.</p></section><section class="section"><h2>06 // Riesgo y respuesta</h2><p>Riesgo variable y principalmente ecológico: dispersión, picaduras, contaminación de alimentos y colapso de polinizadores. No exterminar especies indiscriminadamente; identificar la función del organismo. El fuego puede causar daño ambiental y no es una respuesta universal.</p></section><section class="section"><h2>07 // Relación con el sistema PG-01</h2><p>Vías posibles: esporas en el aire, semillas, agua o suelo contaminados, heridas, filamentos y transporte mecánico sobre el cuerpo. Las respuestas dependen de la especie, la dosis, el ambiente y el estado del huésped. Las ocho etapas humanas/zombi no deben aplicarse automáticamente a la fauna.</p></section><section class="section"><h2>08 // Protocolo de registro</h2><ul><li>Identificar especie y estado del huésped.</li><li>Fotografiar señales sin tocar ni sacudir el material.</li><li>Registrar agua, humedad, temperatura y tipo de contacto si se conocen.</li><li>Separar portador mecánico, exposición, infección probable y transformación confirmada.</li></ul></section><section class="section"><h2>09 // Estado del conocimiento</h2><p><strong>Base del proyecto:</strong> PG-01 afecta de forma variable a plantas, animales, humanos y zombis; no toda vida alterada es hostil.</p><p><strong>Ampliación propuesta:</strong> señales específicas y respuestas de campo para esta rama, sujetas a revisión cuando existan casos individuales documentados.</p></section><footer>TLS / ARCHIVO BIOLÓGICO · Los campos pendientes no constituyen canon.</footer></div><p class="tls-return-branch"><a href="../../../index.html">← Volver a Clasificación biológica · Rama Vegetal</a></p>
 </body></html>

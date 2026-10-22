@@ -1,5 +1,60 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Punto 00 · Ubicaciones internas</title><style>
-:root{color-scheme:dark;--bg:#080c08;--panel:#111911;--line:#34432f;--green:#b5d77b;--text:#e0e4d6;--muted:#aeb7a4;--amber:#e5c58e}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1a2a1a,transparent 50%),var(--bg);color:var(--text);font:15px/1.65 system-ui,sans-serif}header{padding:26px max(18px,calc((100% - 1060px)/2));border-bottom:1px solid var(--line);background:#0b100b}main{max-width:1060px;margin:auto;padding:24px 18px 60px}a{color:var(--green)}.eyebrow{font:11px ui-monospace,monospace;letter-spacing:.14em;color:var(--muted)}h1{font:clamp(30px,5vw,45px)/1.1 Georgia,serif;margin:10px 0}h2{font:23px Georgia,serif;margin:0 0 7px}.intro{max-width:780px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px;margin-top:22px}.card{display:block;text-align:left;border:1px solid var(--line);border-radius:10px;padding:16px;background:linear-gradient(145deg,#141e14,#0b100b);color:var(--text);cursor:pointer}.card:hover,.card:focus-visible{border-color:var(--green);outline:none}.code{font:10px ui-monospace,monospace;color:var(--green);letter-spacing:.1em}.card p{font-size:13px;color:var(--muted);margin:8px 0}.tag{display:inline-block;font:10px ui-monospace,monospace;color:var(--amber);border:1px solid #6d5637;border-radius:4px;padding:3px 6px}.detail{margin-top:18px;border:1px solid var(--line);border-radius:12px;background:#0e150f;padding:18px;min-height:140px}.detail h3{font:10px ui-monospace,monospace;letter-spacing:.12em;color:var(--green);margin:15px 0 5px}.detail p,.detail li{color:#c6cebf;font-size:14px}.detail .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px}.fact{padding:10px;border:1px solid #29382a;border-radius:7px}.fact small{display:block;color:var(--muted);font:10px ui-monospace,monospace}.foot{margin-top:24px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted)}</style></head><body><header><a href="index.html">← Volver al mapa interactivo de Punto 00</a><p class="eyebrow">T.L.S. // P0 // INTERNAL LOCATIONS</p><h1>Puntos de interés del invernadero</h1><p class="intro">Directorio interno para consultar los sectores del invernadero sin cargar estas fichas junto al mapa principal. Selecciona una ubicación para abrir su resumen y expediente.</p></header><main><div class="grid" id="grid"></div><section class="detail" id="detail" aria-live="polite"><div class="eyebrow">DIRECTORIO DE UBICACIONES</div><h2>Selecciona un sector</h2><p class="intro">Las fichas reúnen las observaciones y notas asociadas a cada ubicación.</p></section><p class="foot">El mapa radial permanece como interfaz principal. El catálogo de especies se consulta desde Clasificación biológica → Vegetal.</p></main><script>const pointsOfInterest=[
+:root{color-scheme:dark;--bg:#080c08;--panel:#111911;--line:#34432f;--green:#b5d77b;--text:#e0e4d6;--muted:#aeb7a4;--amber:#e5c58e}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1a2a1a,transparent 50%),var(--bg);color:var(--text);font:15px/1.65 system-ui,sans-serif}header{padding:26px max(18px,calc((100% - 1060px)/2));border-bottom:1px solid var(--line);background:#0b100b}main{max-width:1060px;margin:auto;padding:24px 18px 60px}a{color:var(--green)}.eyebrow{font:11px ui-monospace,monospace;letter-spacing:.14em;color:var(--muted)}h1{font:clamp(30px,5vw,45px)/1.1 Georgia,serif;margin:10px 0}h2{font:23px Georgia,serif;margin:0 0 7px}.intro{max-width:780px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px;margin-top:22px}.card{display:block;text-align:left;border:1px solid var(--line);border-radius:10px;padding:16px;background:linear-gradient(145deg,#141e14,#0b100b);color:var(--text);cursor:pointer}.card:hover,.card:focus-visible{border-color:var(--green);outline:none}.code{font:10px ui-monospace,monospace;color:var(--green);letter-spacing:.1em}.card p{font-size:13px;color:var(--muted);margin:8px 0}.tag{display:inline-block;font:10px ui-monospace,monospace;color:var(--amber);border:1px solid #6d5637;border-radius:4px;padding:3px 6px}.detail{margin-top:18px;border:1px solid var(--line);border-radius:12px;background:#0e150f;padding:18px;min-height:140px}.detail h3{font:10px ui-monospace,monospace;letter-spacing:.12em;color:var(--green);margin:15px 0 5px}.detail p,.detail li{color:#c6cebf;font-size:14px}.detail .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px}.fact{padding:10px;border:1px solid #29382a;border-radius:7px}.fact small{display:block;color:var(--muted);font:10px ui-monospace,monospace}.foot{margin-top:24px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted)}</style>
+<style id="phyto-immersive-global-v2">
+/* PHYTOGENESIS IMMERSIVE GLOBAL V2 */
+:root {
+  --phyto-green: #67ffad;
+  --phyto-edge: rgba(103,255,173,.27);
+  --phyto-glow: rgba(49,220,128,.10);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(23,100,61,.14), transparent 48%),
+    radial-gradient(ellipse at 0% 100%, rgba(14,63,45,.12), transparent 45%);
+}
+a, button, input, select, textarea {
+  transition: color .18s ease, border-color .18s ease,
+              background-color .18s ease, box-shadow .18s ease;
+}
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--phyto-green);
+  outline-offset: 3px;
+}
+img { max-width: 100%; }
+table { max-width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+:is(.panel,.tile,.card,.module,.metric,.log,.dossier,
+    .expediente,.specimen,.record,.box,.section-card) {
+  border-color: var(--phyto-edge);
+}
+:is(.panel,.tile,.card,.module,.specimen,.record) {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+:is(.panel,.tile,.card,.module,.specimen,.record):hover {
+  border-color: rgba(103,255,173,.52);
+  box-shadow: 0 0 18px var(--phyto-glow);
+}
+:is(nav,.nav) a:hover {
+  text-shadow: 0 0 12px rgba(103,255,173,.35);
+}
+@media (max-width: 650px) {
+  img { height: auto; }
+  table { display: block; overflow-x: auto; }
+  :is(.panel,.tile,.card,.module,.dossier,.expediente) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+
+</head><body><header><a href="index.html">← Volver al mapa interactivo de Punto 00</a><p class="eyebrow">T.L.S. // P0 // INTERNAL LOCATIONS</p><h1>Puntos de interés del invernadero</h1><p class="intro">Directorio interno para consultar los sectores del invernadero sin cargar estas fichas junto al mapa principal. Selecciona una ubicación para abrir su resumen y expediente.</p></header><main><div class="grid" id="grid"></div><section class="detail" id="detail" aria-live="polite"><div class="eyebrow">DIRECTORIO DE UBICACIONES</div><h2>Selecciona un sector</h2><p class="intro">Las fichas reúnen las observaciones y notas asociadas a cada ubicación.</p></section><p class="foot">El mapa radial permanece como interfaz principal. El catálogo de especies se consulta desde Clasificación biológica → Vegetal.</p></main><script>const pointsOfInterest=[
 {code:'INT-P0-01',folder:'01_Acceso_principal',name:'Acceso principal',state:'PROPUESTA DE UBICACIÓN',purpose:'Punto de transición entre el exterior y el interior del invernadero. Puede servir para registrar cómo se entra, qué parte de la estructura sigue siendo reconocible y qué señales aparecen antes de avanzar.',canon:'El lugar es un antiguo invernadero invadido por trepadoras; la existencia y posición de una puerta concreta aún no están establecidas.',details:[['Estructura','Número de puertas, material, apertura y estado: pendientes.'],['Señales','Huellas, vegetación alterada, cristales o restos solo se añaden cuando una escena los establezca.'],['Riesgo','No clasificar como entrada segura. La ausencia de señales visibles no prueba ausencia de organismos.'],['Uso narrativo','Llegada, primera inspección, decisión de entrar o retirarse.']],questions:['¿Existe una entrada principal reconocible?','¿La entrada está bloqueada, abierta o cubierta?','¿Quién descubrió el acceso y cuándo?']},
 {code:'INT-P0-02',folder:'02_Pasillo_central',name:'Pasillo central',state:'PROPUESTA DE UBICACIÓN',purpose:'Eje de circulación hipotético para conectar distintas partes del invernadero. No se da por hecho que el edificio tenga esta distribución; el pasillo se conservará solo si encaja con el plano que aprobemos.',canon:'El interior presenta humedad y condiciones relativamente estables. No existe un trazado interior confirmado en el expediente.',details:[['Geometría','Anchura, longitud, visibilidad y orientación: por definir.'],['Suelo','Material, charcos, raíces y resistencia: no documentados.'],['Vegetación','No asignar especies ni densidad sin aprobar un avistamiento.'],['Uso narrativo','Orientación, desplazamiento lento, pérdida de referencias o encuentro; cada evento se registra por separado.']],questions:['¿Hay un eje central o el interior está dividido por bancales?','¿Se puede ver de un extremo al otro?','¿Qué rutas conectan con otras áreas?']},
 {code:'INT-P0-03',folder:'03_Zona_de_cultivo_antiguo',name:'Zona de cultivo antiguo',state:'PROPUESTA DE UBICACIÓN',purpose:'Área hipotética donde podrían haber existido bancales, macetas o mesas de cultivo antes del abandono. Es una posibilidad coherente con la función de un invernadero, pero no un hecho confirmado sobre este edificio concreto.',canon:'La identidad del lugar como invernadero es canónica; la distribución de cultivo y los restos de equipamiento no están descritos.',details:[['Elementos','Bancales, recipientes, mesas, etiquetas y sistemas de riego: pendientes de aprobación.'],['Sustrato','Composición, drenaje y profundidad: desconocidos.'],['Inventario','No se asigna ninguna especie concreta a esta zona.'],['Uso narrativo','Exploración de restos, comparación de plantas y búsqueda de pistas del uso anterior.']],questions:['¿Qué se cultivaba originalmente?','¿Quedan etiquetas legibles o registros?','¿El sistema de riego sigue presente?']},
