@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07110d"><title>T.L.S. // PHYTOGENESIS — Terminal de acceso</title>
+<style>
+:root{--bg:#050907;--panel:#0a1510;--panel2:#0c1d14;--green:#67ff9a;--green2:#1ea65b;--muted:#9bb8a4;--line:#244a34;--red:#ff625e;--gold:#d9c68a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 55% -10%,#153c25 0,transparent 42%),linear-gradient(135deg,#050907,#08130e 60%,#030605);color:#dce9df;font-family:Consolas,'Courier New',monospace;min-height:100vh}body:before{content:"";pointer-events:none;position:fixed;inset:0;opacity:.12;background:repeating-linear-gradient(0deg,transparent 0 3px,#8affad 4px,transparent 5px);z-index:5}.shell{max-width:1440px;margin:auto;padding:14px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border:1px solid var(--line);background:#07110de8;box-shadow:0 0 25px #1aff6c0c;position:relative;z-index:1}.brand{font-size:12px;letter-spacing:1.4px;color:var(--muted)}.brand strong{display:block;color:var(--green);font-size:15px;margin-top:4px}.sysstate{text-align:right;font-size:11px;color:var(--muted);line-height:1.8}.live{color:var(--green)}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:14px;margin-top:14px}.sidebar,.panel,.hero,.module{border:1px solid var(--line);background:linear-gradient(145deg,#0b1911ed,#06100b);box-shadow:inset 0 0 25px #1aff6c08}.sidebar{padding:14px;height:max-content}.sigil{width:74px;height:74px;border:1px solid var(--green2);border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:36px;margin:5px auto 12px;box-shadow:0 0 24px #42ff871b}.sidebar h2{text-align:center;font-size:16px;letter-spacing:3px;margin:0;color:var(--green)}.sidebar p{text-align:center;color:var(--muted);font-size:10px;margin:6px 0 20px}.nav a{display:block;text-decoration:none;color:#c5d9cb;padding:12px 9px;border-top:1px solid #173523;font-size:11px;letter-spacing:.5px}.nav a:hover,.nav a:focus{background:#133b23;color:var(--green);outline:1px solid var(--green2)}.nav a span{color:var(--green);margin-right:8px}.warning{margin-top:18px;border:1px solid #793b31;color:#ff8e80;padding:10px;font-size:10px;line-height:1.6}.main{min-width:0}.hero{padding:clamp(20px,4vw,42px);position:relative;overflow:hidden;min-height:260px;background:linear-gradient(90deg,#07120df5 0%,#07120de8 48%,#07120d9c 100%),radial-gradient(ellipse at 80% 40%,#245b36,#07110d 65%)}.hero:after{content:"PG-01";position:absolute;right:3%;bottom:-22px;font-size:clamp(70px,15vw,180px);font-weight:bold;color:#9dffb108;letter-spacing:-8px;pointer-events:none}.eyebrow{font-size:11px;color:var(--green);letter-spacing:2px}.hero h1{font-size:clamp(34px,6vw,68px);letter-spacing:2px;margin:18px 0 4px;color:#f0f7f1;text-shadow:0 0 20px #56ff8524}.hero h2{font-size:clamp(14px,2.4vw,23px);letter-spacing:5px;color:var(--green);font-weight:400;margin:0 0 18px}.hero p{max-width:690px;line-height:1.7;font-size:13px;color:#c4d7c9}.motto{color:var(--green);font-weight:bold;letter-spacing:1.5px;margin-top:20px;font-size:12px}.statusrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.panel{padding:13px 15px}.panel label{display:block;font-size:10px;color:var(--muted);letter-spacing:1px}.panel strong{display:block;margin-top:7px;color:var(--green);font-size:14px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:26px 0 12px}.sectionhead h3{margin:0;font-size:15px;letter-spacing:2px;color:#e4f4e8}.sectionhead small{font-size:10px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.module{padding:16px;min-height:174px;display:flex;flex-direction:column;position:relative;transition:transform .18s,border-color .18s}.module:hover{transform:translateY(-3px);border-color:var(--green2)}.num{font-size:11px;color:var(--green);letter-spacing:1px}.module h4{font-size:14px;line-height:1.4;margin:13px 0 8px;color:#e4f4e8}.module p{font-size:11px;color:var(--muted);line-height:1.6;margin:0 0 15px}.module a{margin-top:auto;color:var(--green);font-size:11px;text-decoration:none;border-top:1px solid #1b3b29;padding-top:12px}.module a:hover{text-decoration:underline}.tag{display:inline-block;font-size:9px;color:#9cffb5;border:1px solid #286b42;padding:4px 6px;margin-top:8px;width:max-content}.tag.damaged{color:#ff8b80;border-color:#793b31}.sidegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.logline{font-size:11px;line-height:1.7;color:var(--muted);border-bottom:1px solid #173523;padding:7px 0}.logline b{color:var(--green);font-weight:400}.footer{margin-top:18px;padding:14px;border-top:1px solid var(--line);color:#6f8d78;font-size:10px;line-height:1.7;text-align:center}.pill{border:1px solid #285d3a;color:var(--green);padding:5px 8px;font-size:10px;white-space:nowrap}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.sidebar{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.statusrow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.shell{padding:7px}.topbar{padding:11px}.sysstate{font-size:9px}.brand{font-size:10px}.brand strong{font-size:13px}.hero{padding:20px;min-height:0}.hero h1{font-size:36px;letter-spacing:0}.hero h2{letter-spacing:2px}.hero p{font-size:12px}.grid,.sidegrid{grid-template-columns:1fr}.module{min-height:0}.statusrow{grid-template-columns:1fr}.statusrow .panel{display:flex;justify-content:space-between;align-items:center}.statusrow .panel strong{margin:0}.sectionhead{align-items:start;flex-direction:column}.pill{font-size:9px}}
+
+[hidden]{display:none!important}
+.boot-screen{position:fixed;inset:0;z-index:50;background:#020503;display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,8vw,100px);color:#70ff9b}
+.boot-mark{font-size:clamp(24px,5vw,44px);letter-spacing:4px;text-shadow:0 0 18px #34ff7a55}.boot-mark span{display:block;font-size:11px;letter-spacing:2px;color:#73947c;margin-top:10px}
+.boot-rule{height:2px;background:#153b25;margin:30px 0 18px;max-width:520px;overflow:hidden}.boot-rule i{display:block;height:100%;width:0;background:#68ff9c;box-shadow:0 0 15px #68ff9c;animation:loadbar 2.6s ease forwards}
+.boot-lines{font-size:12px;line-height:1.9;color:#9ebba6}.boot-lines p{margin:0;transition:opacity .25s}.boot-lines p:nth-child(3){color:#ff8177}
+.ghost-button{margin-top:30px;align-self:flex-start;background:transparent;border:1px solid #28583a;color:#87c99b;padding:10px 14px;font:inherit;font-size:10px;letter-spacing:1px;cursor:pointer}
+.fade-out{animation:fadeout .45s forwards}.login-screen{min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 30%,#102d1a 0,transparent 50%),#030604}
+.login-window{width:min(100%,540px);border:1px solid #316746;background:linear-gradient(145deg,#0a1710,#040906);box-shadow:0 0 60px #20ff6810,inset 0 0 35px #1cff6908}
+.windowbar,.windowfoot{display:flex;justify-content:space-between;gap:10px;padding:10px 13px;background:#07100b;border-bottom:1px solid #21452d;color:#6f967b;font-size:9px;letter-spacing:1px}.windowbar span:first-child{color:#6aff98}.windowfoot{border-top:1px solid #21452d;border-bottom:0;font-size:8px;flex-wrap:wrap}
+.login-content{padding:clamp(22px,6vw,42px);text-align:center}.emblem{width:64px;height:64px;border:1px solid #3b995b;border-radius:50%;display:grid;place-items:center;margin:0 auto 22px;color:#71ff9d;font-size:34px;box-shadow:0 0 30px #2eff6717}.eyebrow{font-size:10px;letter-spacing:1.5px;color:#70e893}.login-content h1{font-size:clamp(30px,8vw,48px);letter-spacing:2px;margin:14px 0 4px;color:#e7f3e9}.login-sub{font-size:11px;letter-spacing:3px;color:#5cc47c;margin:0}.login-divider{height:1px;background:linear-gradient(90deg,transparent,#316746,transparent);margin:25px 0}.login-copy{font-size:12px;line-height:1.8;color:#a8c0ae;text-align:left}.login-content form{text-align:left;margin-top:25px}.login-content label{display:block;color:#79c992;font-size:10px;letter-spacing:1.5px;margin-bottom:8px}.password-row{display:flex;align-items:center;border:1px solid #2b583a;background:#030805;padding:0 10px;color:#6aff98}.password-row input{width:100%;min-width:0;background:transparent;border:0;outline:0;color:#e4f5e8;padding:14px 10px;font:inherit;font-size:13px}.password-row input::placeholder{color:#4e6e57}.password-row button{border:0;background:transparent;color:#70d88e;cursor:pointer;font-size:15px}.access-button{display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:14px;padding:14px 15px;background:#164729;border:1px solid #4dbb70;color:#e7ffed;font:inherit;font-size:11px;letter-spacing:1.5px;cursor:pointer;transition:background .2s,box-shadow .2s}.access-button:hover{background:#206638;box-shadow:0 0 22px #35ff6b20}.login-message{font-size:10px;letter-spacing:1px;color:#75947d;margin:14px 0 0;min-height:14px}.login-message.success{color:#74ff9b}.recovery-note{margin-top:24px;text-align:left;border-top:1px solid #1a3825;padding-top:13px;color:#6e9479;font-size:10px}.recovery-note summary{cursor:pointer;letter-spacing:1px}.recovery-note p{line-height:1.7}.recovery-note code{color:#8cffad}.appear{animation:appear .5s ease both}.unlock{animation:unlock .7s ease}.shake{animation:shake .28s linear}
+.context-panel p{font-size:12px;line-height:1.8;color:#b9cebf;margin:0 0 12px}.context-panel p:last-child{margin-bottom:0}
+@keyframes loadbar{to{width:100%}}@keyframes fadeout{to{opacity:0;visibility:hidden}}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes unlock{50%{box-shadow:0 0 55px #55ff8b35;border-color:#79ffa0}}@keyframes shake{25%,75%{transform:translateX(-4px)}50%,100%{transform:translateX(4px)}}
+@media(max-width:560px){.boot-lines{font-size:11px}.windowbar{font-size:8px}.login-content{padding:24px 20px}.windowfoot{line-height:1.6}}
+
+</style></head>
+<body>
+<div id="boot" class="boot-screen" aria-live="polite">
+  <div class="boot-mark">T.L.S.<span> / TERMINAL DE RECUPERACIÓN</span></div>
+  <div class="boot-rule"><i></i></div>
+  <div id="boot-lines" class="boot-lines">
+    <p>[SYS] Inicializando terminal local...</p>
+    <p>[IO] Comprobando memoria de archivo...</p>
+    <p>[WARN] Se detectan sectores dañados.</p>
+    <p>[OK] Núcleo de consulta disponible.</p>
+  </div>
+  <button id="skip-boot" class="ghost-button" type="button">OMITIR DIAGNÓSTICO</button>
+</div>
+
+<section id="login" class="login-screen" hidden>
+  <div class="login-window">
+    <div class="windowbar"><span>● ● ●</span><span>AUTH://TLS-ARCHIVE</span><span>LOCAL</span></div>
+    <div class="login-content">
+      <div class="emblem">✳</div>
+      <p class="eyebrow">THE LAST SURVIVORS // ARCHIVO RECUPERADO</p>
+      <h1>PHYTOGENESIS</h1>
+      <p class="login-sub">TERMINAL DE CONSULTA · PG-01</p>
+      <div class="login-divider"></div>
+      <p class="login-copy">Se ha recuperado una copia parcial del archivo de investigación. Introduzca la clave de acceso registrada en la nota de recuperación para abrir el directorio.</p>
+      <form id="login-form">
+        <label for="password">CLAVE DE ACCESO</label>
+        <div class="password-row"><span>›</span><input id="password" type="password" autocomplete="off" placeholder="Introducir clave..." required><button type="button" id="toggle-password" aria-label="Mostrar u ocultar clave">◉</button></div>
+        <button class="access-button" type="submit">INICIAR SESIÓN <span>↗</span></button>
+        <p id="login-message" class="login-message" role="status">ESPERANDO CREDENCIALES...</p>
+      </form>
+      <details class="recovery-note"><summary>NOTA DE RECUPERACIÓN</summary><p>Fragmento legible del terminal: <code>PHYTO-01</code>. El mecanismo de acceso es una simulación narrativa local, no una protección de seguridad real.</p></details>
+    </div>
+    <div class="windowfoot"><span>BUILD: ARCHIVE-LOCAL</span><span>CONEXIÓN EXTERNA: NO REQUERIDA</span></div>
+  </div>
+</section>
+
+
+<script>
+(function(){
+  const boot=document.getElementById('boot'), login=document.getElementById('login'), archive=document.getElementById('archive');
+  const lines=[...document.querySelectorAll('#boot-lines p')]; let finished=false;
+  function showLogin(){if(finished)return;finished=true;boot.classList.add('fade-out');setTimeout(()=>{boot.hidden=true;login.hidden=false;login.classList.add('appear');document.getElementById('password').focus();},450);}
+  document.getElementById('skip-boot').addEventListener('click',showLogin);
+  lines.forEach((line,i)=>{line.style.opacity='0';setTimeout(()=>{if(!finished){line.style.opacity='1';line.classList.add('typed');}},500+i*650);});
+  setTimeout(showLogin,3300);
+  document.getElementById('toggle-password').addEventListener('click',()=>{const p=document.getElementById('password');p.type=p.type==='password'?'text':'password';});
+  document.getElementById('login-form').addEventListener('submit',e=>{
+    e.preventDefault();const p=document.getElementById('password').value.trim();const msg=document.getElementById('login-message');
+    if(p.toUpperCase()==='SECTOR-OMEGA'){msg.textContent='CLAVE OBSOLETA ACEPTADA // ABRIENDO DIRECTORIO AISLADO...';msg.classList.add('success');document.querySelector('.login-window').classList.add('unlock');setTimeout(()=>{window.location.href='ARCHIVO_NEGRO_SECTOR_OMEGA.html';},850);}
+    else if(p.toUpperCase()==='PHYTO-01'){msg.textContent='ACCESO ACEPTADO // ABRIENDO ARCHIVO...';msg.classList.add('success');document.querySelector('.login-window').classList.add('unlock');setTimeout(()=>{window.location.href='02_RESUMEN/resumen.html';},650);}
+    else{msg.textContent='CLAVE NO RECONOCIDA // INTENTE DE NUEVO';msg.classList.remove('success');document.querySelector('.login-window').classList.remove('shake');void document.querySelector('.login-window').offsetWidth;document.querySelector('.login-window').classList.add('shake');document.getElementById('password').select();}
+  });
+})();
+</script>
+</body></html>
