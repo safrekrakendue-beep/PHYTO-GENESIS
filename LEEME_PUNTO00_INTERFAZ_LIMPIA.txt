@@ -1,6 +1,0 @@
-PUNTO 00 — ESTRUCTURA
-
-La única pantalla principal interactiva está en 00_Punto_0_invernadero/index.html.
-Los ocho sectores están dentro de 00_Punto_0_invernadero/sectores/.
-El catálogo general de especies no aparece como una sección adicional dentro de Punto 00: los nombres deben enlazar a sus fichas oficiales en Clasificación biológica.
-Las antiguas rutas redirigen a la interfaz principal para evitar dos portadas distintas.
