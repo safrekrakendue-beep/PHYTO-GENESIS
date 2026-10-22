@@ -1,0 +1,10 @@
+TLS · PHYTOGENESIS PG-01 · CATÁLOGO ECOLÓGICO v1.3
+
+Contenido ampliado: 15 expedientes vegetales y 6 ramas animales, cada uno con identificación, morfología, hábitat, conducta, ciclo, riesgo, relación con PG-01 y registro de campo.
+
+Criterio editorial: el canon del proyecto se conserva y las ampliaciones se etiquetan como propuestas revisables. No se inventan muestras ni se confirma la presencia de especies en Punto 0 sin evidencia. Las referencias visuales originales se mantienen.
+
+Abrir index.html. Para conservar todos los estilos y enlaces, extraer el ZIP completo a una carpeta antes de abrirlo.
+
+
+CORRECCIÓN v1.3.1: el index.html contiene ahora el CSS incrustado para conservar el tema verde tecnológico aunque el visor no cargue style.css. Se eliminó el enlace duplicado a la biblioteca visual. El resto de las páginas sigue usando style.css; mantén el archivo junto a las carpetas.

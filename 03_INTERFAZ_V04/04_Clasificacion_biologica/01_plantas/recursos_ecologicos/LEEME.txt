@@ -1,0 +1,19 @@
+THE LAST SURVIVORS — PHYTOGENESIS PG-01
+DOSSIER 05: CATÁLOGO ECOLÓGICO
+
+USO
+1. Extrae todo el ZIP en una carpeta.
+2. Abre index.html en el navegador.
+3. Usa los enlaces para abrir cada expediente y regresa con “Volver al índice”.
+4. Conserva style.css y las carpetas 01_Reino_vegetal y 02_Reino_animal junto al index.html.
+
+CONTENIDO
+- 15 expedientes de especies vegetales mencionadas en referencias del proyecto.
+- 6 ramas de investigación animal: mamíferos, aves, reptiles, anfibios, fauna acuática e invertebrados.
+- Cada ficha tiene expediente.html, expediente.md, evidencias/ y registros/.
+
+CANON
+Los nombres vegetales se conservan, pero la mayoría de sus características siguen pendientes. No se inventan muestras, ubicaciones ni especies confirmadas. Las categorías animales no implican infección ni mutación confirmada.
+
+ESTILO
+Interfaz negra tecnológica con verde bioluminiscente y alertas ámbar, CSS local incluido.

@@ -1,0 +1,2 @@
+REPARACION_LOCAL.txt
+Se incrustaron los estilos en las páginas HTML y se corrigió el enlace del índice. El módulo sigue siendo independiente. Para que enlaces cruzados desde otros módulos funcionen, la versión fusionada deberá respetar las rutas relativas documentadas.

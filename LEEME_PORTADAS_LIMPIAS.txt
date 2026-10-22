@@ -1,0 +1,6 @@
+REORGANIZACIÓN DE PORTADAS
+
+La navegación principal muestra ahora únicamente módulos independientes: Ciclo de infección, Clasificación biológica, Punto 00, Matriz y registros compartidos, y Galería visual.
+La progresión de huéspedes ya no se presenta como una tarjeta principal independiente: debe consultarse dentro de Humano-Zombi. Las anomalías vegetales se consultan dentro de Vegetal > Mutaciones. El catálogo ecológico se consulta desde Punto 00 y los expedientes de especie en Clasificación biológica.
+
+Se conservaron los archivos originales; esta pasada modifica la presentación de navegación, no elimina los expedientes de origen. Revisar las rutas dinámicas en SPCK antes de borrar versiones anteriores.

@@ -1,0 +1,5 @@
+PHYTOGENESIS — V0.4 ORDENADA
+
+RECORRIDO: index.html (acceso) → 02_RESUMEN/resumen.html → 03_INTERFAZ_V04/index.html (panel principal).
+
+PUNTO 0: desde el panel V0.4, abre la tarjeta “Punto 0 — Invernadero antiguo”; también está en 04_Clasificacion_biologica/01_plantas/recursos_ecologicos/index.html.

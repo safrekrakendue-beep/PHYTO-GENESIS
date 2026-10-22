@@ -1,0 +1,13 @@
+T.L.S. // PHYTOGENESIS — INFORME DE AUDITORÍA LOCAL
+
+Páginas HTML inspeccionadas: 40
+Referencias locales revisadas: 416
+Destinos locales inexistentes: 0
+Fragmentos/anchors inexistentes: 0
+Referencias externas detectadas (no verificadas en línea): 0
+Integridad del ZIP: correcta
+
+No se encontraron rutas locales a archivos inexistentes.
+No se encontraron fragmentos internos ausentes.
+
+Nota: esta auditoría comprueba rutas y fragmentos en el ZIP extraído. No puede confirmar enlaces externos, el comportamiento del navegador/SPCK ni destinos generados dinámicamente por JavaScript.

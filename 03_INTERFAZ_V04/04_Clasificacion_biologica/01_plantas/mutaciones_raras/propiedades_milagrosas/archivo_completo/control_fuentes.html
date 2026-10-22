@@ -1,0 +1,31 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CONTROL DE FUENTES</title><style>
+:root{--bg:#070d0a;--panel:#101a14;--line:#31543b;--green:#8edda0;--muted:#9eb0a1;--gold:#d8bd7b;--red:#e67d72}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#17271c 0,#080d0a 60%);color:#e1ece3;font:16px/1.65 system-ui,Arial,sans-serif}
+header{background:#080f0bef;border-bottom:1px solid var(--line);padding:24px 16px}main{max-width:980px;margin:auto;padding:18px}
+h1,h2,h3{color:var(--green);line-height:1.2}h1{font-size:clamp(1.7rem,5vw,2.5rem)}.panel{border:1px solid var(--line);background:linear-gradient(145deg,var(--panel),#0b120d);border-radius:14px;padding:18px;margin:16px 0}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:3px 9px;color:var(--green);font-size:.78rem;margin:2px}
+.muted,small{color:var(--muted)}a{color:#a8e8b4}nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:9px}th{color:var(--green);background:#142219}
+label{display:block;color:var(--muted);margin:10px 0 4px}input,textarea,select{width:100%;background:#080e0a;color:#eef8ef;border:1px solid #385640;border-radius:8px;padding:10px;font:inherit}textarea{min-height:80px}
+button{background:#173521;border:1px solid #4d865a;color:#effff0;padding:10px 14px;border-radius:9px;font:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+@media print{body{background:white;color:#111}header,.panel{background:white;color:#111;border-color:#999}h1,h2,h3{color:#173b25}nav,button{display:none}}
+</style>
+<style id="tls-estilo-b-global">
+:root{--bg:#050907;--panel:#07110c;--line:#1e5537;--green:#62f79a;--muted:#a0b8a8;--red:#ff7d72}
+*{box-sizing:border-box}
+html{background:var(--bg);color-scheme:dark}
+body{background:radial-gradient(ellipse at 70% 0,#123321,transparent 43%),var(--bg)!important;color:#d9e5dc!important;font-family:Consolas,ui-monospace,monospace!important;line-height:1.7}
+header{background:linear-gradient(110deg,#07120df2,#07120df2 70%,#102719)!important;border-bottom:1px solid var(--line)!important}
+h1,h2,h3{color:var(--green)!important;letter-spacing:.055em}
+a{color:var(--green)!important;text-decoration:none}
+a:hover{color:#c1f5cd!important}
+.panel,.tile,.card,article,section,.box{border:1px solid var(--line)!important;border-radius:0!important;background:linear-gradient(110deg,#07120df2,#07120df2 70%,#102719)!important;box-shadow:none!important}
+.tile,.card{position:relative}
+.tile:after,.card:after{content:"";position:absolute;right:0;bottom:0;width:12px;height:12px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);pointer-events:none}
+small,.muted,.crumb{color:var(--muted)!important}
+button{font-family:inherit}
+img{max-width:100%;height:auto}
+table{display:block;max-width:100%;overflow-x:auto}
+@media(max-width:650px){main{padding:14px!important}h1{font-size:clamp(23px,7vw,34px)!important}.grid{grid-template-columns:minmax(0,1fr)!important}.tile{min-height:0!important}}
+</style>
+</head><body><header><main><span class="tag">T.L.S. / PHYTOGENESIS PG-01</span><h1>CONTROL DE FUENTES</h1><p class="muted">Trazabilidad de los datos medicinales</p><nav><a href="index.html">Índice medicinal</a><a href="registro_medicinal.html">Registro de muestra</a><a href="control_fuentes.html">Control de fuentes</a></nav></main></header><main><section class="panel"><h2>Control de fuentes</h2><label>Afirmación o rasgo</label><textarea placeholder="Escribe el dato que quieres comprobar."></textarea><label>Origen</label><select><option>Confirmado por el creador</option><option>Archivo anterior de PhytoGenesis</option><option>Imagen original</option><option>Observación de campo ficticia</option><option>Propuesta nueva</option></select><label>Referencia exacta</label><input placeholder="Nombre de imagen, página o archivo"><label>Estado</label><select><option>Confirmado</option><option>Visible en imagen</option><option>Hipótesis</option><option>Pendiente de aprobación</option><option>Contradictorio / revisar</option></select><label>Notas</label><textarea placeholder="Qué demuestra la fuente y qué no demuestra."></textarea></section><section class="panel"><h2>Precaución editorial</h2><p>Las propiedades de estas especies son ficticias. No deben interpretarse como remedios reales ni convertirse en instrucciones médicas.</p></section><p><small>Bloque independiente · La web principal v0.4 permanece intacta.</small></p></main></body></html>

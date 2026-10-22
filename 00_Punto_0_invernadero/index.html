@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T.L.S. // Punto 00 — Invernadero y anillos</title>
+<style>
+:root{--bg:#0b0e0b;--panel:#141914;--line:#34422e;--green:#b5d77b;--muted:#9aa28e;--paper:#d4c3a0;--red:#d15c4e;--amber:#c6a568}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 55% 0%,#273021 0,#10140f 38%,#080a08 100%);color:#e7e5d9;font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit;cursor:pointer}.top{padding:18px clamp(16px,4vw,48px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:center;background:#0a0d0bdd;position:sticky;top:0;z-index:3;backdrop-filter:blur(10px)}.brand{font-weight:800;letter-spacing:.14em;color:var(--green)}.tag{font:11px ui-monospace,monospace;letter-spacing:.1em;color:var(--muted)}main{max-width:1200px;margin:auto;padding:28px clamp(14px,3vw,34px) 56px}.eyebrow{font:11px ui-monospace,monospace;letter-spacing:.2em;color:var(--green)}h1{font-size:clamp(28px,5vw,52px);line-height:1.02;margin:8px 0 12px;letter-spacing:-.04em}h1 span{color:var(--green)}.intro{max-width:760px;color:#c4c8b9}.warning{border:1px solid #74443c;background:#281512;padding:12px 14px;margin:20px 0;border-radius:8px;color:#f0c7b8}.legend{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.pill{font:11px ui-monospace,monospace;border:1px solid var(--line);padding:5px 9px;border-radius:4px;color:var(--muted)}.pill.canon{border-color:#718c4d;color:var(--green)}.pill.proposed{border-color:#8a6840;color:#e5c58e}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr);gap:16px;align-items:stretch}.mapbox,.detail{border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#171d16f5,#0d110df5);overflow:hidden;box-shadow:0 18px 60px #0005}.maphead{display:flex;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);font:11px ui-monospace,monospace;color:var(--muted)}.map{position:relative;min-height:470px;padding:20px;display:grid;place-items:center;background-image:linear-gradient(#8ba46a0a 1px,transparent 1px),linear-gradient(90deg,#8ba46a0a 1px,transparent 1px);background-size:24px 24px}.rings{position:relative;width:min(100%,540px);aspect-ratio:1;border-radius:50%;border:1px dashed #8b9c6d66;background:radial-gradient(circle,#5d734d16 0 20%,transparent 20.5%),radial-gradient(circle,transparent 0 31%,#7d925c12 31.5% 45%,transparent 45.5%),radial-gradient(circle,transparent 0 57%,#9e7a3b0c 57.5% 71%,transparent 71.5%),radial-gradient(circle,transparent 0 83%,#b95a4610 83.5%);display:grid;place-items:center}.ringlabel{position:absolute;font:10px ui-monospace,monospace;letter-spacing:.1em;color:#a8b393;background:#10160ddd;padding:4px 7px;border:1px solid #34422e;border-radius:3px}.r1{top:8%;left:50%;transform:translateX(-50%)}.r2{top:24%;right:3%}.r3{bottom:20%;left:1%}.r4{bottom:5%;left:50%;transform:translateX(-50%)}.zone{position:absolute;border:1px solid #77945a;background:#182318e8;color:#dbe8c9;padding:10px 12px;border-radius:7px;text-align:left;max-width:145px;box-shadow:0 8px 22px #0007;transition:.2s}.zone:hover,.zone:focus-visible{transform:translateY(-3px);border-color:var(--green);box-shadow:0 0 0 2px #b5d77b26,0 12px 28px #0009}.zone small{display:block;color:#a6b897;font:10px ui-monospace,monospace;margin-top:3px}.zcore{left:50%;top:50%;transform:translate(-50%,-50%);width:150px;text-align:center;background:#263322;border-color:var(--green)}.zcore:hover,.zcore:focus-visible{transform:translate(-50%,-53%)}.z1{top:17%;left:14%}.z2{top:35%;right:7%}.z3{bottom:20%;right:18%}.z4{bottom:13%;left:9%;border-color:#8c6540;background:#241e13}.z5{top:8%;right:18%;border-color:#884c42;background:#251614}.compass{position:absolute;top:13px;right:14px;font:12px ui-monospace,monospace;color:var(--green)}.scale{position:absolute;bottom:15px;left:15px;color:#9ca58e;font:10px ui-monospace,monospace}.detail{padding:20px;display:flex;flex-direction:column;gap:12px}.status{font:10px ui-monospace,monospace;letter-spacing:.13em;color:var(--green)}.detail h2{font-size:25px;line-height:1.1;margin:0}.detail p{color:#c1c8b8;margin:0}.data{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}.data div{padding:10px;background:#0c100c;border:1px solid #293327;border-radius:6px}.data label{display:block;color:#8f9b84;font:10px ui-monospace,monospace;margin-bottom:3px}.data strong{font-size:13px;font-weight:600}.note{margin-top:auto;border-left:2px solid var(--amber);padding:10px 12px;background:#211c13;color:#d7c59d;font-size:12px}.reset{background:transparent;border:1px solid var(--line);color:var(--green);padding:8px 11px;border-radius:5px}.footer{margin-top:18px;color:#7f8878;font:11px ui-monospace,monospace;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.mini{border:1px solid var(--line);background:#111610;padding:15px;border-radius:8px}.mini b{display:block;color:var(--green);font-size:12px;letter-spacing:.07em}.mini p{font-size:13px;color:#aeb7a4;margin:6px 0 0}@media(max-width:760px){.top{align-items:flex-start;flex-direction:column}.layout{grid-template-columns:1fr}.map{min-height:390px;padding:8px}.rings{width:min(100%,410px)}.zone{padding:7px 8px;font-size:12px;max-width:120px}.zone small{font-size:9px}.zcore{width:124px}.z1{left:5%;top:17%}.z2{right:1%;top:34%}.z3{right:5%;bottom:18%}.z4{left:3%;bottom:12%}.z5{right:5%;top:7%}.bottom{grid-template-columns:1fr}.ringlabel{font-size:8px}.detail{min-height:350px}}
+
+.dossier-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 0}
+.dossier-tab{background:#0d120d;border:1px solid #34422e;color:#aeb9a1;padding:7px 9px;border-radius:5px;font-size:11px;letter-spacing:.04em}
+.dossier-tab[aria-selected="true"]{background:#283522;border-color:#b5d77b;color:#e8f2d8;box-shadow:inset 0 -2px 0 #b5d77b}
+.subpanel{border:1px solid #293327;background:linear-gradient(145deg,#111710,#0b0e0b);padding:13px;border-radius:7px;min-height:145px}
+.subpanel h3{margin:0 0 8px;font:11px ui-monospace,monospace;letter-spacing:.12em;color:#b5d77b}
+.subpanel p{font-size:13px;color:#c1c8b8;margin:0 0 8px}
+.subpanel ul{margin:6px 0 0;padding-left:18px;color:#c1c8b8;font-size:13px}
+.subpanel li{margin:5px 0}
+.recordline{display:flex;gap:8px;align-items:flex-start;border-bottom:1px solid #283126;padding:8px 0;font-size:12px;color:#c4c8b9}
+.recordline:last-child{border-bottom:0}
+.recordline strong{color:#e1d1ad;min-width:80px;font:10px ui-monospace,monospace;letter-spacing:.05em}
+.evidence{display:inline-block;font:10px ui-monospace,monospace;border:1px solid #8a6840;color:#e5c58e;padding:3px 6px;border-radius:3px;margin:0 4px 4px 0}
+.evidence.canon{border-color:#718c4d;color:#b5d77b}
+.dossier-heading{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.dossier-code{font:10px ui-monospace,monospace;color:#7f8d73}
+@media(max-width:760px){.dossier-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.dossier-tab{width:100%}.subpanel{min-height:0}}
+
+.specimen-registry{margin-top:22px;border-top:1px solid #34402e;padding-top:16px}
+.specimen-tools{display:grid;grid-template-columns:1.4fr 1fr;gap:8px;margin:12px 0}
+.specimen-tools input,.specimen-tools select{min-width:0;width:100%;background:#0a0e0a;border:1px solid #35442f;color:#dce5d1;border-radius:5px;padding:10px;font-size:12px}
+.sample-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sample-card{display:block;text-align:left;border:1px solid #34402e;border-radius:6px;padding:12px;background:linear-gradient(145deg,#151b13,#0a0d0a);color:#e0e4d6;cursor:pointer;min-width:0}
+.sample-card:hover,.sample-card:focus-visible{border-color:#b5d77b;outline:none;box-shadow:0 0 0 2px #b5d77b22}
+.sample-card .sample-code{font:10px ui-monospace,monospace;color:#9ca98b;letter-spacing:.08em}
+.sample-card strong{display:block;font:15px Georgia,serif;margin:7px 0 5px;color:#e5d8ba}
+.sample-card p{font-size:12px;line-height:1.45;color:#aeb8a2;margin:0 0 9px}
+.sample-label{display:inline-block;font:9px ui-monospace,monospace;letter-spacing:.05em;padding:4px 6px;border:1px solid #7e633e;color:#dfbf88;border-radius:3px}
+.sample-label.canon{border-color:#70894e;color:#b5d77b}
+.sample-detail{margin-top:10px;border:1px solid #3d4a35;border-left:3px solid #b5d77b;background:#0d120d;padding:14px;border-radius:4px}
+.sample-detail h3{font:16px Georgia,serif;color:#e4d6b7;margin:0 0 8px}
+.sample-detail p,.sample-detail li{font-size:12px;line-height:1.55;color:#c1c8b8}
+.sample-detail ul{padding-left:18px}
+.sample-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0}
+.sample-meta div{padding:8px;background:#151b13;border:1px solid #293327}
+.sample-meta small{display:block;font:9px ui-monospace,monospace;color:#8f9b81;margin-bottom:4px}
+.sample-meta span{font-size:12px;color:#d7ddce}
+.sample-warning{font-size:11px;color:#e0bd82;border-left:2px solid #9a7042;padding:6px 9px;margin-top:10px;background:#21190f}
+.sample-empty{padding:15px;color:#aeb8a2;font-size:12px;border:1px dashed #384532;border-radius:5px}
+@media(max-width:600px){.specimen-tools,.sample-grid,.sample-meta{grid-template-columns:1fr}}
+
+.species-index{margin-top:24px;border-top:1px solid #34402e;padding-top:16px}
+
+.environment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0}
+.environment-cell{background:#151b13;border:1px solid #293327;padding:9px;border-radius:4px;min-width:0}
+.environment-cell small{display:block;font:9px ui-monospace,monospace;letter-spacing:.08em;color:#b5d77b;margin-bottom:5px}
+.environment-cell p{font-size:12px;line-height:1.45;color:#c1c8b8;margin:0}
+@media(max-width:600px){.environment-grid{grid-template-columns:1fr}}
+ .sector-links{display:flex;flex-wrap:wrap;gap:8px;padding:10px clamp(16px,4vw,48px)}.sector-links a{color:#b5d77b;border:1px solid #34422e;padding:7px 10px;text-decoration:none;font:12px ui-monospace,monospace}.sector-links a:hover{background:#283522}
+</style></head>
+<body>
+<header class="top"><div><div class="brand">T.L.S. // ARCHIVO DE CAMPO</div><div class="tag">THE LAST SURVIVORS · BIOLOGICAL HAZARD DIVISION</div></div><div class="tag">DOSSIER PG-01 / MAPA DE RECONOCIMIENTO</div></header>
+<div style="padding:10px clamp(16px,4vw,48px);background:#0b100b;border-bottom:1px solid #34422e;font:12px ui-monospace,monospace"><a href="../index.html" style="color:#b5d77b;text-decoration:none;border:1px solid #34422e;padding:8px 11px;display:inline-block">← VOLVER A INTERFAZ PRINCIPAL</a> <a href="ubicaciones.html" style="color:#b5d77b;text-decoration:none;border:1px solid #34422e;padding:8px 11px;display:inline-block;margin-left:6px">PUNTOS INTERNOS ↗</a> <span style="color:#9aa28e;margin-left:10px">PUNTO 0 // MÓDULO INTEGRADO</span></div>
+
+<main><div class="eyebrow">ARCHIVO 07 — CARTOGRAFÍA BIOLÓGICA</div><h1>PUNTO <span>0</span><br>Zona de origen</h1><p class="intro">Archivo de reconocimiento del antiguo invernadero y del ecosistema que lo ha reclamado. Selecciona un sector para abrir su expediente: resumen, observaciones, ambiente, estructura, ecología, riesgos, incógnitas y archivo.</p>
+<div class="warning"><strong>⚠ AVISO DE CLASIFICACIÓN:</strong> el invernadero invadido y su ecosistema húmedo corresponden al antecedente registrado. Los sectores organizan el reconocimiento del terreno; el esquema es orientativo y no representa distancias ni coordenadas exactas.</div>
+<div class="legend"><span class="pill canon">● REGISTRO BASE</span><span class="pill proposed">◇ ESCALA ORIENTATIVA</span><span class="pill">NO A ESCALA</span><span class="pill proposed">EXPEDIENTES DE SECTOR</span></div>
+<div class="layout"><section class="mapbox"><div class="maphead"><span>FIG. P0-A / VISTA RADIAL</span><span>ESTADO: PARCIAL</span></div><div class="map"><div class="compass">N ↑</div><div class="rings"><span class="ringlabel r1">ANILLO EXTERIOR</span><span class="ringlabel r2">BORDE VEGETAL</span><span class="ringlabel r3">ZONA HÚMEDA</span><span class="ringlabel r4">NÚCLEO</span>
+<button class="zone zcore" data-zone="core">PUNTO 0<small>INVERNADERO ANTIGUO</small></button>
+<button class="zone z1" data-zone="canopy">CUBIERTA INVADIDA<small>SECTOR · P-01</small></button>
+<button class="zone z2" data-zone="thicket">MATORRAL DENSO<small>SECTOR · P-02</small></button>
+<button class="zone z3" data-zone="wetland">DEPRESIÓN HÚMEDA<small>SECTOR · P-03</small></button>
+<button class="zone z4" data-zone="outer">PERÍMETRO EXTERIOR<small>SECTOR · P-04</small></button>
+<button class="zone z5" data-zone="unknown">SECTOR SIN DATOS<small>SECTOR · P-05</small></button>
+</div><div class="scale">ESQUEMA TÁCTICO / NO A ESCALA</div></div></section>
+<aside class="detail" aria-live="polite"><div class="status" id="status">● REGISTRO BASE</div><h2 id="title">Punto 0 — Invernadero</h2><p id="desc">Antiguo invernadero cuya silueta original aún se conserva, aunque las plantas trepadoras han cubierto gran parte de la estructura. El interior mantiene condiciones húmedas y relativamente estables, con especies exóticas y numerosos organismos que no son necesariamente hostiles.</p><div class="data"><div><label>CONDICIÓN</label><strong id="condition">Humedad estable</strong></div><div><label>RIESGO</label><strong id="risk">Variable / sin nivel único</strong></div><div><label>OBSERVACIÓN</label><strong id="obs">Actividad vegetal diversa</strong></div><div><label>ESTADO DEL DATO</label><strong id="certainty">Canon establecido</strong></div></div><div class="note" id="note">Nota de campo: no asumir que toda forma vegetal es agresiva. La conducta depende de la especie y del entorno.</div>
+<div class="dossier-heading"><span class="dossier-code" id="dossierCode">EXP-P0-00</span><span class="tag">EXPEDIENTE DETALLADO</span></div>
+<div class="dossier-tabs" role="tablist" aria-label="Secciones del expediente">
+<button class="dossier-tab" data-tab="summary" role="tab" aria-selected="true">RESUMEN</button>
+<button class="dossier-tab" data-tab="observations" role="tab" aria-selected="false">OBSERVACIONES</button>
+<button class="dossier-tab" data-tab="environment" role="tab" aria-selected="false">AMBIENTE</button>
+<button class="dossier-tab" data-tab="structure" role="tab" aria-selected="false">ESTRUCTURA</button>
+<button class="dossier-tab" data-tab="ecology" role="tab" aria-selected="false">ECOLOGÍA</button>
+<button class="dossier-tab" data-tab="risks" role="tab" aria-selected="false">RIESGOS</button>
+<button class="dossier-tab" data-tab="archive" role="tab" aria-selected="false">ARCHIVO</button>
+<button class="dossier-tab" data-tab="unknowns" role="tab" aria-selected="false">INCÓGNITAS</button>
+<button class="dossier-tab" data-tab="fieldlog" role="tab" aria-selected="false">REGISTRO</button>
+</div>
+<div class="subpanel" id="subpanel" role="tabpanel" aria-live="polite">
+<h3>RESUMEN OPERATIVO</h3><p>Selecciona un sector del mapa para cargar su expediente ampliado.</p>
+</div>
+<button class="reset" id="reset">↺ Volver al dossier base</button>
+
+<section class="specimen-registry" aria-labelledby="specimenTitle">
+  <div class="dossier-heading" style="margin-top:18px">
+    <div>
+      <div class="dossier-code">TLS / P-GEN / SAMPLE-REG</div>
+      <h2 id="specimenTitle" style="margin:5px 0 0;font:16px Georgia,serif;color:#e4d6b7">Registro de muestras biológicas</h2>
+    </div>
+    <span class="tag">MÓDULO EXPERIMENTAL</span>
+  </div>
+  <p style="color:#aeb8a2;font-size:12px;margin:8px 0 12px">Registros de campo recuperados del Punto 0.</p>
+  <div class="specimen-tools">
+    <input id="sampleSearch" type="search" placeholder="Buscar por código, nombre o estado…" aria-label="Buscar muestras" />
+    <select id="sampleFilter" aria-label="Filtrar muestras">
+      <option value="all">Todas las entradas</option>
+      <option value="canon">Canon / antecedente registrado</option>
+      <option value="proposal">Propuestas nuevas</option>
+      <option value="pending">Identificación pendiente</option>
+    </select>
+  </div>
+  <div id="sampleGrid" class="sample-grid" aria-live="polite"></div>
+  <div id="sampleDetail" class="sample-detail" aria-live="polite">
+    <div class="dossier-code">SELECCIONA UNA ENTRADA</div>
+    <p style="margin:7px 0 0;color:#b9c2ae;font-size:13px">Selecciona una tarjeta para consultar procedencia, estado de identificación y notas de archivo.</p>
+  </div>
+</section>
+</aside></div>
+
+
+
+
+<div class="bottom"><div class="mini"><b>01 / LECTURA DEL MAPA</b><p>Los anillos organizan la lectura del invernadero y sus sectores.</p></div><div class="mini"><b>02 / CRITERIO DE REGISTRO</b><p>Los datos del Punto 0 se conservan como establecidos. Los sectores añadidos están señalados como propuestas para que puedas aceptarlos, modificarlos o descartarlos.</p></div><div class="mini"><b>03 / PRÓXIMA EXPANSIÓN</b><p>Podemos añadir puntos de interés, muestras recuperadas, rutas de expedición y registros de equipos desaparecidos cuando definamos su contenido.</p></div></div><div class="footer"><span>TLS/P-GEN/PO-07 · EXPEDIENTES v0.6 · DOSSIER AMPLIADO</span><span>EL MAPA NO SUSTITUYE UN INFORME DE CAMPO</span></div></main>
+<script>
+const dossiers={
+core:{status:'● REGISTRO BASE',title:'Punto 0 — Invernadero',desc:'Antiguo invernadero cuya silueta original aún se conserva, aunque las plantas trepadoras han cubierto gran parte de la estructura. El interior mantiene condiciones húmedas y relativamente estables, con especies exóticas y numerosos organismos que no son necesariamente hostiles.',condition:'Humedad estable',risk:'Variable / sin nivel único',obs:'Actividad vegetal diversa',certainty:'Canon establecido',note:'Nota de campo: no asumir que toda forma vegetal es agresiva. La conducta depende de la especie y del entorno.'},
+canopy:{status:'◇ SECTOR · P-01',title:'Cubierta invadida',desc:'Sector conceptual que agrupa las partes superiores del invernadero donde las trepadoras cubren vidrio, metal y armazones. Se propone como punto de observación para registrar el estado de la estructura.',condition:'Exposición irregular',risk:'Por determinar',obs:'Trepadoras y estructuras',certainty:'Idea nueva',note:'Propuesta no canónica: puede renombrarse, dividirse o eliminarse. No se ha establecido que este sector tenga especies exclusivas.'},
+thicket:{status:'◇ SECTOR · P-02',title:'Matorral denso',desc:'Área hipotética del borde vegetal, útil para clasificar la vegetación que dificulta el paso y separar avistamientos de especies territoriales de los encuentros casuales.',condition:'Vegetación cerrada',risk:'Por determinar',obs:'Visibilidad reducida',certainty:'Idea nueva',note:'Propuesta de organización. No implica que toda la vegetación de este sector sea hostil ni que exista una frontera fija.'},
+wetland:{status:'◇ SECTOR · P-03',title:'Depresión húmeda',desc:'Sector conceptual destinado a reunir observaciones de charcas, suelo saturado, raíces expuestas y plantas adaptadas a la humedad. Sirve como categoría de archivo, no como ubicación canónica confirmada.',condition:'Muy húmeda (propuesta)',risk:'Por determinar',obs:'Agua y raíces',certainty:'Idea nueva',note:'Antes de fijar esta zona en el lore, podemos decidir si realmente existe alrededor del Punto 0 y qué especies la habitan.'},
+outer:{status:'◇ SECTOR · P-04',title:'Perímetro exterior',desc:'Anillo de referencia para registrar señales, senderos bloqueados y cambios en la vegetación antes de aproximarse al invernadero. No representa una línea de seguridad real.',condition:'Variable',risk:'Desconocido',obs:'Accesos y rastros',certainty:'Idea nueva',note:'La existencia de un perímetro operativo es una propuesta. No hay distancias, coordenadas ni rutas confirmadas en esta ficha.'},
+unknown:{status:'◇ SECTOR · P-05',title:'Sector sin datos',desc:'Espacio reservado para futuras notas de campo que todavía no cuentan con evidencia suficiente. Puede alojar información contradictoria sin convertirla automáticamente en verdad del mundo.',condition:'Sin datos',risk:'No evaluado',obs:'Registro pendiente',certainty:'Idea nueva',note:'Mantener este sector vacío es intencional: los huecos de información no deben rellenarse con hechos inventados.'}
+};
+
+const extended={
+core:{
+code:'EXP-P0-00', summary:'El Punto 0 es un antiguo invernadero cuya silueta original todavía puede reconocerse, aunque las trepadoras han cubierto buena parte de la estructura. El interior mantiene un ambiente húmedo y relativamente estable, con especies exóticas y organismos de comportamiento diverso.',
+observations:['La estructura original sigue siendo reconocible bajo la vegetación.','El interior presenta humedad y condiciones relativamente estables.','No todos los organismos presentes son hostiles.','Las respuestas del ecosistema dependen de la especie y de las condiciones locales.'],
+unknowns:['Extensión exacta del ecosistema alrededor del invernadero.','Distribución precisa de cada especie.','Estado actual de accesos, cristales y soportes estructurales.','Qué sectores pueden recorrerse con seguridad; no hay rutas seguras confirmadas en este expediente.'],
+log:[['BASE','Datos derivados del antecedente registrado.'],['PRECAUCIÓN','No interpretar la ausencia de agresión como garantía de seguridad.'],['PENDIENTE','Añadir observaciones concretas solo cuando se definan en el canon.']]
+},
+canopy:{
+code:'EXP-P0-P01',summary:'Propuesta de sector para documentar las partes superiores del invernadero: cubierta, armazones y zonas donde las plantas trepadoras han avanzado sobre la estructura. La categoría sirve para ordenar futuras observaciones, no confirma una división geográfica oficial.',
+observations:['Las trepadoras cubren gran parte de la silueta del invernadero: registrado.','La separación de una “Cubierta invadida” como sector independiente es una propuesta.','No se asignan especies exclusivas a este sector.'],
+unknowns:['Cuánto vidrio permanece intacto.','Qué partes de la cubierta soportan peso.','Si existen flores, frutos o estructuras reproductivas visibles en altura.','Si el sector debe subdividirse en cubierta norte, central y sur.'],
+log:[['PROPUESTA','Sector creado para organizar futuras notas.'],['SIN VERIFICAR','No se ha establecido una ruta de acceso.'],['PENDIENTE','Definir hallazgos y fotografías de campo.']]
+},
+thicket:{
+code:'EXP-P0-P02',summary:'Área conceptual para agrupar observaciones de vegetación densa en el borde del ecosistema. Se utilizaría para registrar pérdida de visibilidad, obstáculos vegetales y avistamientos, sin asumir que el conjunto sea hostil.',
+observations:['El lore contempla vegetación territorial y especies de comportamientos distintos.','La existencia de un sector formal llamado “Matorral denso” es una propuesta.','No se da por hecho que toda planta del área ataque a los intrusos.'],
+unknowns:['Límites y densidad reales de la vegetación.','Qué especies están presentes y cuáles son solo avistamientos sin confirmar.','Si hay corredores naturales entre la vegetación.','Cómo varía el comportamiento según la estación o la disponibilidad de nutrientes.'],
+log:[['PROPUESTA','Categoría de archivo, no zona canónica confirmada.'],['CRITERIO','Separar observación directa de interpretación del explorador.'],['PENDIENTE','Vincular especies solo cuando su hábitat esté establecido.']]
+},
+wetland:{
+code:'EXP-P0-P03',summary:'Sector propuesto para organizar registros relacionados con agua, suelo saturado, raíces expuestas y organismos adaptados a ambientes húmedos. No confirma la existencia de una depresión acuática concreta junto al invernadero.',
+observations:['El interior del Punto 0 se describe como húmedo y relativamente estable: registrado.','Una depresión húmeda independiente es una propuesta de cartografía.','Las plantas acuáticas o de zonas húmedas pueden documentarse aquí si se aprueba la ubicación.'],
+unknowns:['Presencia y profundidad de charcas.','Conexión entre agua superficial y raíces.','Calidad del agua y posibles cambios estacionales.','Qué especies serían residentes permanentes.'],
+log:[['CANON','Humedad estable en el interior del invernadero.'],['PROPUESTA','Depresión húmeda como sector separado.'],['PENDIENTE','Decidir si el área existe en el mapa definitivo.']]
+},
+outer:{
+code:'EXP-P0-P04',summary:'Anillo conceptual para registrar aproximaciones, rastros y cambios en la vegetación antes de llegar al invernadero. No representa un perímetro de seguridad real ni una frontera biológica establecida.',
+observations:['El ecosistema alrededor del Punto 0 se organiza en zonas para facilitar la lectura del lore.','El “Perímetro exterior” es una propuesta de nomenclatura.','No hay coordenadas, distancias ni rutas confirmadas.'],
+unknowns:['Distancia entre el invernadero y el primer cambio notable de vegetación.','Puntos de acceso y obstáculos.','Si existen rastros persistentes de expediciones anteriores.','Cómo cambia el límite del ecosistema con el tiempo.'],
+log:[['PROPUESTA','Anillo de referencia, no perímetro operativo.'],['NO A ESCALA','El mapa es esquemático.'],['PENDIENTE','Definir accesos solo si se incorporan al canon.']]
+},
+unknown:{
+code:'EXP-P0-P05',summary:'Espacio reservado para informes incompletos, señales contradictorias o zonas que aún no se han podido caracterizar. Su función es conservar las lagunas de información sin rellenarlas con hechos inventados.',
+observations:['La ausencia de datos no equivale a ausencia de actividad.','Un testimonio aislado debe distinguirse de una observación repetida.','La existencia de este sector es una propuesta de organización del archivo.'],
+unknowns:['Localización real del área.','Origen y fiabilidad de futuros informes.','Si los registros se refieren al mismo fenómeno o a eventos distintos.','Qué evidencia sería suficiente para cambiar su clasificación.'],
+log:[['PROTOCOLO','No convertir rumores en hechos confirmados.'],['ESTADO','Sin datos suficientes para evaluar el riesgo.'],['PENDIENTE','Adjuntar evidencias cuando existan.']]
+}};
+
+const environmentProfiles={
+core:{
+classification:'DATOS MIXTOS: CANON + CAMPOS PENDIENTES',
+lighting:'No especificada en el canon disponible',
+humidity:'Húmedo y relativamente estable — registrado',
+terrain:'Interior de un antiguo invernadero; superficie exacta pendiente',
+vegetation:'Vegetación abundante y trepadoras que cubren buena parte de la estructura — registrado',
+visibility:'Variable; no cuantificada',
+sound:'Sin registro canónico específico',
+air:'No hay mediciones confirmadas',
+proposed:['Registrar iluminación por hora o franja del día','Definir materiales del suelo y zonas de acumulación de agua','Añadir observaciones de olor, sonido y circulación del aire solo si se aprueban en el lore']
+},
+canopy:{
+classification:'PROPUESTA DE CARTOGRAFÍA',
+lighting:'Propuesta: luz irregular filtrada por vidrio roto y hojas; pendiente de aprobación',
+humidity:'Sin medición confirmada; podría variar según exposición y ventilación',
+terrain:'Estructura elevada y soportes del invernadero como elementos por verificar',
+vegetation:'Las trepadoras sobre la silueta del invernadero son canon; esta división como sector es propuesta',
+visibility:'Propuesta: visibilidad fragmentada por hojas, estructuras y reflejos',
+sound:'Sin registro',
+air:'Sin registro',
+proposed:['Confirmar cuánto vidrio queda en la cubierta','Decidir si hay rutas de acceso transitables','Registrar especies solo cuando se confirme su presencia']
+},
+thicket:{
+classification:'PROPUESTA DE CARTOGRAFÍA',
+lighting:'Propuesta: iluminación discontinua bajo una masa vegetal densa',
+humidity:'No establecida para este sector',
+terrain:'Propuesta: terreno irregular y con obstáculos vegetales; no confirmado',
+vegetation:'El lore contempla vegetación territorial y especies de comportamiento diverso; la delimitación del matorral es propuesta',
+visibility:'Propuesta: baja a media, según densidad vegetal',
+sound:'Sin registro; no inferir presencia de fauna por sonidos no descritos',
+air:'Sin registro',
+proposed:['Definir límites del sector','Confirmar composición del terreno','Evitar asignar un nivel de peligro sin especies identificadas']
+},
+wetland:{
+classification:'REGISTRO PARCIAL + SECTOR PROPUESTO',
+lighting:'Sin registro confirmado',
+humidity:'El interior del invernadero es húmedo y relativamente estable — canon; la depresión húmeda separada es propuesta',
+terrain:'La existencia de charcas, barro o suelo saturado no está confirmada',
+vegetation:'Las especies acuáticas o de ambientes húmedos pueden indexarse si su presencia se establece',
+visibility:'Sin registro',
+sound:'Sin registro',
+air:'Sin registro',
+proposed:['Decidir si el sector húmedo existe fuera del invernadero','Definir si hay agua superficial','No inventar mediciones de agua o suelo como si fueran datos oficiales']
+},
+outer:{
+classification:'PROPUESTA DE CARTOGRAFÍA',
+lighting:'Sin registro; depende de la hora y de la cobertura vegetal si se define en el canon',
+humidity:'Sin medición confirmada',
+terrain:'No se han establecido distancias, elevación ni rutas',
+vegetation:'El ecosistema circundante tiene zonas y organismos diversos; el anillo exterior es una herramienta de organización propuesta',
+visibility:'Sin registro',
+sound:'Sin registro',
+air:'Sin registro',
+proposed:['Definir el límite entre invernadero y entorno','Dibujar accesos solo después de aprobarlos','No etiquetar rutas como seguras sin evidencia']
+},
+unknown:{
+classification:'SIN DATOS SUFICIENTES',
+lighting:'Desconocida',
+humidity:'Desconocida',
+terrain:'Desconocido',
+vegetation:'Sin inventario fiable',
+visibility:'Desconocida',
+sound:'Sin registro verificable',
+air:'Sin mediciones',
+proposed:['Conservar el vacío de información hasta que haya una observación','Separar testimonios de evidencias directas','No convertir rumores en canon']
+}
+};
+function renderEnvironment(){
+ const key=window.activeDossier||'core';
+ const e=environmentProfiles[key]||environmentProfiles.core;
+ const panel=document.getElementById('subpanel');
+ const rows=[
+ ['ILUMINACIÓN',e.lighting],['HUMEDAD',e.humidity],['TERRENO',e.terrain],
+ ['VEGETACIÓN',e.vegetation],['VISIBILIDAD',e.visibility],['SONIDO',e.sound],['AIRE',e.air]
+ ];
+ panel.innerHTML='<h3>PERFIL AMBIENTAL // '+e.classification+'</h3><div class="environment-grid">'+rows.map(r=>'<div class="environment-cell"><small>'+r[0]+'</small><p>'+r[1]+'</p></div>').join('')+'</div><h3 style="margin-top:14px">DATOS POR DEFINIR</h3><ul>'+e.proposed.map(x=>'<li>'+x+'</li>').join('')+'</ul><div class="sample-warning">Los campos marcados como propuesta o desconocidos no son mediciones oficiales ni hechos canónicos confirmados.</div>';
+}
+
+const coreDeep={
+structure:{title:'ESTRUCTURA FÍSICA',intro:'El edificio conserva una silueta reconocible de antiguo invernadero, aunque gran parte de su contorno está cubierto por plantas trepadoras.',rows:[['Identidad arquitectónica','Antiguo invernadero — registrado.'],['Estado de la silueta','Todavía reconocible bajo la vegetación — registrado.'],['Cubierta y cristales','Integridad, roturas y estabilidad: sin confirmar.'],['Armazón y soportes','Materiales, corrosión y capacidad de carga: sin confirmar.'],['Accesos y puertas','Número, ubicación y estado: sin confirmar.'],['Suelo interior','Material, desniveles, drenaje y resistencia: sin confirmar.']],pending:['No dar por hecho que el techo soporta peso humano.','No trazar entradas ni salidas oficiales hasta definirlas.','Cualquier crujido, derrumbe o cristal roto debe aparecer como observación de escena, no como dato previo.']},
+ecology:{title:'ECología Y VIDA PRESENTE',intro:'El interior reúne especies exóticas y organismos con comportamientos diversos. La presencia de vida no equivale automáticamente a hostilidad.',rows:[['Diversidad','Hay especies exóticas y organismos de distinto comportamiento — registrado.'],['Conducta','No todos los organismos son hostiles; la respuesta depende de especie y entorno.'],['Interacciones','Competencia, simbiosis, depredación y territorialidad deben registrarse por especie cuando estén definidas.'],['Inventario del invernadero','No hay una lista completa de especies asignadas al interior en este expediente.'],['Ciclo biológico','Esporas, semillas, raíces y filamentos forman parte del sistema PhytoGenesis; su presencia concreta en cada punto debe confirmarse.'],['Fauna asociada','No se asignan animales específicos al invernadero sin una referencia aprobada.']],pending:['Vincular especies solo cuando su ficha indique hábitat o se decida expresamente.','Separar avistamiento, testimonio e identificación confirmada.','No convertir una especie del índice general en residente del Punto 0 automáticamente.']},
+risks:{title:'RIESGOS Y PROTOCOLO DE CAMPO',intro:'No existe un único nivel de peligro confirmado para todo el Punto 0. La evaluación debe depender de la especie, la situación y la evidencia disponible.',rows:[['Amenaza biológica','Variable; no hay nivel único confirmado.'],['Contacto vegetal','No tocar raíces, filamentos, esporas o estructuras desconocidas sin que la escena establezca el procedimiento.'],['Fuego','El fuego es una debilidad importante de PhytoGenesis, pero un fuego pequeño puede no eliminar raíces profundas o semillas.'],['Estructura','La estabilidad del edificio no ha sido evaluada en este dossier.'],['Rutas seguras','Ninguna ruta se considera segura por defecto.'],['Respuesta ante conducta hostil','Registrar señales y comportamiento observado; no generalizar a todas las especies.']],pending:['No presentar recomendaciones ficticias como protocolos médicos reales.','No confundir ausencia de ataque con ausencia de riesgo.','Toda amenaza específica requiere una especie, evento o evidencia concreta.']},
+archive:{title:'ARCHIVO, EVIDENCIAS Y TRAZABILIDAD',intro:'Este expediente separa el antecedente registrado de las hipótesis de trabajo. Una anotación propuesta no pasa a canon por aparecer en la interfaz.',rows:[['Código del expediente','EXP-P0-00'],['Clasificación','Punto de origen / antiguo invernadero.'],['Datos canónicos','Silueta reconocible; trepadoras cubren gran parte de la estructura; interior húmedo y relativamente estable; especies exóticas y organismos no necesariamente hostiles.'],['Datos pendientes','Mediciones, mapa interno, accesos, inventario exacto, estado estructural y rutas.'],['Muestras','El registro de muestras asociado contiene plantillas y propuestas; no implica que se hayan recuperado físicamente.'],['Última regla de revisión','Conservar vacíos cuando falte evidencia; no rellenarlos mediante suposiciones.']],pending:['Para cada futuro hallazgo, anotar código, fecha ficticia, ubicación aprobada, observador y nivel de certeza.','Marcar las contradicciones sin resolverlas automáticamente.','Promover una propuesta a canon solo con decisión expresa del autor.']}
+};
+function renderDeepTab(tab,key,panel){
+ const data=coreDeep[tab];
+ if(key!=='core'){
+  panel.innerHTML='<h3>'+data.title+'</h3><p>Este apartado todavía no tiene datos confirmados para el sector <b>'+dossiers[key].title+'</b>. La existencia de este sector es una propuesta de cartografía.</p><div class="sample-warning">ESTADO: REGISTRO INCOMPLETO · No trasladar automáticamente los datos del invernadero a este sector.</div><h3 style="margin-top:14px">PUNTOS A RESOLVER</h3><ul><li>Confirmar si el sector se conserva en el mapa definitivo.</li><li>Definir observaciones concretas antes de asignar especies, riesgos o rutas.</li><li>Separar las ideas nuevas del antecedente registrado.</li></ul>';return;
+ }
+ panel.innerHTML='<h3>'+data.title+'</h3><p>'+data.intro+'</p><div class="environment-grid">'+data.rows.map(r=>'<div class="environment-cell"><small>'+r[0]+'</small><p>'+r[1]+'</p></div>').join('')+'</div><h3 style="margin-top:14px">NOTAS DEL REGISTRO</h3><ul>'+data.pending.map(x=>'<li>'+x+'</li>').join('')+'</ul><div class="sample-warning">CLASIFICACIÓN DOCUMENTAL: los datos explícitamente marcados como canon proceden del antecedente registrado. Los campos restantes continúan abiertos.</div>';
+}
+
+function renderTab(tab){
+const key=window.activeDossier||'core';const d=extended[key]||extended.core;const panel=document.getElementById('subpanel');
+document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===tab)));
+if(tab==='environment'){renderEnvironment();return;}
+if(['structure','ecology','risks','archive'].includes(tab)){renderDeepTab(tab,key,panel);return;}
+if(tab==='summary'){
+panel.innerHTML='<h3>RESUMEN OPERATIVO</h3><p>'+d.summary+'</p><span class="evidence '+(key==='core'?'canon':'')+'">'+(key==='core'?'REGISTRO BASE':'PROPUESTA DE ORGANIZACIÓN')+'</span><span class="evidence">SIN COORDENADAS CONFIRMADAS</span>';
+}else if(tab==='observations'){
+panel.innerHTML='<h3>OBSERVACIONES Y CRITERIOS</h3><ul>'+d.observations.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+}else if(tab==='unknowns'){
+panel.innerHTML='<h3>INCÓGNITAS ABIERTAS</h3><p>Preguntas pendientes: no deben tratarse como datos confirmados.</p><ul>'+d.unknowns.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+}else{
+panel.innerHTML='<h3>REGISTRO DE CAMPO</h3>'+d.log.map(x=>'<div class="recordline"><strong>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('');
+}
+}
+
+const ids=['status','title','desc','condition','risk','obs','certainty','note'];function show(key){const d=dossiers[key];if(!d)return;window.activeDossier=key;ids.forEach(id=>document.getElementById(id).textContent=d[id]);document.getElementById('dossierCode').textContent=(extended[key]||extended.core).code;document.querySelectorAll('.zone').forEach(b=>b.style.boxShadow=b.dataset.zone===key?'0 0 0 2px #b5d77b55,0 0 24px #b5d77b22':'');renderTab(document.querySelector('[data-tab][aria-selected="true"]')?.dataset.tab||'summary');}document.querySelectorAll('[data-zone]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.zone)));document.getElementById('reset').addEventListener('click',()=>show('core'));document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>renderTab(b.dataset.tab)));window.activeDossier='core';renderTab('summary');
+
+const samples=[
+{code:'SMP-P0-001',name:'Matriz vegetal no clasificada',kind:'proposal',label:'PROPUESTA NUEVA',origin:'Sector por determinar',state:'Sin muestra física; entrada conceptual',risk:'No evaluado',description:'Plantilla de archivo para una futura muestra vegetal recuperada. No representa un organismo ya confirmado dentro del Punto 0.',notes:['Registrar forma, color, textura y dimensiones solo tras definir una muestra concreta.','No asignar especie por semejanza visual.','Añadir una ilustración cuando exista una referencia aprobada.'],warning:'Entrada de ejemplo. No constituye evidencia canónica.'},
+{code:'SMP-P0-002',name:'Estructura portadora de esporas',kind:'proposal',label:'PROPUESTA NUEVA',origin:'Procedencia no asignada',state:'Identificación pendiente',risk:'Desconocido',description:'Ficha de trabajo para documentar una posible estructura relacionada con la dispersión de esporas. El registro no afirma que se haya recuperado una estructura concreta.',notes:['Distinguir entre esporas observadas y sospecha de esporulación.','Registrar condiciones ambientales sin deducir causalidad.','Mantener el origen como desconocido hasta contar con una observación aprobada.'],warning:'La relación exacta con el ciclo de PhytoGenesis debe definirse en el canon antes de convertir esta ficha en un hallazgo.'},
+{code:'SMP-P0-003',name:'Filamentos de origen incierto',kind:'proposal',label:'PROPUESTA NUEVA',origin:'Ubicación no confirmada',state:'Sin identificación',risk:'No evaluado',description:'Registro provisional para hilos, raíces finas o filamentos que puedan aparecer en una futura escena de exploración. La apariencia por sí sola no determina su función.',notes:['No concluir que el filamento es infeccioso solo por su forma.','Documentar si está unido a una planta, sustrato u otro organismo.','Anotar las diferencias entre observación directa y testimonio.'],warning:'Concepto de archivo; no se declara una muestra ya existente en el lore.'},
+{code:'SMP-P0-004',name:'Tejido vegetal endurecido',kind:'proposal',label:'PROPUESTA NUEVA',origin:'Sector por determinar',state:'Clasificación abierta',risk:'No evaluado',description:'Plantilla para registrar tejido con apariencia leñosa o mineralizada, sin atribuirle de antemano una mutación específica.',notes:['Describir dureza y aspecto solo con datos ficticios aprobados.','No relacionar automáticamente con La Piedra Viva.','Separar un posible parecido de una identificación real.'],warning:'No es una nueva mutación confirmada; se trata de una categoría de muestras propuesta.'},
+{code:'SMP-P0-005',name:'Registro de especie medicinal',kind:'canon',label:'CATEGORÍA DEL LORE',origin:'Hábitat específico por definir',state:'Referencia de categoría, no espécimen individual',risk:'Depende de la especie',description:'El lore contempla especies medicinales como La Sanadora, El Calmante, El Antídoto, El Purificador y El Renovador, así como imitadoras peligrosas. Esta entrada sirve de índice, no de muestra recuperada.',notes:['Vincular una especie concreta solo cuando su ubicación esté establecida.','Las propiedades son ficticias y no equivalen a consejo médico real.','Mantener separadas las especies auténticas y sus imitadoras peligrosas.'],warning:'La categoría medicinal pertenece al lore; el espécimen y su procedencia no están confirmados.'},
+{code:'SMP-P0-006',name:'Material vegetal de zona húmeda',kind:'proposal',label:'PROPUESTA NUEVA',origin:'Interior húmedo del invernadero (si se aprueba como muestra)',state:'Pendiente de descripción',risk:'No evaluado',description:'Ficha potencial para documentar material vegetal en un ambiente húmedo. El entorno húmedo del interior del Punto 0 sí forma parte del lore, pero esta muestra es hipotética.',notes:['No asignar una especie sin identificación.','Registrar si la muestra se encontró adherida al sustrato o separada.','Añadir cadena de custodia ficticia si se crea una misión que la recupere.'],warning:'La humedad interior es canon; la muestra específica es una propuesta.'}
+];
+function drawSamples(){
+ const q=(document.getElementById('sampleSearch').value||'').trim().toLowerCase();
+ const f=document.getElementById('sampleFilter').value;
+ const filtered=samples.filter(s=>(f==='all'||(f==='canon'&&s.kind==='canon')||(f==='proposal'&&s.kind==='proposal')||(f==='pending'&&/pendiente|sin identificación|abierta/i.test(s.state)))&&[s.code,s.name,s.origin,s.state,s.description].join(' ').toLowerCase().includes(q));
+ const grid=document.getElementById('sampleGrid');
+ if(!filtered.length){grid.innerHTML='<div class="sample-empty">No hay entradas que coincidan con la búsqueda.</div>';return}
+ grid.innerHTML=filtered.map(s=>'<button class="sample-card" data-sample="'+s.code+'"><span class="sample-code">'+s.code+'</span><strong>'+s.name+'</strong><p>'+s.description+'</p><span class="sample-label '+(s.kind==='canon'?'canon':'')+'">'+s.label+'</span></button>').join('');
+ grid.querySelectorAll('[data-sample]').forEach(b=>b.addEventListener('click',()=>showSample(b.dataset.sample)));
+}
+function showSample(code){
+ const s=samples.find(x=>x.code===code);if(!s)return;
+ document.getElementById('sampleDetail').innerHTML='<div class="dossier-code">'+s.code+'</div><h3>'+s.name+'</h3><p>'+s.description+'</p><div class="sample-meta"><div><small>PROCEDENCIA</small><span>'+s.origin+'</span></div><div><small>ESTADO</small><span>'+s.state+'</span></div><div><small>RIESGO</small><span>'+s.risk+'</span></div><div><small>CLASIFICACIÓN</small><span>'+s.label+'</span></div></div><strong style="font:10px ui-monospace,monospace;color:#b5d77b;letter-spacing:.1em">NOTAS DE ARCHIVO</strong><ul>'+s.notes.map(n=>'<li>'+n+'</li>').join('')+'</ul><div class="sample-warning">'+s.warning+'</div>';
+}
+document.getElementById('sampleSearch').addEventListener('input',drawSamples);
+document.getElementById('sampleFilter').addEventListener('change',drawSamples);
+drawSamples();
+</script><div style="max-width:1100px;margin:12px auto;padding:10px 14px;border:1px solid rgba(93,255,143,.28);border-radius:10px;background:rgba(5,18,12,.88);color:#bce8ca;font:13px/1.55 system-ui,sans-serif"><strong style="color:#65ff9b;letter-spacing:.12em">PUNTO 00 · INVERNADERO</strong><br>Centro: invernadero y árbol central. Primer anillo: flora frutal, con hostiles dormidas ocasionales. Anillo intermedio: bosque común y especies hostiles. Anillo exterior: especies territoriales. Los nombres resaltados abren el expediente principal de cada especie cuando existe una ficha vinculada.</div>
+</body></html>

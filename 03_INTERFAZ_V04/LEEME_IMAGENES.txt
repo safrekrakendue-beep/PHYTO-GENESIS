@@ -1,0 +1,10 @@
+T.L.S. // PHYTOGENESIS — IMÁGENES Y REFERENCIAS
+
+Se añadieron:
+- 31 imágenes originales recuperadas del catálogo ecológico v1.5, copiadas a assets/imagenes/referencias_catalogo/.
+- Una imagen conceptual de la interfaz en assets/imagenes/interfaz/terminal_concepto.png.
+- Una galería navegable en galeria_imagenes.html, enlazada desde la portada y la navegación global.
+
+La galería permite abrir cada imagen a tamaño completo. Las imágenes del catálogo se conservan como referencias visuales: no confirman por sí solas datos biológicos ni rellenan información perdida.
+
+Abre PHYTOGENESIS/index.html para el arranque, usa PHYTO-01 para entrar y accede a la galería desde la portada.

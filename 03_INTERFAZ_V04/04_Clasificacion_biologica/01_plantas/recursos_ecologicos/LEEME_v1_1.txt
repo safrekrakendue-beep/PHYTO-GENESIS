@@ -1,0 +1,16 @@
+PHYTOGENESIS — CATÁLOGO ECOLÓGICO v1.1
+
+Se incorporan las láminas visuales originales recibidas en el proyecto dentro de referencias_visuales/.
+Abre index.html y usa el enlace Biblioteca visual original. Cada expediente vegetal contiene referencias visuales relevantes; las páginas de fauna incluyen una referencia general de animales infectados.
+
+IMPORTANTE: las imágenes originales tienen prioridad. Los resúmenes del expediente orientan la lectura y no deben reemplazar ni contradecir el contenido de las láminas. Los detalles dudosos deben verificarse en la imagen antes de tratarlos como canon.
+
+No mover archivos individuales: los enlaces son relativos. Descomprime el ZIP completo y abre index.html en el navegador.
+
+
+ACTUALIZACIÓN DE CONTENIDO — v1.3
+Se ampliaron las 15 fichas vegetales y las 6 ramas animales, tanto en HTML como en Markdown. Cada expediente separa la categoría/rasgos derivados del material del proyecto de las ampliaciones funcionales propuestas. La presencia de especies en Punto 0 no se da por confirmada sin registro. Las imágenes originales continúan incluidas y tienen prioridad cuando aporten detalles más precisos.
+
+
+ACTUALIZACIÓN DE CONTENIDO — v1.3
+Se ampliaron las 15 fichas vegetales y las 6 ramas animales, tanto en HTML como en Markdown. Cada expediente separa la categoría/rasgos derivados del material del proyecto de las ampliaciones funcionales propuestas. La presencia de especies en Punto 0 no se da por confirmada sin registro. Las imágenes originales continúan incluidas y tienen prioridad cuando aporten detalles más precisos.

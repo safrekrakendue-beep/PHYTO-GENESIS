@@ -1,0 +1,2 @@
+REPARACION_LOCAL.txt
+Se sustituyeron etiquetas editoriales por estados descriptivos del archivo, sin completar información biológica ausente. Se conservan los cinco expedientes y la estructura del módulo.

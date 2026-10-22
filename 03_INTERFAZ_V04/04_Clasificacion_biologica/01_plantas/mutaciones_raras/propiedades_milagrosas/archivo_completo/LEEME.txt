@@ -1,0 +1,9 @@
+T.L.S. / PHYTOGENESIS PG-01 — BLOQUE 09.2: EXPEDIENTES MEDICINALES Y FALSAS MEDICINALES
+
+Incluye cinco expedientes medicinales completos en HTML y Markdown, cinco expedientes de imitadoras, índice, registro de muestra, control de fuentes y CSS integrado.
+
+Las imitadoras comparten casi toda la apariencia de sus equivalentes; cada pareja tiene una única diferencia visual registrada.
+
+Todas las páginas HTML llevan el estilo verde-negro integrado para evitar pantallas blancas cuando no se carga un CSS externo. Las plantillas de registro no guardan los datos automáticamente.
+
+Las propiedades descritas son ficticias. Este bloque es independiente y no modifica la web principal v0.4.

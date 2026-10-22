@@ -1,0 +1,6 @@
+PUNTO 00 — ESTRUCTURA FUSIONADA
+
+La entrada oficial es 03_INTERFAZ_V04/04_Clasificacion_biologica/01_plantas/punto0/index.html.
+El mapa de anillos vive en index.html. punto0_completo.html redirige al mapa para evitar dos interfaces principales.
+El contenido extenso previo se conserva en archivo_sectores.html como referencia, y los ocho sectores mantienen sus páginas individuales.
+Las fichas oficiales de especies pertenecen a Clasificación biológica; Punto 00 funciona como mapa del ecosistema y enlaza a esos expedientes.

@@ -1,0 +1,4 @@
+AJUSTE DE IMÁGENES — ESTILO B
+Se eliminó cualquier imagen duplicada dentro de la columna narrativa de los 15 expedientes vegetales.
+La imagen de referencia queda únicamente en el panel lateral REGISTRO VISUAL, siguiendo la composición
+de la comparativa B. Se mantiene el ajuste object-fit:contain para respetar la imagen original sin recorte.

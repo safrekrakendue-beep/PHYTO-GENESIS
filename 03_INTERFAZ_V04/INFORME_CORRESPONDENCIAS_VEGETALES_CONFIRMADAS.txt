@@ -1,0 +1,10 @@
+CORRESPONDENCIAS VEGETALES CONFIRMADAS POR EL USUARIO
+=======================================================
+La Estranguladora: 531781
+La Tejedora: 532872
+Rabo de Espinas / Rabo de Gato: 532876
+La Flotante: 532875
+La Mordiente: 532874
+
+Las referencias se han aplicado a los expedientes HTML de las especies correspondientes
+siempre que el recurso PNG exista en assets/imagenes/referencias_catalogo.

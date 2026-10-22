@@ -1,0 +1,32 @@
+THE LAST SURVIVORS — PHYTOGENESIS
+INFORME DE REPARACIONES INICIALES
+
+Se trabajó sobre copias independientes de cinco módulos. Los ZIP originales y la web principal v0.4 no fueron modificados.
+
+02 Ciclo de infección:
+- CSS incrustado en todas las páginas HTML para reducir dependencia de archivos externos.
+- Enlace defectuoso del índice cambiado a un ancla local.
+- Etiquetas editoriales sustituidas por estados descriptivos.
+
+03 Progresión humanos/zombis:
+- CSS incrustado en todas las páginas HTML.
+- Enlace cruzado actualizado a la estructura de carpetas prevista para el archivo integrado.
+- Etiquetas editoriales sustituidas por estados descriptivos.
+
+04 Clasificación biológica:
+- Enlace cruzado actualizado a la estructura de carpetas prevista.
+- Etiquetas editoriales sustituidas por estados descriptivos.
+- Se conservaron las páginas y su CSS ya incrustado.
+
+07 Anomalías excepcionales:
+- Etiquetas editoriales sustituidas por estados descriptivos.
+- Se conservaron los cinco expedientes; no se inventaron diferencias biológicas nuevas.
+
+08 Matriz maestra y registros:
+- Etiquetas editoriales sustituidas por estados descriptivos.
+- Las plantillas no se han convertido en almacenamiento real de datos.
+
+Pendiente:
+- La validación final de los enlaces cruzados requiere la estructura integrada definitiva.
+- Aún hay que auditar el catálogo ecológico, el ecosistema, las medicinales y Punto 0 en profundidad.
+- No se han fusionado módulos entre sí.

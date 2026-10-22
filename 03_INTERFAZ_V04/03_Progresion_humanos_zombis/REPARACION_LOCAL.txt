@@ -1,0 +1,2 @@
+REPARACION_LOCAL.txt
+Se incrustaron los estilos en todas las páginas HTML. El enlace al ciclo general apunta a la carpeta vecina 02_Ciclo_infeccion en la estructura final prevista. El módulo sigue separado.

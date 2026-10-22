@@ -1,0 +1,7 @@
+T.L.S. // PHYTOGENESIS PG-01 — VISUALIZACIONES TECNOLÓGICAS
+
+La portada principal de la interfaz V0.4 incluye un círculo interactivo dividido en tres ramas: humana, animal y vegetal. Al seleccionar un sector, se actualiza el panel y aparece un enlace al directorio correspondiente.
+
+El expediente existente 04_Clasificacion_biologica/01_plantas/recursos_ecologicos/00_Punto_0_invernadero/index.html incorpora un mapa holográfico interactivo con núcleo y tres anillos conceptuales. Al seleccionar cada anillo cambia la ficha descriptiva.
+
+Los anillos no asignan especies ni distancias no documentadas; deben validarse con los expedientes del proyecto. Se conservaron los documentos y carpetas preexistentes.

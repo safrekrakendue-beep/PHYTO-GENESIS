@@ -1,0 +1,8 @@
+T.L.S. — PHYTOGENESIS PG-01 — ANOMALÍAS EXCEPCIONALES v1.1
+
+Abre index.html. Los expedientes están en expedientes/ en formato HTML y Markdown.
+
+Criterio confirmado por el creador:
+Las cinco anomalías son excepcionales y diferentes de las especies y variantes comunes, pero no necesariamente irrepetibles. Pueden existir otros ejemplares del mismo tipo con pequeñas diferencias biológicas. No se fija todavía qué diferencias concretas presenta cada ejemplar.
+
+Esta edición conserva los datos del archivo mutaciones.html de la versión v0.4 consultada y añade aclaraciones editoriales separadas. No reemplaza ni modifica el archivo maestro v0.4.

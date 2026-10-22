@@ -1,0 +1,10 @@
+T.L.S. // PHYTOGENESIS — NAVEGACIÓN ENTRE MÓDULOS
+
+Esta versión añade una barra de navegación global a las páginas HTML de los módulos.
+Desde cada expediente se puede volver a la portada principal y saltar directamente a los índices de los demás módulos incluidos.
+
+Inicio: abre PHYTOGENESIS/index.html.
+Acceso narrativo: PHYTO-01.
+Conserva la estructura de carpetas al extraer el ZIP; no muevas los HTML fuera de sus carpetas.
+
+La navegación fue revisada como enlaces locales dentro del ZIP. La visualización concreta en SPCK/navegador móvil todavía requiere una prueba manual.

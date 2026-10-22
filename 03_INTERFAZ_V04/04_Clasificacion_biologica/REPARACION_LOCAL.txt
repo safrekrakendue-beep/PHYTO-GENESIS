@@ -1,0 +1,2 @@
+REPARACION_LOCAL.txt
+Se ajustó el enlace cruzado a la carpeta vecina 03_Progresion_humanos_zombis prevista para la interfaz integrada. El módulo sigue separado.

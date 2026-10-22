@@ -1,0 +1,10 @@
+T.L.S. // PHYTOGENESIS — INTEGRACIÓN V0.4 + CATÁLOGO
+
+La portada de la terminal enlaza a:
+- 04_Clasificacion_biologica/01_plantas/recursos_ecologicos/index.html: catálogo original con expedientes y biblioteca visual.
+- interfaz_v04.html: versión web V0.4 conservada como página independiente.
+
+Se han copiado los archivos del catálogo manteniendo su estructura relativa y sus referencias visuales.
+Las páginas del catálogo y la V0.4 incluyen accesos de retorno a la portada y enlaces entre estos directorios.
+No se ha sobrescrito el sitio original ni se han combinado los expedientes en un solo HTML.
+La contraseña narrativa de la terminal sigue siendo PHYTO-01.

@@ -1,0 +1,12 @@
+T.L.S. // PHYTOGENESIS — TERMINAL DE ACCESO
+
+INICIO: abre PHYTOGENESIS/index.html desde el navegador o SPCK.
+
+SECUENCIA: la terminal muestra un breve diagnóstico animado y después solicita la clave narrativa.
+CLAVE DE ACCESO: PHYTO-01
+
+NOTA: la clave es una simulación de acceso para ambientación. No protege realmente los archivos.
+
+Tras acceder, la portada presenta el contexto de PG-01 y enlaces a los cinco módulos incluidos en esta copia. Conserva todas las carpetas para que los enlaces funcionen.
+
+Esta versión no modifica la web principal v0.4 ni convierte los expedientes en un único HTML.

@@ -1,0 +1,2 @@
+REPARACION_LOCAL.txt
+Se sustituyeron etiquetas editoriales por estados descriptivos del archivo. Las plantillas siguen siendo registros visuales; no se afirma que guarden datos automáticamente.

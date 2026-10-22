@@ -1,0 +1,20 @@
+THE LAST SURVIVORS — PHYTOGENESIS
+PAQUETE DE PRUEBA INTEGRADO EN UNA SOLA CARPETA
+
+Este ZIP conserva los módulos como carpetas independientes dentro de una misma carpeta raíz.
+No se ha convertido el proyecto en un único HTML ni se han fusionado las fichas en una sola página.
+
+Estructura:
+PHYTOGENESIS/
+  02_Ciclo_infeccion/
+  03_Progresion_humanos_zombis/
+  04_Clasificacion_biologica/
+  07_Anomalias_excepcionales/
+  08_Matriz_Maestra_y_Registros/
+  INFORME_REPARACIONES_INICIALES.txt
+
+NOTAS:
+- Los ZIP originales de cada módulo no se modificaron al generar este paquete.
+- Los estilos de los módulos 02 y 03 se incrustaron en las páginas HTML.
+- Algunos enlaces cruzados están preparados para la estructura de carpetas prevista, pero deben verificarse al abrir la carpeta raíz.
+- Esta es una prueba de integración estática; no se ha probado visualmente en SPCK ni en Android.

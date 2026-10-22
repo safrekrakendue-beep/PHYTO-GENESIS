@@ -1,0 +1,11 @@
+T.L.S. // PHYTOGENESIS — ACCESO Y PORTADA SEPARADOS
+
+- index.html es exclusivamente la pantalla de arranque y acceso.
+- La contraseña narrativa es PHYTO-01.
+- Tras aceptar la clave, la terminal abre portada.html.
+- portada.html es la página principal del archivo y no muestra el formulario de contraseña.
+- Los botones PORTADA PRINCIPAL de los expedientes abren portada.html directamente.
+- CERRAR SESIÓN en la portada vuelve a index.html.
+
+Conserva todas las carpetas al extraer el ZIP.
+La contraseña es una simulación narrativa, no una protección de seguridad real.

@@ -1,0 +1,30 @@
+PHYTOGENESIS — ACTUALIZACIÓN VISUAL B
+======================================
+
+Se aplicó una capa visual inspirada en COMPARATIVA_EXPEDIENTES/estilo_b_documento.html
+a las páginas HTML de navegación y expedientes dentro de 03_INTERFAZ_V04, excluyendo
+las páginas de comparación para mantenerlas como referencia original.
+
+Se actualizaron referencias de imágenes de expedientes cuando el código indicado por
+el usuario existe en assets/imagenes/referencias_catalogo.
+
+Códigos asignados desde las indicaciones del usuario:
+531776 La Frutal
+531781 La Estranguladora
+532865 La Imitadora
+532861 La Vigilante
+532868 El Cazador
+532870 Berrero
+532869 Espinario
+532871 La Bella y el Espinario (referencia compartida indicada)
+532873 La Cántara
+532872 La Tejedora
+532875 La Flotante
+532862 La Luciérnaga
+
+Pendiente de revisión visual:
+- Identificar especies cuyas imágenes aún no estén vinculadas en sus expedientes.
+- Revisar si cada archivo visual corresponde exactamente a la especie, desde SPCK.
+- Los códigos 532125, 532124, 532126, 532854, 532860 y 532858 son referencias de
+  categorías/módulos y no se asignan como retratos de especies.
+- No se han inventado imágenes ni contenido de expedientes.

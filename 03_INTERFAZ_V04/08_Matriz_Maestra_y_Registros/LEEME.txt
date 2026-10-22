@@ -1,0 +1,13 @@
+THE LAST SURVIVORS — PHYTOGENESIS PG-01
+BLOQUE 08 v1.1 — ESTILO VERDE RESTAURADO
+
+Corrección:
+- CSS integrado dentro de cada página HTML para evitar que el índice o las páginas aparezcan blancas cuando el visor no carga style.css.
+- Se conserva la estética verde oscuro/negro tecnológica.
+- Se mantiene style.css como copia externa para ediciones futuras.
+- No se han cambiado los datos de REGISTRO ni los campos de las plantillas.
+- Este ZIP es independiente y no modifica la web principal v0.4.
+
+Nota de funcionamiento:
+- El registro de campo es una plantilla visual y no guarda automáticamente los datos.
+- Auditoría estática: se comprueba la presencia del estilo integrado y las rutas locales; no equivale a una prueba real en Android/SPCK.

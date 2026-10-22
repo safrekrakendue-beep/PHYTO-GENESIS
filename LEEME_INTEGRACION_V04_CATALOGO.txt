@@ -1,0 +1,14 @@
+T.L.S. // PHYTOGENESIS — ESTRUCTURA JERÁRQUICA V0.4
+
+FLUJO DE ENTRADA
+1. index.html — terminal de acceso (clave narrativa: PHYTO-01).
+2. 02_RESUMEN/resumen.html — resumen previo al sistema.
+3. 03_INTERFAZ_V04/index.html — interfaz V0.4 principal.
+4. 03_INTERFAZ_V04/panel_modulos.html — explorador alternativo de módulos.
+
+Todo el contenido de trabajo se encuentra dentro de 03_INTERFAZ_V04, organizado en carpetas y subcarpetas. Los módulos existentes, el catálogo ecológico, los expedientes y los recursos visuales se mantienen separados. No se han combinado los documentos en un HTML gigante.
+
+La auditoría de rutas debe hacerse después de cualquier modificación manual. La estructura se ha reorganizado y enlazado estáticamente; no se ha realizado una prueba visual completa en Android/SPCK.
+
+
+CORRECCIÓN DE NAVEGACIÓN V0.4

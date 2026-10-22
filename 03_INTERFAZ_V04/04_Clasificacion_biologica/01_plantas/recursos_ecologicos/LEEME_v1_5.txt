@@ -1,0 +1,10 @@
+T.L.S. // PHYTOGENESIS PG-01 // CATÁLOGO ECOLÓGICO v1.5
+
+Esta versión amplía los 15 expedientes vegetales con una matriz operativa: señales a documentar, protocolo de observación, preguntas abiertas y registro mínimo recomendado. La matriz es una herramienta de trabajo propuesta, no canon automático.
+
+Se conservan las referencias visuales originales y las seis ramas animales. No se confirma presencia en Punto 0 ni se inventan muestras. Los rasgos no definidos permanecen como preguntas abiertas.
+
+USO: extraer el ZIP completo y abrir index.html. Mantener style.css, biblioteca_visual.html, referencias_visuales y todas las carpetas en su estructura. No reemplaza el archivo maestro v0.4.
+
+
+ACTUALIZACIÓN DE ESTRUCTURA: Punto 0 y expedientes vegetales integrados en 04_Clasificacion_biologica/01_plantas/expediente.html. La antigua ruta de Punto 0 redirige a la rama Vegetal para evitar dos destinos ecológicos separados. El índice general del catálogo se conserva para los registros animales y la biblioteca visual.
