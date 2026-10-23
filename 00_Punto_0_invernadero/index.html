@@ -270,6 +270,8 @@ panel.innerHTML='<h3>RESUMEN OPERATIVO</h3><p>'+d.summary+'</p><span class="evid
 panel.innerHTML='<h3>OBSERVACIONES Y CRITERIOS</h3><ul>'+d.observations.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
 }else if(tab==='unknowns'){
 panel.innerHTML='<h3>INCÓGNITAS ABIERTAS</h3><p>Preguntas pendientes: no deben tratarse como datos confirmados.</p><ul>'+d.unknowns.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+}else if(tab==='fieldlog'){
+panel.innerHTML='<div class="narrative-records"><iframe title="Archivo narrativo recuperado del Punto 0" src="registros.html" loading="lazy" style="display:block;width:100%;min-height:1100px;height:85vh;border:1px solid #34422e;border-radius:10px;background:#080d09" allowfullscreen></iframe></div>';
 }else{
 panel.innerHTML='<h3>REGISTRO DE CAMPO</h3>'+d.log.map(x=>'<div class="recordline"><strong>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('');
 }

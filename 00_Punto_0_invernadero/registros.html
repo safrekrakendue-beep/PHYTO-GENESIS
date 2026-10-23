@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHYTOGENESIS // Archivo recuperado</title>
+<style>
+:root{--bg:#080d0d;--panel:#101919;--panel2:#0b1212;--line:#29413c;--text:#d0ded5;--muted:#81968b;--green:#9fc9a9;--red:#ff6c59;--amber:#d8bc78;--cyan:#75d6c4}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1a3028 0,transparent 52%),var(--bg);color:var(--text);font:14px/1.65 "Courier New",monospace}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;background:repeating-linear-gradient(0deg,transparent 0 3px,#0002 4px);opacity:.24}
+header{padding:22px clamp(16px,4vw,48px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:center;background:#070c0be8}
+.brand{font-weight:bold;letter-spacing:.18em;color:var(--green);font-size:15px}.sub{font-size:10px;letter-spacing:.13em;color:var(--muted);margin-top:5px}
+.status{text-align:right;font-size:10px;letter-spacing:.08em;color:var(--amber)}.status strong{display:block;color:var(--red);font-size:11px}
+main{max-width:1120px;margin:auto;padding:30px 18px 60px}
+.eyebrow{font-size:10px;letter-spacing:.2em;color:var(--green)}
+h1{font-size:clamp(25px,5vw,42px);line-height:1.1;letter-spacing:.04em;margin:10px 0 12px;color:#e0e9e1}
+.intro{max-width:760px;color:#9aada1}
+.notice{border:1px solid #604d35;background:#1b1710;padding:12px 14px;margin:22px 0;color:#cbb88d;font-size:11px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:26px 0 12px;color:var(--muted);font-size:11px;letter-spacing:.1em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:12px}
+.card{position:relative;text-align:left;color:var(--text);background:linear-gradient(145deg,#121d1a,#0a1111);border:1px solid var(--line);padding:16px;min-height:154px;cursor:pointer;overflow:hidden;transition:border-color .2s,transform .2s,background .2s}
+.card:hover{border-color:var(--green);transform:translateY(-2px);background:#14201c}
+.card:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.card .topline{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:var(--muted);letter-spacing:.08em}
+.card h2{font-size:15px;margin:14px 0 7px;color:#dbe7dc;line-height:1.35}
+.card p{font-size:11px;color:#8da197;margin:0}
+.card .bar{height:3px;background:#26342e;margin-top:14px;overflow:hidden}
+.card .bar span{height:100%;display:block;background:var(--green)}
+.card.damaged{border-color:#79453b;box-shadow:inset 0 0 24px #a32b1b10}
+.card.damaged:after{content:"SIGNAL LOSS //";position:absolute;right:8px;bottom:7px;font-size:8px;letter-spacing:.14em;color:#c66b5a;opacity:.8}
+.card.restricted{border-style:dashed;border-color:#79683e}
+.card.restricted .bar span{background:var(--amber)}
+.card.gardener{border-color:#49694e;background:linear-gradient(145deg,#111d15,#0b1110)}
+.card.gardener h2{font-family:Georgia,serif;font-weight:normal}
+.viewer{display:none;border:1px solid var(--line);background:var(--panel2)}
+.viewer.open{display:block;position:fixed;z-index:51;left:50%;top:max(8px,env(safe-area-inset-top));bottom:max(8px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(920px,calc(100vw - 28px));max-height:none;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;margin:0;box-shadow:0 24px 90px #000c}
+.modal-backdrop{display:none;position:fixed;inset:0;z-index:50;background:rgba(0,5,5,.84);backdrop-filter:blur(4px)}
+.modal-backdrop.open{display:block}
+body.modal-active{overflow:hidden}
+.viewer-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;padding:16px 18px;background:#111b18;border-bottom:1px solid var(--line)}
+.viewer-head h2{font-size:17px;margin:3px 0;color:#e0e9e1}
+.viewer-meta{font-size:10px;color:var(--muted);letter-spacing:.1em}
+.close{border:1px solid var(--line);background:#0b1210;color:var(--text);padding:7px 11px;cursor:pointer;font:inherit;font-size:11px}
+.viewer-body{padding:clamp(18px,4vw,36px);max-width:850px;margin:auto;white-space:normal}
+.viewer-body .stamp{font-size:10px;letter-spacing:.15em;color:var(--muted);border-bottom:1px dashed #33453d;padding-bottom:12px;margin-bottom:22px}
+.viewer-body h3{font-size:12px;color:var(--green);letter-spacing:.12em;margin:20px 0 5px}
+.viewer-body p{margin:0 0 15px}
+.viewer-body .field{color:#9db4a3}
+.viewer-body .redacted{color:#111;background:#111;user-select:none;border-bottom:1px solid #111;padding:0 4px}
+.viewer-body .locked{color:var(--amber);border:1px dashed #79683e;background:#1a170f;padding:0 4px;font-size:.9em}
+.viewer-body .broken{color:var(--red);background:#29100e;padding:0 3px;text-shadow:1px 0 #ff3025,-1px 0 #4ae3c0}
+.viewer.damaged{border-color:#79453b;box-shadow:0 0 24px #ff302512}
+.viewer.damaged .viewer-head{background:#1b1211}
+.viewer.damaged .viewer-body{background:repeating-linear-gradient(0deg,transparent 0 8px,#ff302505 9px)}
+.viewer.restricted{border-color:#79683e}
+.viewer.restricted .viewer-head{background:#19170f}
+.viewer.gardener .viewer-body{font-family:Georgia,serif;font-size:16px;line-height:1.85}
+.viewer.gardener .viewer-body .stamp{font-family:"Courier New",monospace}
+.viewer.gardener .viewer-head h2{font-family:Georgia,serif;font-weight:normal}
+.endline{color:var(--red);font:700 12px/1.6 "Courier New",monospace;letter-spacing:.1em;border-top:1px dashed #714039;padding-top:14px;margin-top:26px}
+footer{border-top:1px solid var(--line);padding:16px;text-align:center;color:#65776d;font-size:10px;letter-spacing:.1em}
+@media(max-width:600px){header{align-items:flex-start;flex-direction:column}.status{text-align:left}.viewer-head{padding:13px;}.card{min-height:140px}.viewer.open{left:8px;right:8px;top:max(8px,env(safe-area-inset-top));bottom:max(8px,env(safe-area-inset-bottom));width:auto;transform:none}}
+
+/* CORRUPCIÓN VISUAL RESTAURADA: puede coexistir con restricciones de acceso */
+@keyframes archiveGlitch {
+  0%, 73%, 100% { transform:translate(0,0); filter:none; clip-path:inset(0); }
+  74% { transform:translate(-4px,1px); filter:contrast(1.8) hue-rotate(38deg); clip-path:inset(10% 0 68% 0); }
+  76% { transform:translate(5px,-2px); filter:saturate(2.1); clip-path:inset(55% 0 18% 0); }
+  78% { transform:translate(-2px,0); clip-path:inset(0); }
+}
+@keyframes archiveFlicker {
+  0%,100%{opacity:1} 18%{opacity:.9} 19%{opacity:.4} 20%{opacity:1}
+  46%{opacity:.7} 47%{opacity:.22} 49%{opacity:1} 81%{opacity:.82} 82%{opacity:.38} 83%{opacity:1}
+}
+.card.damaged {
+  isolation:isolate;
+  box-shadow:0 0 12px #ff382622,0 0 26px #ff38261c,inset 0 0 28px #ff20151b;
+  animation:archiveFlicker 5.3s steps(1,end) infinite, archiveGlitch 6.2s steps(1,end) infinite;
+}
+.card.damaged::before {
+  content:"";
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(255,48,32,.17) 5px 6px),
+             linear-gradient(100deg,transparent 0 25%,rgba(255,15,15,.13) 26% 29%,transparent 30% 62%,rgba(50,255,220,.1) 63% 65%,transparent 66%);
+  mix-blend-mode:screen;
+}
+.card.damaged::after {
+  content:"// SIGNAL CORRUPTED · PACKETS LOST //";
+  position:absolute;right:7px;bottom:7px;z-index:4;
+  color:#ff7766;background:rgba(35,7,7,.8);padding:3px 5px;
+  font:700 8px/1.2 "Courier New",monospace;letter-spacing:.11em;
+  text-shadow:2px 0 #ff1717,-2px 0 #3cf7c4;
+  animation:archiveGlitch 3.7s steps(1,end) infinite;
+}
+.card.damaged h2,.card.damaged p,.card.damaged .topline {
+  text-shadow:1px 0 rgba(255,0,0,.45),-1px 0 rgba(65,255,215,.22);
+}
+.card.restricted.damaged { border-style:dashed; border-color:#a75d4b; }
+.viewer.damaged {
+  isolation:isolate;
+  border-color:#b64c3d;
+  box-shadow:0 0 28px #ff30252b,inset 0 0 45px #ff20151b;
+  /* No animar transform en el contenedor: desplazaría la ventana modal. */
+  animation:archiveFlicker 5.8s steps(1,end) infinite;
+}
+.viewer.open {
+  display:flex; flex-direction:column;
+  height:auto; min-height:0;
+}
+.viewer.open .viewer-head {flex:0 0 auto; position:sticky; top:0; z-index:3; align-items:flex-start;}
+.viewer.open .viewer-body {flex:1 1 auto; width:100%; min-height:0;}
+.close {flex:0 0 auto; position:sticky; top:0; z-index:4; min-width:76px; min-height:44px; touch-action:manipulation;}
+@media(max-width:600px){
+  .viewer.open {top:8px; bottom:8px; left:8px; right:8px; width:auto; max-height:calc(100dvh - 16px); overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;}
+  .viewer-head {gap:10px;}
+  .viewer-head h2 {overflow-wrap:break-word; word-break:normal; hyphens:auto;}
+  .viewer.damaged .viewer-head {display:block; padding-top:54px;}
+  .viewer.damaged .viewer-head > div {width:100%; min-width:0;}
+  .viewer.damaged .viewer-head::after {position:absolute; top:8px; right:12px; width:calc(100% - 24px); max-width:none; margin:0; text-align:right; overflow-wrap:normal; white-space:normal; line-height:1.35;}
+  .viewer.damaged .viewer-head .close {position:absolute; top:8px; left:12px;}
+}
+.viewer.damaged .viewer-head {
+  position:relative;
+  background:repeating-linear-gradient(0deg,#1b1211 0 5px,#271210 6px 7px);
+  border-bottom-color:#79453b;
+}
+.viewer.damaged .viewer-head::after {
+  content:"▓▒░ ARCHIVE STREAM UNSTABLE // RECOVERY ERRORS ░▒▓";
+  display:block;margin-top:8px;color:#ff7765;font-size:9px;letter-spacing:.12em;
+  text-shadow:2px 0 red,-2px 0 #36eec2;animation:archiveGlitch 3.6s steps(1,end) infinite;
+}
+.viewer.damaged .viewer-body {
+  position:relative;
+  background:repeating-linear-gradient(0deg,transparent 0 6px,rgba(255,45,25,.055) 7px 8px);
+  text-shadow:1px 0 rgba(255,0,0,.22),-1px 0 rgba(50,255,210,.12);
+}
+.viewer.damaged .viewer-body p:nth-of-type(3n)::after {
+  content:"  ░▒▓ [PACKET LOST: 0x00] ▓▒░";
+  color:#ff6957;font:700 9px "Courier New",monospace;letter-spacing:.05em;
+  text-shadow:2px 0 red,-2px 0 #39f5c4;
+}
+.viewer.damaged .broken {
+  display:inline;
+  color:#ff806d;background:rgba(100,8,8,.38);
+  text-shadow:2px 0 red,-2px 0 #39f5c4;
+  animation:archiveGlitch 2.8s steps(1,end) infinite;
+}
+.viewer.restricted .locked {
+  color:#e2c578;border:1px dashed #9d7c37;
+  background:repeating-linear-gradient(135deg,#211b0e 0 5px,#2a2110 6px 8px);
+  padding:2px 5px;
+  box-shadow:inset 0 0 10px #d8bc7815;
+}
+.viewer.damaged.restricted { border-style:dashed; }
+.card.gardener::before {
+  content:"";
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(110deg,transparent 0 70%,rgba(115,190,120,.04) 71% 73%,transparent 74%);
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div><div class="brand">PHYTOGENESIS // ARCHIVO RECUPERADO</div><div class="sub">T.L.S. · DIVISIÓN DE RIESGO BIOLÓGICO · PUNTO 0</div></div>
+  <div class="status"><strong>CUENTA ACTIVA: INVESTIGADOR PRINCIPAL</strong>PERMISOS: ARCHIVO / MANTENIMIENTO<br>SESIÓN: ABIERTA · IDENTIDAD NO VERIFICADA</div>
+</header>
+<main>
+  <div class="eyebrow">TERMINAL DE RECUPERACIÓN // LOTE 0x07</div>
+  <h1>REGISTROS DEL<br>INVERNADERO</h1>
+  <p class="intro">Se han recuperado fragmentos de la documentación almacenada en el invernadero central. Los expedientes se muestran según el orden de recuperación, no por fecha. La integridad indicada corresponde al archivo recuperado; no garantiza que el contenido sea completo ni que el usuario tenga permiso para consultarlo.</p>
+  <div class="notice">AVISO DEL SISTEMA: algunos campos están restringidos por permisos. Los segmentos dañados no han podido reconstruirse. La cuenta activa no ha cambiado durante la recuperación.</div>
+  <div class="toolbar"><span>ARCHIVOS DISPONIBLES</span><span id="count">13 REGISTROS · 0 ABIERTOS</span></div>
+  <section class="grid" id="grid" aria-label="Expedientes recuperados"></section>
+  <div class="modal-backdrop" id="backdrop"></div>
+  <section class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="vtitle" aria-live="polite">
+    <div class="viewer-head"><div><div class="viewer-meta" id="vmeta"></div><h2 id="vtitle"></h2></div><button class="close" id="close">CERRAR [×]</button></div>
+    <article class="viewer-body" id="vbody"></article>
+  </section>
+</main>
+<footer>T.L.S. // RECUPERACIÓN PARCIAL DE DATOS · NO SE GARANTIZA LA AUTENTICIDAD DE LOS REGISTROS</footer>
+<script>
+const records = [
+{id:"PG-001",date:"03/03/20XX",integrity:100,state:"ÍNTEGRO",kind:"scientific",title:"Registro de apertura del invernadero",desc:"Inventario inicial y condiciones ambientales.",body:`<div class="stamp">T.L.S. / DIVISIÓN DE RIESGO BIOLÓGICO<br>DOCUMENTO TÉCNICO · REVISIÓN 01</div>
+<h3>OBJETO</h3><p>Se inicia el registro sistemático del invernadero central, incluyendo temperatura, humedad, composición del sustrato y estado de las especies almacenadas. Las condiciones ambientales se mantienen dentro de los márgenes establecidos. <span class="broken">[LECTURA INCOMPLETA: margen establecido / margen observado / diferencia no consignada]</span></p>
+<h3>OBSERVACIÓN</h3><p>El personal de mantenimiento ha informado de pequeñas variaciones en el sistema de riego del sector norte. No se considera un incidente biológico. Se solicita revisar las válvulas durante el próximo turno.</p>
+<p class="field">CONCLUSIÓN: sin anomalías críticas registradas.</p>`},
+{id:"PG-002",date:"05/03/20XX",integrity:88,state:"DAÑO MENOR",kind:"damaged",title:"Variación del crecimiento radicular",desc:"Primera observación fuera de los parámetros habituales.",body:`<div class="stamp">INFORME DE CULTIVO · MUESTRA R-02</div>
+<h3>RESULTADOS</h3><p>Se ha observado una expansión radicular superior a la media en tres especímenes del sector norte. La composición del sustrato no presenta diferencias significativas respecto al lote de control. <span class="broken">[PÁRRAFO SUPRIMIDO POR ERROR DE RECUPERACIÓN: la muestra ya había sido examinada antes de su ingreso]</span></p><p>La inspección visual detectó filamentos finos en la parte inferior de las bandejas. Una sección del registro fotográfico se ha perdido durante la recuperación: <span class="broken">[FRAGMENTO DAÑADO: 0x00—0x3F]</span>.</p><p>Se recomienda repetir las mediciones dentro de las próximas cuarenta y ocho horas.</p>`},
+{id:"PG-003",date:"09/03/20XX",integrity:50,state:"RECUPERACIÓN PARCIAL",kind:"damaged",title:"Respuesta de la muestra orgánica",desc:"Una prueba tuvo un resultado que no figura en la conclusión.",body:`<div class="stamp">PROTOCOLO EXPERIMENTAL · COPIA 2 DE 3</div>
+<h3>PROCEDIMIENTO</h3><p>Se expuso una muestra vegetal a una pequeña cantidad de material orgánico previamente aislado. El objetivo era comprobar si la proliferación filamentosa dependía de nutrientes presentes en el sustrato.</p><p>Durante los primeros minutos no se observaron cambios. A continuación, el espécimen presentó un crecimiento localizado alrededor de la muestra. El operador anotó que el crecimiento parecía orientarse hacia el calor de la mano, aunque esa frase aparece tachada en la copia original. <span class="broken">[TRANSCRIPCIÓN INESTABLE: no responde al estímulo / responde al operador / respuesta no prevista]</span> El registro de los siguientes treinta y dos segundos está <span class="broken">▓▒░ CORRUPTO ░▒▓</span>.</p><p>La conclusión original no se ha recuperado. En la copia conservada, la última línea dice: «No repetir el procedimiento sin que el doctor █████ esté presente».</p>`},
+{id:"PG-004",date:"12/03/20XX",integrity:92,state:"ÍNTEGRO CON CAMPOS BLOQUEADOS",kind:"restricted",title:"Inventario de especies y permisos",desc:"La mayor parte del documento está intacta.",body:`<div class="stamp">INVENTARIO BOTÁNICO · REVISIÓN 04</div>
+<h3>SECTOR NORTE</h3><p>Los especímenes A-11 a A-18 se mantienen estables. Se han actualizado las necesidades de riego y el registro de nutrientes. El espécimen A-19 queda excluido del inventario ordinario por orden del investigador principal. <span class="locked">[MOTIVO DE EXCLUSIÓN · NIVEL 04]</span> <span class="broken">[EN UNA COPIA ANTERIOR FIGURABA COMO «NO LOCALIZADO»]</span></p><p>La ubicación exacta de A-19 figura como <span class="locked">[ACCESO RESTRINGIDO · NIVEL 04]</span>. La ficha de manipulación requiere el protocolo <span class="locked">[CÓDIGO DE AUTORIZACIÓN NO DISPONIBLE]</span>.</p><p>La integridad de este archivo es alta. No se puede determinar si los campos bloqueados fueron añadidos antes o después de la recuperación.</p>`},
+{id:"PG-005",date:"16/03/20XX",integrity:30,state:"DAÑO MODERADO",kind:"damaged",title:"Incidente en el corredor de servicio",desc:"Huellas, marcas en el suelo y una descripción incompleta.",body:`<div class="stamp">REGISTRO DE INCIDENTE · 04-B</div>
+<h3>INFORME</h3><p>Durante la inspección del corredor de servicio se detectaron marcas de arrastre y huellas sobre el suelo húmedo. La separación entre las impresiones sugiere un desplazamiento a baja altura.</p><p>Seguridad informó de una figura cuadrúpeda al otro lado de la mampara. Su constitución física no pudo determinarse con precisión debido a las condiciones de iluminación. Dos testigos describieron tamaños distintos; un tercero aseguró que la figura estaba al otro lado de la mampara y también dentro del corredor. <span class="broken">[DECLARACIÓN INCOMPATIBLE: conservar ambas versiones]</span> La grabación muestra que el individuo presenta <span class="broken">▓▒░░ [DESCRIPCIÓN MORFOLÓGICA DAÑADA] ░▒▓</span>.</p><p>Se ha perdido el final de la recomendación. Solo se recuperó: «Evitar el contacto directo hasta determinar si la criatura puede…» <span class="broken">[DATOS IRRECUPERABLES]</span>.</p>`},
+{id:"PG-006",date:"19/03/20XX",integrity:72,state:"DAÑO PARCIAL",kind:"damaged",title:"Notas complementarias del investigador",desc:"El tono del documento cambia en las últimas líneas.",body:`<div class="stamp">NOTAS DE LABORATORIO · AUTOR: INVESTIGADOR PRINCIPAL</div>
+<p>Los resultados no coinciden con los modelos de crecimiento que utilizamos. He solicitado una segunda revisión, aunque no espero que aporte nada nuevo. Las muestras no deberían haber alcanzado ese tamaño en tan poco tiempo.</p><p>He vuelto a encontrar filamentos junto a la puerta de mi despacho. El personal de mantenimiento afirma que estaban ahí ayer. No recuerdo haberlos visto. Esta mañana he encontrado fibras bajo la puerta, aunque el pasillo fue limpiado anoche. <span class="broken">[NOTA AÑADIDA A MANO: no escribir esto en el informe oficial]</span></p><p>La dirección solicita un informe concluyente. Les enviaré los datos que tenemos. No incluiré la parte de la cámara porque <span class="broken">[SEGMENTO PERDIDO]</span>.</p><p>Necesito dormir. Llevo tres noches escuchando el sistema de riego incluso cuando está apagado.</p>`},
+{id:"PG-007",date:"22/03/20XX",integrity:18,state:"DAÑO SEVERO",kind:"damaged",title:"Registro de cámara: corredor B",desc:"Solo se recuperaron metadatos y unas pocas líneas.",body:`<div class="stamp">FUENTE: CÁMARA B-04 · TRANSCRIPCIÓN AUTOMÁTICA</div>
+<p>02:14:08 — Apertura de puerta detectada.</p><p>02:14:11 — Movimiento a baja altura en el extremo del corredor.</p><p>02:14:13 — La figura se detiene frente a la cámara. No se detecta movimiento durante nueve segundos. En el registro auxiliar, la cámara aparece orientada hacia la pared durante el mismo intervalo. <span class="broken">[FUENTES NO SINCRONIZADAS: 02:14:13 / 02:14:13 / 02:14:13]</span></p><p>02:14:22 — <span class="broken">▓▓▒▒░░░░░ [FOTOGRAMAS PERDIDOS] ░░▒▒▓▓</span></p><p>02:14:31 — Señal interrumpida. El archivo de vídeo asociado no se encuentra en el lote recuperado.</p><p class="field">Nota: no se ha podido verificar si la transcripción corresponde a la fecha indicada.</p>`},
+{id:"PG-008",date:"25/03/20XX",integrity:96,state:"ÍNTEGRO CON CAMPOS BLOQUEADOS",kind:"restricted",title:"Protocolo de aislamiento del espécimen",desc:"Un documento limpio con instrucciones que no podemos consultar por completo.",body:`<div class="stamp">PROTOCOLO DE BIOSEGURIDAD · COPIA OFICIAL</div>
+<h3>MEDIDAS AUTORIZADAS</h3><p>El sector norte permanecerá cerrado hasta completar la inspección del sistema de ventilación. El cierre deberá mantenerse incluso si el indicador de puerta aparece en verde. <span class="locked">[EXCEPCIONES AL CIERRE · ANEXO 2]</span> El personal deberá utilizar protección respiratoria y evitar el contacto con filamentos desconocidos.</p><p>En caso de observar una respuesta coordinada entre especímenes, activar el procedimiento <span class="locked">[PROTOCOLO █-17 · NIVEL DE ACCESO INSUFICIENTE]</span>.</p><p>Los detalles relativos a la respuesta coordinada se almacenan en el anexo <span class="locked">[ANEXO NO DISPONIBLE PARA ESTA CUENTA]</span>. No se autoriza la reproducción del anexo fuera del sistema original.</p><p>Documento validado. No hay indicios de daño en el archivo recuperado.</p>`},
+{id:"PG-009",date:"27/03/20XX",integrity:5,state:"CASI IRRECUPERABLE",kind:"damaged",title:"[TÍTULO NO RECUPERADO]",desc:"El contenido no permite identificar al autor.",body:`<div class="stamp">METADATOS INCOMPLETOS · FUENTE DESCONOCIDA</div>
+<p>… no era una raíz. Lo vi moverse cuando retiré la bandeja. No tenía que moverse.</p><p>El doctor dijo que dejara de entrar ahí. Después cerró la puerta y se llevó la llave. Pero la puerta estaba abierta cuando volví.</p><p><span class="broken">▓▒░░░░░░░░░░░░░░░░░░ [BLOQUE DAÑADO] ░░░░░░░░░░░░░░░░░░▒▓</span></p><p>… si alguien encuentra esto, no arranque las cosas blancas de la pared. No son raíces.</p>`},
+{id:"PG-010",date:"26/03/20XX",integrity:100,state:"NOTA PERSONAL · PAPEL RECUPERADO",kind:"gardener",title:"Apunte junto al cuarto de herramientas",desc:"Una nota cotidiana escrita a mano.",body:`<div class="stamp">HOJA SUELTA · SIN FIRMA · ESCANEADA DEL CUARTO DE HERRAMIENTAS</div>
+<p>Comprar guantes nuevos. Los viejos se engancharon con esos hilos blancos otra vez y ya no hay manera de limpiarlos. También tengo que mirar la manguera del sector tres, porque pierde agua desde el martes.</p><p>El doctor ha puesto otra señal de prohibido pasar en la puerta norte. Como si no tuviera bastante trabajo ya. Si quiere que nadie entre, que arregle la cerradura en lugar de pegar carteles.</p><p>Me he llevado una taza al cobertizo y la he dejado allí. Mañana me acordaré de traerla. Siempre digo lo mismo.</p>`},
+{id:"PG-011",date:"27/03/20XX",integrity:43,state:"NOTA DE MANTENIMIENTO · RECUPERACIÓN PARCIAL",kind:"gardener",title:"Una cosa que no pienso volver a limpiar",desc:"Un apunte práctico entre informes de laboratorio.",body:`<div class="stamp">NOTA DE MANTENIMIENTO · PAPEL MANCHADO</div>
+<p>Hoy me tocó limpiar el pasillo del fondo. Había tierra por todas partes, aunque nadie había llevado macetas allí. También encontré unas marcas largas en la puerta, por la parte de abajo. Como si algo hubiera intentado pasar por debajo, pero no cabe nada por ese hueco.</p><p>Le pregunté al doctor si sabía qué era. Me dijo que eran daños estructurales y que no debía preocuparme. Bueno, claro. Daños estructurales que dejan barro en el techo.</p><p>Dejé la escoba en el pasillo y me fui. Que lo limpie otro. Si mañana sigue ahí, que lo vea alguien que cobre más que yo.</p>`},
+{id:"PG-012",date:"30/03/20XX",integrity:100,state:"ÍNTEGRO · NOTA PERSONAL",kind:"gardener",title:"Para acordarme de llamar a casa",desc:"Una nota sencilla, escrita en un margen libre.",body:`<div class="stamp">NOTA PERSONAL · MARGEN DE UNA HOJA DE INVENTARIO</div>
+<p>Llamar a mi hermana cuando salga del turno. Llevo días diciéndome que lo haré y siempre termino demasiado cansado. Preguntarle por la rodilla de mamá y si la planta del alféizar sigue viva. Seguro que la ha regado demasiado, como siempre.</p><p>Hoy el invernadero estaba más tranquilo. Casi parecía un día normal, con el agua corriendo por las tuberías y el zumbido de las lámparas. Aunque el agua estaba cortada desde ayer, según el aviso pegado junto al cuarto de bombas. A lo mejor me confundí de día. Me gustaría que volviera a ser así más a menudo.</p><p>He dejado las llaves colgadas detrás de la puerta del cobertizo. No quiero volver a perderlas.</p>`},
+{id:"PG-013",date:"02/04/20XX",integrity:67,state:"REGISTRO PERSONAL · AUTOR NO VERIFICADO",kind:"gardener",title:"Antes de que termine el turno",desc:"Última entrada personal recuperada. No hay registros posteriores.",body:`<div class="stamp">REGISTRO PERSONAL · TRANSCRIPCIÓN RECUPERADA<br>FECHA DEL SISTEMA: 02/04/20XX · AUTOR NO VERIFICADO</div>
+<p>Hoy me acordé de mi viejo. Siempre decía que las plantas se parecían a la gente: si las dejabas sin agua, se marchitaban; si las cuidabas demasiado, tampoco las dejabas crecer como debían. Nunca supe si tenía razón, pero me gustaba escucharlo hablar mientras arreglaba las macetas de casa.</p><p>Cuando empecé a trabajar aquí pensé que sería un empleo tranquilo. Regar, podar, cambiar la tierra, limpiar las herramientas y volver a casa con las manos llenas de olor a hojas. Al principio me sabía los nombres de casi todas las plantas. Ahora hay algunas que prefiero no nombrar, por si acaso.</p><p>Me queda una hermana en la ciudad. Hace meses que no hablamos. La última vez discutimos por una tontería, una de esas cosas que parecen importantes hasta que pasa demasiado tiempo. Si alguna vez salgo de aquí, quizá vaya a verla. Le llevaría una planta pequeña, de las normales, de esas que no hacen nada raro por la noche.</p><p>Echo de menos cosas bastante tontas: desayunar sin mirar el reloj, quejarme del autobús, escuchar a mi hermana hablar de cualquier cosa mientras preparo café. Nunca pensé que acabaría escribiendo estas cosas en una hoja de inventario, pero supongo que aquí dentro uno termina hablándole al papel.</p><p>Ya casi no queda nadie en el invernadero. O al menos, no he visto a nadie en días. A veces oigo ruidos por los pasillos y me digo que serán las tuberías, las puertas sueltas o cualquier cosa que pueda explicarse sin darle demasiadas vueltas. Es más fácil trabajar así. Ayer conté tres golpes en la puerta norte. Esta mañana encontré cuatro marcas. No sé por qué las estoy contando.</p><p>Bueno, tengo que dejarlo aquí. He oído que llaman a la puerta del cobertizo. Qué extraño; no esperaba visitas a estas horas. Quizá por fin haya venido alguien.</p><p>Voy a mirar. Si es alguien de mantenimiento, le diré que la cerradura vuelve a fallar. Si es mi hermana, aunque no tiene sentido que sea ella, le pediré que espere mientras busco las llaves.</p><p class="broken">[EL RESTO DE LA HOJA ESTÁ EN BLANCO. NO SE HA RECUPERADO NINGUNA ANOTACIÓN POSTERIOR.]</p><p class="endline">FIN DEL REGISTRO.</p>`}
+];
+
+const grid = document.getElementById('grid');
+const viewer = document.getElementById('viewer');
+const vmeta = document.getElementById('vmeta');
+const vtitle = document.getElementById('vtitle');
+const vbody = document.getElementById('vbody');
+const count = document.getElementById('count');
+const backdrop = document.getElementById('backdrop');
+
+function cardClass(r){return 'card '+(r.kind==='damaged'?'damaged':r.kind==='restricted'?'restricted':r.kind==='gardener'?'gardener':'');}
+function renderCards(){
+  grid.innerHTML = records.map(r => `<button class="${cardClass(r)}" data-id="${r.id}" type="button">
+    <div class="topline"><span>${r.id}</span><span>${r.integrity}% ÍNTEGRO</span></div>
+    <h2>${r.title}</h2><p>${r.date} · ${r.state}</p><p>${r.desc}</p>
+    <div class="bar"><span style="width:${r.integrity}%"></span></div>
+  </button>`).join('');
+  grid.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>openRecord(btn.dataset.id)));
+}
+function openRecord(id){
+  const r=records.find(x=>x.id===id);
+  if(!r)return;
+  viewer.className='viewer open '+(r.kind==='damaged'?'damaged':r.kind==='restricted'?'restricted':r.kind==='gardener'?'gardener':'')+(r.kind==='restricted'&&r.integrity<60?' damaged':'');
+  vmeta.textContent=`${r.id} // ${r.date} // INTEGRIDAD ${r.integrity}% // ${r.state}`;
+  vtitle.textContent=r.title;
+  vbody.innerHTML=r.body;
+  count.textContent=`13 REGISTROS · ${id} ABIERTO`;
+  backdrop.classList.add('open');
+  document.body.classList.add('modal-active');
+  document.getElementById('close').focus();
+}
+function closeViewer(){viewer.className='viewer';backdrop.classList.remove('open');document.body.classList.remove('modal-active');count.textContent='13 REGISTROS · 0 ABIERTOS';}
+document.getElementById('close').addEventListener('click',closeViewer);
+backdrop.addEventListener('click',closeViewer);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeViewer()});
+renderCards();
+</script>
+</body>
+</html>
